@@ -1,0 +1,400 @@
+/* =Layout
+-------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+/* Body */
+body {
+    background: #ffffff;
+    font-family: 'Montserrat';
+}
+
+main {
+    min-height: 85vh;
+}
+
+/* Site Intro */
+.site-intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 250px;
+    background: #f4f4f4;
+}
+
+/*header css*/
+a.header-plan-trip {
+    display: block;
+    height: 100%;
+    background: #86c340;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    padding-right: 15px;
+}
+
+span.ride-icon {
+    display: block;
+    min-width: 80px;
+    height: 80px;
+    background: url(img/ride-ico.png) no-repeat #81a048;
+    background-position: center;
+    margin-right: 15px;
+
+}
+
+nav#is-site-navbar-primary {
+    transition: all 0.7s;
+}
+
+nav#is-site-navbar-primary.scrollUp {
+    transform: translateY(-80px);
+}
+
+nav#is-site-navbar-primary {
+    background: #111 !important;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+ul#menu-main-menu li + li:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    height: 9px;
+    width: 15px;
+    background: url(img/menu-ico.png) no-repeat;
+    background-position: center;
+}
+
+ul#menu-main-menu li {
+    padding: 0 50px 0 0;
+    position: relative;
+}
+
+ul#menu-main-menu a:hover, ul#menu-main-menu a:focus, ul#menu-main-menu a:active {
+    color: #86c340;
+
+}
+
+ul#menu-main-menu a {
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logo-container {
+    min-width: 220px;
+    background: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*header css*/
+/*himalayan hero slider*/
+.himalayan-hero-slider {
+    margin-top: 0px;
+}
+
+/*himalayan hero slider*/
+
+/* =Post
+-------------------------------------------------------------- */
+article a h3 {
+    color: #333333;
+    margin-top: 0;
+}
+
+article h3:hover, article a:hover {
+    color: #0056B3;
+    text-decoration: none;
+}
+
+/* =Elements
+-------------------------------------------------------------- */
+
+/* Social Profiles */
+.social-profiles {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.searchform {
+    padding: 15px;
+    background: #f4f4f4;
+    border: 1px solid #dedede;
+}
+
+/* Pagination Workaround */
+.page-numbers {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.page-numbers > li {
+    display: inline;
+}
+
+.page-numbers > li > a,
+.page-numbers > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #428bca;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.page-numbers > li:first-child > a,
+.page-numbers > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.page-numbers > li:last-child > a,
+.page-numbers > li:last-child > span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.page-numbers > li > a:hover,
+.page-numbers > li > span:hover,
+.page-numbers > li > a:focus,
+.page-numbers > li > span:focus {
+    color: #2a6496;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.page-numbers > li > span.current > a,
+.page-numbers > li > span.current > span,
+.page-numbers > li > span.current > a:hover,
+.page-numbers > li > span.current > span:hover,
+.page-numbers > li > span.current > a:focus,
+.page-numbers > li > span.current > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.page-numbers > .disabled > span,
+.page-numbers > .disabled > span:hover,
+.page-numbers > .disabled > span:focus,
+.page-numbers > .disabled > a,
+.page-numbers > .disabled > a:hover,
+.page-numbers > .disabled > a:focus {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.page-numbers-lg > li > a,
+.page-numbers-lg > li > span {
+    padding: 10px 16px;
+    font-size: 18px;
+}
+
+.page-numbers-lg > li:first-child > a,
+.page-numbers-lg > li:first-child > span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.page-numbers-lg > li:last-child > a,
+.page-numbers-lg > li:last-child > span {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.page-numbers-sm > li > a,
+.page-numbers-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.page-numbers-sm > li:first-child > a,
+.page-numbers-sm > li:first-child > span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.page-numbers-sm > li:last-child > a,
+.page-numbers-sm > li:last-child > span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* =Misc
+-------------------------------------------------------------- */
+
+.no-radius {
+    border-radius: 0;
+    moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+nav#is-site-navbar-primary {
+    padding: 0;
+}
+
+/* == WP CSS - post_class() == */
+
+.post-id {
+}
+
+.post {
+}
+
+.page {
+}
+
+.attachment {
+}
+
+.sticky {
+}
+
+.hentry {
+}
+
+.category-misc {
+}
+
+.category-example {
+}
+
+.tag-news {
+}
+
+.tag-wordpress {
+}
+
+.tag-markup {
+}
+
+.gallery-caption {
+}
+
+.bypostauthor {
+}
+div#primary {
+    width: 100%;
+}
+.himalayan-dirt {
+    background: #f2f2f2;
+    padding: 70px 0;
+    width: 100%;
+}
+.himalayan-dirt p {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 300;
+    color: #333;
+}
