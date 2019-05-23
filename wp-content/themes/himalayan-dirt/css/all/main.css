@@ -1,10 +1,16 @@
 /* =Layout
 -------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+
+html {
+    font-size: 10px;
+}
+
 /* Body */
 body {
     background: #ffffff;
     font-family: 'Montserrat';
+    font-size: 1.4rem;
 }
 
 main {
@@ -40,9 +46,11 @@ span.ride-icon {
     display: block;
     min-width: 80px;
     height: 80px;
-    background: url(img/ride-ico.png) no-repeat #81a048;
+    background: url(../../image/bike.svg) no-repeat #8067bf;
     background-position: center;
     margin-right: 15px;
+    background-size: 50px;
+    filter: invert(1);
 
 }
 
@@ -90,6 +98,12 @@ ul#menu-main-menu a {
     transition: all 0.4s;
     font-size: 14px;
     font-weight: 600;
+}
+
+.logo-container img {
+    max-width: 110px;
+    height: auto;
+
 }
 
 .logo-container {
@@ -384,17 +398,228 @@ nav#is-site-navbar-primary {
 
 .bypostauthor {
 }
+
 div#primary {
     width: 100%;
 }
+
 .himalayan-dirt {
     background: #f2f2f2;
     padding: 70px 0;
     width: 100%;
 }
+
 .himalayan-dirt p {
     font-size: 20px;
     line-height: 38px;
     font-weight: 300;
     color: #333;
 }
+
+section {
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*featured rides*/
+span.featured {
+    display: inline-block;
+    background: #f2f2f2;
+    color: #aaa;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+}
+
+.himalayan-dirt-discription h2 {
+    font-size: 4.4rem;
+    color: #00aeef;
+    margin: 1.5rem 0;
+}
+
+.himalayan-dirt-discription {
+
+}
+
+.himalayan-dirt-discription p {
+    color: #111;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.himalayan-dirt-discription, .himalayan-ride-image {
+    margin-top: 6rem;
+}
+
+.himalayan-dirt-discription a:hover {
+    opacity: 0.8;
+
+}
+
+.himalayan-dirt-discription a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color: #00aeef;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #00aeef;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.himalayan-dirt-discription a:hover svg {
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+
+}
+
+.himalayan-dirt-discription a svg, .himalayan-dirt-discription a svg path {
+    max-width: 2rem;
+    height: 2rem;
+    fill: #00aeef !important;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/*featured rides*/
+/*about bimal gurun sectioln*/
+.about-bimal .image-container:after {
+    content: '';
+    position: absolute;
+    height: 60%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 100%);
+    opacity: 1;
+}
+
+.about-bimal .image-container img {
+    height: 100%;
+    background: #111;
+    width: auto;
+    max-width: initial;
+}
+
+.name-info, .contact-info {
+    width: 100%;
+}
+
+.bimal-info {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    align-items: self-start;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-end;
+}
+.name-info span {
+    display: block;
+    color: #fff;
+    font-weight: 100;
+
+}
+.name-info h2 + span {
+    font-size: 2.8rem;
+
+}
+.name-info h2 {
+    font-size: 9rem;
+    line-height: 10rem;
+    color: #111;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.contact-info span {
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+.contact-info {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 4rem;
+    color: #fff;
+
+}
+.contact-info .cn + .cn {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+
+}
+.contact-info .cn img {
+    height: 2.6rem;
+    width: 2.6rem;
+    filter: invert(1);
+    margin-right: 2rem;
+}
+.intro-bimal p{
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 3rem;
+    line-height: 3rem;
+}
+.about-bimal {
+    overflow: hidden;
+}
+.intro-bimal {
+    height: 100%;
+    background: #111;
+    padding: 4rem;
+}
+.video-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+}
+.himalayan-intro-video iframe{
+    margin-bottom: -1.5rem;
+}
+/*about bimal gurun sectioln*/
+/*himalayan dirt happy riders*/
+#himalayan-dirt-happy-riders{
+    background: url(../../image/himalayan-dirt-testimonial.png)  no-repeat;
+    background-position: bottom center;
+    min-height: 100vh;
+    padding-bottom: 40rem;
+}
+/*himalayan dirt happy riders*/
