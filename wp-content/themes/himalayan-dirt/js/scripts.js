@@ -80,7 +80,7 @@ jQuery(document).ready(function ($) {
         var offset = 20; //Offset of 20px
 
         $('html, body').animate({
-            scrollTop: $(".himalayan-dirt").offset().top + offset
+            scrollTop: $("#himalayanDirt").offset().top + offset
         }, 500);
     });
 

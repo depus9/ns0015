@@ -38,7 +38,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section id="himalayan-dirt-rides">
+            <section id="himalayan-dirt-rides" id="himalayanDirt">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 aos-item" data-aos="fade-right">
