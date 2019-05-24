@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
     AOS.init();
     //back to top action
     if ($('#back-to-top').length) {
-        var scrollTrigger = 100, // px
+        var scrollTrigger = 500, // px
             backToTop = function () {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop > scrollTrigger) {
@@ -75,5 +75,13 @@ jQuery(document).ready(function ($) {
             }, 700);
         });
     }
+    //scroll to about section
+    $(".arrow.bounce").click(function() {
+        var offset = 20; //Offset of 20px
+
+        $('html, body').animate({
+            scrollTop: $(".himalayan-dirt").offset().top + offset
+        }, 500);
+    });
 
 });

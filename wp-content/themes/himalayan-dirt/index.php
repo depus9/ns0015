@@ -13,6 +13,19 @@ get_header(); ?>
             </header>
             <div class="himalayan-hero-slider">
                 <div class="owl-carousel owl-theme" id="himalayan-hero">
+                    <div class="hero-slider-item"
+                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayn-dirt-hero-1.png);">
+                        <div class="container">
+                            <div class="hero-caption">
+                                <h2>Shred the<span>Himalayan Dirt</span></h2>
+                                <span>With a rider owned mountain bike tour company.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow bounce">
+                    <img
+                            src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
                 </div>
             </div>
             <section class="himalayan-dirt">
@@ -201,7 +214,7 @@ get_header(); ?>
                                                 entire
                                                 country geared for making your ride the bet exigence possible.</p>
                                             <div class="rider-name">
-                                                <p>John Doe<span>United Kingdom</span></p>
+                                                s <p>John Doe<span>United Kingdom</span></p>
 
                                             </div>
                                     </div>
