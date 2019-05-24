@@ -1,10 +1,22 @@
 section#media .card{
     border: 0 !important;
 }
-.course-caption{
-    padding: 1.5rem;
+.media-caption{
+    padding:1.5rem;
 }
-.course-caption a {
+.media-caption h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #555;
+}
+.media-caption p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #555;
+    line-height:2.4rem;
+    padding-top: 1rem;
+}
+.media-caption a {
     max-width: 15rem;
     display: flex;
     align-items: center;
@@ -22,11 +34,16 @@ section#media .card{
     -o-transition: all 0.4s;
     transition: all 0.4s;
 }
-.course-caption a>svg {
+.media-caption a>svg {
     max-width: 2rem;
     height: 2rem;
     fill: #00aeef!important;
 }
-.course-caption a:hover {
-    opacity: 0.8;
+.media-caption a:hover {
+    opacity: 0.7;
+    transform: translate(1)
+}
+
+.media-page-content {
+    padding:12rem 0 40rem; 
 }
