@@ -993,20 +993,24 @@ a#back-to-top img {
     font-size: 1.6rem;
     margin-top: 3rem;
 }
-.himalayan-hero-inner{
+
+.himalayan-hero-inner {
     position: relative;
 }
+
 /*innper page rides*/
 section#himalayan-rides span.featured {
     margin-top: 20px;
 
 }
+
 section#himalayan-rides .himalayan-dirt-discription h2 {
-color: #111;
+    color: #111;
     font-size: 2.4rem;
     margin: 30px 0;
     font-weight: 600;
 }
+
 section#himalayan-rides .himalayan-dirt-discription p {
     color: #777;
     margin-top: 5rem;
@@ -1014,32 +1018,39 @@ section#himalayan-rides .himalayan-dirt-discription p {
     line-height: 2.4rem;
 
 }
+
 section#himalayan-rides .himalayan-dirt-discription a {
     width: 70%;
     color: #111;
     border-color: #111;
 }
-section#himalayan-rides .himalayan-dirt-discription a svg,  section#himalayan-rides .himalayan-dirt-discription a svg path{
-fill: #111 !important;
+
+section#himalayan-rides .himalayan-dirt-discription a svg, section#himalayan-rides .himalayan-dirt-discription a svg path {
+    fill: #111 !important;
 }
+
 .ride-item {
     margin-bottom: 80px;
 }
-.bottom-contact h2 + span{
+
+.bottom-contact h2 + span {
     color: #fff;
     font-size: 24px;
 
 }
-.bottom-contact h2{
+
+.bottom-contact h2 {
     font-size: 5rem;
     line-height: 6.3rem;
     color: #fff;
     font-weight: 300;
 }
+
 .bottom-contact {
     background: #000;
     padding: 120px 0;
 }
+
 form#quickContact input[type=text], form#quickContact input[type=email] {
     background: #121212;
     border: none;
@@ -1050,7 +1061,34 @@ form#quickContact input[type=text], form#quickContact input[type=email] {
     font-size: 1.5rem;
     padding-left: 1.5rem;
 }
-form#quickContact .submit{
+
+form#quickContact .submit {
     width: 100%;
     font-size: 1.8rem;
+}
+
+.ride-item.blog {
+    background: #fff;
+    box-shadow: 0  0 21px 0 rgba(17,17,17,0.09);
+
+}
+
+.ride-item.blog .himalayan-dirt-discription {
+    padding: 20px;
+
+}
+.ride-item.blog .himalayan-dirt-discription a {
+    max-width: 60%;
+
+}
+.ride-item.blog .himalayan-dirt-discription p {
+    color: #777;
+    font-size: 1.3rem;
+
+}
+.ride-item.blog .himalayan-dirt-discription h2 {
+    font-size: 1.8rem;
+    color: #111;
+    font-weight: 600;
+    margin-top: 0;
 }
