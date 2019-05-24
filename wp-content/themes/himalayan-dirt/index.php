@@ -214,7 +214,7 @@ get_header(); ?>
                                                 entire
                                                 country geared for making your ride the bet exigence possible.</p>
                                             <div class="rider-name">
-                                                s <p>John Doe<span>United Kingdom</span></p>
+                                                <p>John Doe<span>United Kingdom</span></p>
 
                                             </div>
                                     </div>

@@ -83,5 +83,14 @@ jQuery(document).ready(function ($) {
             scrollTop: $("#himalayanDirt").offset().top + offset
         }, 500);
     });
+    $(".hero-slider-item").tilt({
+        maxTilt: 15,
+        perspective: 8000,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+        speed: 1200,
+        glare: true,
+        maxGlare: 0.1,
+        scale: 1.03
+    });
 
 });
