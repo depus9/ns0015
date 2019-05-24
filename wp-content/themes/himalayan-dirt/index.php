@@ -28,7 +28,7 @@ get_header(); ?>
                             src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
                 </div>
             </div>
-            <section class="himalayan-dirt">
+            <section class="himalayan-dirt" id="himalayanDirt">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-sm-8 text-center"><p>To provide all sorts of Mountain Biking Tours in the
@@ -38,7 +38,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section id="himalayan-dirt-rides" id="himalayanDirt">
+            <section id="himalayan-dirt-rides">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 aos-item" data-aos="fade-right">
