@@ -837,12 +837,12 @@ footer {
     width: 100%;
 }
 
-a.btn.footer-contact:hover {
+a.btn.footer-contact:hover, form#quickContact .submit:hover {
     max-width: 190px
 
 }
 
-a.btn.footer-contact {
+a.btn.footer-contact, form#quickContact .submit {
     font-size: 1.5rem;
     color: #fff;
     background: #87c440;
@@ -858,7 +858,7 @@ a.btn.footer-contact {
     transition: all 0.4s;
 }
 
-a.btn.footer-contact svg {
+a.btn.footer-contact svg, form#quickContact .submit svg {
     width: 20px;
 }
 
@@ -995,4 +995,62 @@ a#back-to-top img {
 }
 .himalayan-hero-inner{
     position: relative;
+}
+/*innper page rides*/
+section#himalayan-rides span.featured {
+    margin-top: 20px;
+
+}
+section#himalayan-rides .himalayan-dirt-discription h2 {
+color: #111;
+    font-size: 2.4rem;
+    margin: 30px 0;
+    font-weight: 600;
+}
+section#himalayan-rides .himalayan-dirt-discription p {
+    color: #777;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+}
+section#himalayan-rides .himalayan-dirt-discription a {
+    width: 70%;
+    color: #111;
+    border-color: #111;
+}
+section#himalayan-rides .himalayan-dirt-discription a svg,  section#himalayan-rides .himalayan-dirt-discription a svg path{
+fill: #111 !important;
+}
+.ride-item {
+    margin-bottom: 80px;
+}
+.bottom-contact h2 + span{
+    color: #fff;
+    font-size: 24px;
+
+}
+.bottom-contact h2{
+    font-size: 5rem;
+    line-height: 6.3rem;
+    color: #fff;
+    font-weight: 300;
+}
+.bottom-contact {
+    background: #000;
+    padding: 120px 0;
+}
+form#quickContact input[type=text], form#quickContact input[type=email] {
+    background: #121212;
+    border: none;
+    min-height: 45px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    color: #4e4e4e;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+}
+form#quickContact .submit{
+    width: 100%;
+    font-size: 1.8rem;
 }
