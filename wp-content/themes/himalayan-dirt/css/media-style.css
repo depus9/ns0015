@@ -1,0 +1,32 @@
+section#media .card{
+    border: 0 !important;
+}
+.course-caption{
+    padding: 1.5rem;
+}
+.course-caption a {
+    max-width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color: #00aeef;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #00aeef;
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.course-caption a>svg {
+    max-width: 2rem;
+    height: 2rem;
+    fill: #00aeef!important;
+}
+.course-caption a:hover {
+    opacity: 0.8;
+}
