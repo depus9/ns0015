@@ -7,7 +7,7 @@
  */
 get_header(); ?>
     <div class="row">
-        <div id="primary" class="site-main-content">
+        <div id="primary" class="site-main-content" data-aos="zoom-in">
             <header class="page-title sr-only">
                 <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
             </header>
@@ -170,34 +170,77 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="himalayan-intro-video pt-0 pb-0" data-aos="flip-down">
+            <section class="himalayan-intro-video pt-0 pb-0" data-aos="zoom-in">
                 <div class="intro-video-container">
                     <iframe src="https://www.youtube.com/embed/vfRlsBbD11c?autoplay=1&loop=1&controls=0&disablekb=1&mute=1"
                             width="100%" style="height: 100vh" frameborder="0"></iframe>
                 </div>
                 <div class="video-overlay"></div>
             </section>
-            <section id="himalayan-dirt-happy-riders" class="">
+            <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-9">
                             <div class="section-title">
                                 <h2>Happy Riders</h2>
                                 <span>This is why we do what we do</span>
                             </div>
                             <div class="owl-carousel owl-theme" id="happy-riders">
                                 <div class="riders-text">
+                                    <div class="rider-words">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 191.029 191.029"
+                                             style="enable-background:new 0 0 191.029 191.029;" xml:space="preserve">
+<path style="fill:#fff;" d="M44.33,88.474v15.377h38.417v82.745H0v-82.745h0.002V88.474c0-31.225,8.984-54.411,26.704-68.918
+	C38.964,9.521,54.48,4.433,72.824,4.433v44.326C62.866,48.759,44.33,48.759,44.33,88.474z M181.107,48.759V4.433
+	c-18.343,0-33.859,5.088-46.117,15.123c-17.72,14.507-26.705,37.694-26.705,68.918v15.377h0v82.745h82.744v-82.745h-38.417V88.474
+	C152.613,48.759,171.149,48.759,181.107,48.759z"/>
+                                            <p>The best trails any of is have ever ridden. For any
+                                                mountainbiker Nepal is a must visit. Not Only superb trails but an
+                                                entire
+                                                country geared for making your ride the bet exigence possible.</p>
+                                            <div class="rider-name">
+                                                <p>John Doe<span>United Kingdom</span></p>
 
+                                            </div>
+                                    </div>
+                                    <div class="rider-image">
+                                        <img src="<?php echo bloginfo('template_directory') ?>/image/dimalayan-dirt-rider.png"
+                                             alt="Himalayan Dirt Rider">
+                                    </div>
+                                </div>
+                                <div class="riders-text">
+                                    <div class="rider-words">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 191.029 191.029"
+                                             style="enable-background:new 0 0 191.029 191.029;" xml:space="preserve">
+<path style="fill:#fff;" d="M44.33,88.474v15.377h38.417v82.745H0v-82.745h0.002V88.474c0-31.225,8.984-54.411,26.704-68.918
+	C38.964,9.521,54.48,4.433,72.824,4.433v44.326C62.866,48.759,44.33,48.759,44.33,88.474z M181.107,48.759V4.433
+	c-18.343,0-33.859,5.088-46.117,15.123c-17.72,14.507-26.705,37.694-26.705,68.918v15.377h0v82.745h82.744v-82.745h-38.417V88.474
+	C152.613,48.759,171.149,48.759,181.107,48.759z"/>
+                                            <p>The best trails any of is have ever ridden. For any
+                                                mountainbiker Nepal is a must visit. Not Only superb trails but an
+                                                entire
+                                                country geared for making your ride the bet exigence possible.</p>
+                                            <div class="rider-name">
+                                                <p>John Doe<span>United Kingdom</span></p>
+
+                                            </div>
+                                    </div>
+                                    <div class="rider-image">
+                                        <img src="<?php echo bloginfo('template_directory') ?>/image/dimalayan-dirt-rider.png"
+                                             alt="Himalayan Dirt Rider">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="instagramGallery">
-                <div class="owl-carousel owl-theme" id="instaFeed">
-                    <div class="instaItem"></div>
-                </div>
+            <section class="instagramGallery pt-0 pb-0">
+                <?php echo do_shortcode('[instagram-feed]') ?>
             </section>
         </div>
     </div>
