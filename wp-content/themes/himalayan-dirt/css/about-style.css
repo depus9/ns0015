@@ -1,0 +1,33 @@
+.about-content .himalayan-dirt-discription h2 {
+    font-size: 2.8rem;
+    color: #111;
+    font-weight: 600;
+}
+.about-content .himalayan-dirt-discription p{
+    color: #111;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    min-height: 20rem;
+}
+.about-content .himalayan-dirt-discription a {
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color: #111111;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #111;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.about-content .himalayan-dirt-discription a svg, .about-content .himalayan-dirt-discription a svg path{
+    fill: #111 !important;
+}

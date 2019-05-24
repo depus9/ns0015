@@ -65,6 +65,7 @@ function ishouvikwp_styles_loader() {
     wp_enqueue_style( 'ishouvik-wp-main', get_template_directory_uri() . '/css/all/main.css', false, '1.0', 'all' );
     wp_enqueue_style( 'aos css', get_template_directory_uri() . '/css/all/aos.css', false, '1.1', 'all' );
     wp_enqueue_style( 'media-style', get_template_directory_uri() . '/css/media-style.css', false, '1.1', 'all' );
+    wp_enqueue_style( 'about-style', get_template_directory_uri() . '/css/about-style.css', false, '1.1', 'all' );
     wp_enqueue_style('ishouvikwp-default', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'ishouvikwp_styles_loader');
