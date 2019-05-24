@@ -1,24 +1,19 @@
 <?php
-/**
- * Description: Default Index template to display loop of blog posts
- *
- * @package WordPress
- * @subpackage iShouvik WP
- */
+//Template Name: Our Rides Template
 get_header(); ?>
     <div class="row">
         <div id="primary" class="site-main-content" data-aos="zoom-in">
             <header class="page-title sr-only">
                 <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
             </header>
-            <div class="himalayan-hero-slider">
-                <div class="owl-carousel owl-theme" id="himalayan-hero">
+            <div class="himalayan-hero-inner">
+                <div id="himalayan-hero-inner">
                     <div class="hero-slider-item"
-                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayn-dirt-hero-1.png);">
+                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayan-rides-bg.png);">
                         <div class="container">
                             <div class="hero-caption">
-                                <h2>Shred the<span>Himalayan Dirt</span></h2>
-                                <span>With a rider owned mountain bike tour company.</span>
+                                <h2>Rides<span>Himalayan Dirt</span></h2>
+                                <span class="dark">With a rider owned mountain bike tour company.</span>
                             </div>
                         </div>
                     </div>
@@ -257,5 +252,4 @@ get_header(); ?>
             </section>
         </div>
     </div>
-
 <?php get_footer(); ?>

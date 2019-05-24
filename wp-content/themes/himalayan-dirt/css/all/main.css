@@ -1,6 +1,6 @@
 /* =Layout
 -------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800,900&display=swap');
 
 * {
     outline: none !important;
@@ -136,16 +136,17 @@ ul#menu-main-menu a {
 .hero-caption h2 {
     font-size: 7.6rem;
     display: block;
-    font-weight: 100;
+    font-weight: 50;
     text-transform: uppercase;
     color: #fff;
     line-height: 7.8rem;
 }
 
 .hero-caption h2 span {
-    font-weight: 700;
+    font-weight: 900;
     display: block;
 }
+
 .hero-caption h2 + span {
     color: #f3b50d;
     font-size: 24px;
@@ -156,6 +157,7 @@ ul#menu-main-menu a {
     text-align: center;
     margin: 8% 0;
 }
+
 .bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
@@ -173,14 +175,17 @@ ul#menu-main-menu a {
         transform: translateY(-15px);
     }
 }
+
 .himalayan-hero-slider {
     position: relative;
 }
-.arrow.bounce a{
+
+.arrow.bounce a {
     color: #fff;
     text-decoration: none;
 
 }
+
 .arrow.bounce {
     position: absolute;
     bottom: -60px;
@@ -193,14 +198,20 @@ ul#menu-main-menu a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
+
 .arrow.bounce img {
     /* filter: invert(1); */
     width: 20px;
     transform: rotate(90deg);
 }
+
+.hero-caption h2 + span.dark {
+    color: #111;
+}
+
 /*himalayan hero slider*/
 
 /* =Post
@@ -981,4 +992,7 @@ a#back-to-top img {
     align-items: center;
     font-size: 1.6rem;
     margin-top: 3rem;
+}
+.himalayan-hero-inner{
+    position: relative;
 }

@@ -86,6 +86,7 @@ function ishouvikwp_scripts_loader() {
     wp_enqueue_script('bootstrap_form_fields', get_template_directory_uri() . '/js/form_fields.js'); // Add Bootstrap Classes to form fields
     wp_enqueue_script('owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'); //owl carousel
     wp_enqueue_script('aos script', get_template_directory_uri() . '/js/aos.js'); // All aos
+    wp_enqueue_script('Tilt effect', get_template_directory_uri() . '/js/tilt.jquery.js'); // Tilt Effect
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js'); // All additional scripts
 
 
