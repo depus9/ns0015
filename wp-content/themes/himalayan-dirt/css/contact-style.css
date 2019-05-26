@@ -1,6 +1,8 @@
 .media-contact-page{
     background: transparent;
-    margin-top: -6rem;
+    margin-top: -10rem;
+    padding-bottom: 10rem;
+    position: relative;
 }
 form.contact-form .form-group input {
     width:100%;
@@ -99,5 +101,12 @@ form.contact-form {
     justify-content: center;
     margin-top: 0;
 }
-
-
+.himalayan-location.-map {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+.himalayan-location.-map img{
+    height: 100%;
+}

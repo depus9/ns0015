@@ -79,6 +79,9 @@ get_header(); ?>
         </div>
     </div>
     </div>
+    <div class="himalayan-location -map">
     <img  src="<?php echo bloginfo('template_directory'); ?>/image/contact-map.png" alt="Himalayan dirt location map">
+    </div>
+   
     </div>
 <?php get_footer(); ?>
