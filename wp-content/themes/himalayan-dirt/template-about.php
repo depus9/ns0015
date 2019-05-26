@@ -170,7 +170,7 @@ get_header(); ?>
                     </form>
 
                 </div>
-            </didv>
+            </div>
         </div>
     </div>
     </div>
