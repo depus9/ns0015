@@ -12,6 +12,10 @@
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title('|', true, 'right'); ?></title>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/ico/favicon.png">
     <?php wp_head(); ?>
@@ -33,7 +37,7 @@
         <div class="logo-container"><a href="<?php echo site_url()?>"><img src="<?php echo bloginfo('template_directory')?>/image/logo.png"></a> </div>
         <?php ishouvik_nav_menu('primary'); ?>
         <?php //get_template_part( 'searchform', 'navbar' ); ?>
-        <a href="#" class="header-plan-trip"><span class="ride-icon"></span> Plan your trip</a>
+        <a href="#" class="header-plan-trip" data-toggle="modal" data-target="#formTrip"><span class="ride-icon"></span> Plan your trip</a>
     </div>
 </nav>
 

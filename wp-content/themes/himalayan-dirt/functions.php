@@ -64,6 +64,7 @@ function ishouvikwp_styles_loader() {
     wp_enqueue_style( 'owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', false, '1.0', 'all' );
     wp_enqueue_style( 'ishouvik-wp-main', get_template_directory_uri() . '/css/all/main.css', false, '1.0', 'all' );
     wp_enqueue_style( 'aos css', get_template_directory_uri() . '/css/all/aos.css', false, '1.1', 'all' );
+    wp_enqueue_style( 'Date Picker', get_template_directory_uri() . '/css/all/datepicker.css', false, '1.1', 'all' );
     wp_enqueue_style( 'media-style', get_template_directory_uri() . '/css/media-style.css', false, '1.1', 'all' );
     wp_enqueue_style('ishouvikwp-default', get_stylesheet_uri());
 }
@@ -87,6 +88,7 @@ function ishouvikwp_scripts_loader() {
     wp_enqueue_script('owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'); //owl carousel
     wp_enqueue_script('aos script', get_template_directory_uri() . '/js/aos.js'); // All aos
     wp_enqueue_script('Tilt effect', get_template_directory_uri() . '/js/tilt.jquery.js'); // Tilt Effect
+    wp_enqueue_script('Date Picker', get_template_directory_uri() . '/js/bootstrap-datepicker.js'); // Tilt Effect
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js'); // All additional scripts
 
 

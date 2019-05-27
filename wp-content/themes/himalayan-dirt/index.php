@@ -185,8 +185,24 @@ get_header(); ?>
             </section>
             <section class="himalayan-intro-video pt-0 pb-0" data-aos="zoom-in">
                 <div class="intro-video-container">
-                    <iframe src="https://www.youtube.com/embed/vfRlsBbD11c?autoplay=1&loop=1&controls=0&disablekb=1&mute=1"
-                            width="100%" style="height: 100vh" frameborder="0"></iframe>
+                    <style>.codegena {
+                            position: relative;
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 56.27198%;
+                        }
+
+                        .codegena iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }</style>
+                    <div class="codegena">
+                        <iframe width='100px' height='59px'
+                                src='https://player.vimeo.com/video/184178553?autoplay=1&title=0&loop=1&badge=0&byline=0&portrait=0&background=1&muted=1'></iframe>
+                    </div>
                 </div>
                 <div class="video-overlay"></div>
             </section>

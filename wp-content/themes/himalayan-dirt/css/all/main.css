@@ -8,6 +8,7 @@
 
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 /* Body */
@@ -15,6 +16,7 @@ body {
     background: #ffffff;
     font-family: 'Montserrat';
     font-size: 1.4rem;
+    overflow-x: hidden;
 }
 
 main {
@@ -136,7 +138,7 @@ ul#menu-main-menu a {
 .hero-caption h2 {
     font-size: 7.6rem;
     display: block;
-    font-weight: 50;
+    font-weight: 100;
     text-transform: uppercase;
     color: #fff;
     line-height: 7.8rem;
@@ -837,17 +839,18 @@ footer {
     width: 100%;
 }
 
-a.btn.footer-contact:hover, form#quickContact .submit:hover {
+a.btn.footer-contact:hover, form#quickContact .submit:hover, .planBtn:hover, .bookNow:hover {
     max-width: 190px
 
 }
 
-a.btn.footer-contact, form#quickContact .submit {
+a.btn.footer-contact, form#quickContact .submit, .planBtn, .bookNow {
     font-size: 1.5rem;
     color: #fff;
     background: #87c440;
     padding: 10px 15px;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     max-width: 180px;
@@ -856,9 +859,10 @@ a.btn.footer-contact, form#quickContact .submit {
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
+    cursor: pointer;
 }
 
-a.btn.footer-contact svg, form#quickContact .submit svg {
+a.btn.footer-contact svg, form#quickContact .submit svg, .planBtn svg, .bookNow svg {
     width: 20px;
 }
 
@@ -996,6 +1000,7 @@ a#back-to-top img {
 
 .himalayan-hero-inner {
     position: relative;
+    overflow: hidden;
 }
 
 /*innper page rides*/
@@ -1051,7 +1056,7 @@ section#himalayan-rides .himalayan-dirt-discription a svg, section#himalayan-rid
     padding: 120px 0;
 }
 
-form#quickContact input[type=text], form#quickContact input[type=email] {
+input[type=text], input[type=email], input[type=date], select.form-control {
     background: #121212;
     border: none;
     min-height: 45px;
@@ -1060,6 +1065,32 @@ form#quickContact input[type=text], form#quickContact input[type=email] {
     color: #4e4e4e;
     font-size: 1.5rem;
     padding-left: 1.5rem;
+    width: 100%;
+}
+
+div#formTrip select,
+div#formTrip input[type=date],
+div#formTrip input[type=email],
+div#formTrip input[type=text] {
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+select.custom-select {
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 1.5rem center !important;
+    background-size: 8px 10px !important;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 form#quickContact .submit {
@@ -1069,7 +1100,7 @@ form#quickContact .submit {
 
 .ride-item.blog {
     background: #fff;
-    box-shadow: 0  0 21px 0 rgba(17,17,17,0.09);
+    box-shadow: 0 0 21px 0 rgba(17, 17, 17, 0.09);
 
 }
 
@@ -1077,18 +1108,213 @@ form#quickContact .submit {
     padding: 20px;
 
 }
+
 .ride-item.blog .himalayan-dirt-discription a {
     max-width: 60%;
 
 }
+
 .ride-item.blog .himalayan-dirt-discription p {
     color: #777;
     font-size: 1.3rem;
 
 }
+
 .ride-item.blog .himalayan-dirt-discription h2 {
     font-size: 1.8rem;
     color: #111;
     font-weight: 600;
     margin-top: 0;
+}
+
+body.modal-open > :not(.modal) {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+div#formTrip .modal-dialog {
+    max-width: 950px;
+}
+
+div#formTrip .modal-body {
+    padding: 0;
+}
+
+div#formTrip form {
+    padding: 40px 30px;
+}
+
+.image-ad {
+    background: url(../../image/trip-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.form-titles p {
+    color: #777;
+    line-height: 2.4rem;
+    margin-bottom: 30px;
+}
+
+.form-titles h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.image-ad:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #216de0, #0092ed, #00a9be, #00b76e, #86b915);
+    opacity: 0.1;
+}
+
+.orCall {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button.planBtn {
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.single-ride-nav {
+    display: flex;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.bookButton {
+    width: 220px;
+}
+
+.tab-links {
+    width: 100%;
+}
+
+.single-rides-nav li a:hover {
+    color: #87c440;
+}
+
+.single-rides-nav li a {
+    color: #666;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-transform: uppercase;
+
+}
+
+.single-rides-nav li {
+    margin-right: 25px;
+
+}
+
+.single-rides-nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+
+.ride-content:first-child {
+    margin-top: 40px;
+
+}
+
+.ride-content {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.ride-content-title h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ride-item p {
+    color: #777;
+    font-size: 1.4rem;
+}
+
+ul.nav.nav-tabs li a.active {
+    color: #87c440;
+}
+
+ul.nav.nav-tabs li a {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav.nav-tabs li {
+    margin-right: 25px;
+    /* margin-bottom: 25px; */
+}
+
+ul.nav.nav-tabs {
+    background: #f2f2f2;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.single-ride-nav {
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+
+}
+
+.single-ride-nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+}
+
+div#himalayanDirt {
+    width: 100%;
+}
+
+.single-ride-nav.sticky.topMenuVisible {
+    top: 80px;
+    box-shadow: none;
+}
+
+.bottom-contact {
+    width: 100%;
+}
+
+.gj-picker.gj-picker-bootstrap.datepicker.gj-unselectable {
+    filter: none !important;
+}
+
+span.input-group-append {
+    display: none;
 }
