@@ -105,6 +105,8 @@ jQuery(document).ready(function ($) {
     // scroll to section
     $(document).on('click', '.single-rides-nav a[href^="#"]', function (e) {
         e.preventDefault();
+        $('.activeScroll').removeClass('activeScroll');
+        $(this).addClass('activeScroll');
         $('html, body').stop().animate({
             scrollTop: $($(this).attr('href')).offset().top - 200
         }, 500, 'linear');

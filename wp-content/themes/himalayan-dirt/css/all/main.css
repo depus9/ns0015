@@ -1206,7 +1206,7 @@ button.planBtn {
     width: 100%;
 }
 
-.single-rides-nav li a:hover {
+.single-rides-nav li a:hover, .single-rides-nav li a.activeScroll {
     color: #87c440;
 }
 

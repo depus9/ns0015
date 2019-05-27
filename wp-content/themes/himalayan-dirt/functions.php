@@ -22,21 +22,22 @@ if (!isset($content_width)) {
 /**
  * Add Support for Custom Theme Options
  *
-*/
+ */
 
 require get_template_directory() . '/includes/custom-options.php';
 
 if (!function_exists('ishouvikwp_theme_setup')):
-    function ishouvikwp_theme_setup() {
+    function ishouvikwp_theme_setup()
+    {
 
         load_theme_textdomain('ishouvikwp', get_template_directory() . '/lang');
 
         add_theme_support('automatic-feed-links');
         add_theme_support('post-thumbnails');
-        add_theme_support( 'html5', array( 'search-form' ) );
+        add_theme_support('html5', array('search-form'));
 
         // This theme uses wp_nav_menu() in one location.
-        register_nav_menu( 'primary', __( 'Navigation Menu', 'ishouvikwp' ) );
+        register_nav_menu('primary', __('Navigation Menu', 'ishouvikwp'));
 
         // load custom walker menu class file
         require 'includes/class-ishouvikwp_walker_nav_menu.php';
@@ -48,7 +49,8 @@ add_action('after_setup_theme', 'ishouvikwp_theme_setup');
  * Define post thumbnail size.
  *
  */
-function ishouvikwp_images() {
+function ishouvikwp_images()
+{
 
     set_post_thumbnail_size(260, 180); // 260px wide x 180px high
 }
@@ -57,26 +59,29 @@ function ishouvikwp_images() {
  * Load CSS styles for theme.
  *
  */
-function ishouvikwp_styles_loader() {
+function ishouvikwp_styles_loader()
+{
     wp_enqueue_style('ishouvikwp-style', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css', false, '1.0', 'all');
     wp_enqueue_style('ishouvikwp-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '1.0', 'all');
-    wp_enqueue_style( 'ishouvikwp-animate', get_template_directory_uri() . '/vendor/animate.min.css', false, '1.0', 'all' );
-    wp_enqueue_style( 'owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', false, '1.0', 'all' );
-    wp_enqueue_style( 'ishouvik-wp-main', get_template_directory_uri() . '/css/all/main.css', false, '1.0', 'all' );
-    wp_enqueue_style( 'aos css', get_template_directory_uri() . '/css/all/aos.css', false, '1.1', 'all' );
-    wp_enqueue_style( 'Date Picker', get_template_directory_uri() . '/css/all/datepicker.css', false, '1.1', 'all' );
-    wp_enqueue_style( 'media-style', get_template_directory_uri() . '/css/media-style.css', false, '1.1', 'all' );
-    wp_enqueue_style( 'about-style', get_template_directory_uri() . '/css/about-style.css', false, '1.1', 'all' );
-    wp_enqueue_style( 'contact-style', get_template_directory_uri() . '/css/contact-style.css', false, '1.1', 'all' );
+    wp_enqueue_style('ishouvikwp-animate', get_template_directory_uri() . '/vendor/animate.min.css', false, '1.0', 'all');
+    wp_enqueue_style('owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', false, '1.0', 'all');
+    wp_enqueue_style('ishouvik-wp-main', get_template_directory_uri() . '/css/all/main.css', false, '1.0', 'all');
+    wp_enqueue_style('aos css', get_template_directory_uri() . '/css/all/aos.css', false, '1.1', 'all');
+    wp_enqueue_style('Date Picker', get_template_directory_uri() . '/css/all/datepicker.css', false, '1.1', 'all');
+    wp_enqueue_style('media-style', get_template_directory_uri() . '/css/media-style.css', false, '1.1', 'all');
+    wp_enqueue_style('about-style', get_template_directory_uri() . '/css/about-style.css', false, '1.1', 'all');
+    wp_enqueue_style('contact-style', get_template_directory_uri() . '/css/contact-style.css', false, '1.1', 'all');
     wp_enqueue_style('ishouvikwp-default', get_stylesheet_uri());
 }
+
 add_action('wp_enqueue_scripts', 'ishouvikwp_styles_loader');
 
 /**
  * Load JavaScript and jQuery files for theme.
  *
  */
-function ishouvikwp_scripts_loader() {
+function ishouvikwp_scripts_loader()
+{
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -85,7 +90,7 @@ function ishouvikwp_scripts_loader() {
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script('popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
     wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js', array('jquery'), '1.0', true);
-    wp_enqueue_script( 'wow-js', get_template_directory_uri() . '/vendor/wow.min.js' ); // Wow JS to invoke animate.css classes when on screen
+    wp_enqueue_script('wow-js', get_template_directory_uri() . '/vendor/wow.min.js'); // Wow JS to invoke animate.css classes when on screen
     wp_enqueue_script('bootstrap_form_fields', get_template_directory_uri() . '/js/form_fields.js'); // Add Bootstrap Classes to form fields
     wp_enqueue_script('owl-carousel', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'); //owl carousel
     wp_enqueue_script('aos script', get_template_directory_uri() . '/js/aos.js'); // All aos
@@ -95,105 +100,110 @@ function ishouvikwp_scripts_loader() {
 
 
 }
+
 add_action('wp_enqueue_scripts', 'ishouvikwp_scripts_loader');
 
-function ishwp_wow_js_loader() {
+function ishwp_wow_js_loader()
+{
     echo '<script type="text/javascript">new WOW().init();</script>';
 }
+
 add_action('wp_head', 'ishwp_wow_js_loader');
 /**
  * Define theme's widget areas.
  *
  */
-function ishouvikwp_widgets_init() {
+function ishouvikwp_widgets_init()
+{
     register_sidebar(
         array(
-            'name'          => __('Page Header', 'ishouvikwp'),
-            'id'            => 'page-header',
+            'name' => __('Page Header', 'ishouvikwp'),
+            'id' => 'page-header',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => "</div>",
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         )
     );
 
 
     register_sidebar(
         array(
-            'name'          => __('Site Intro', 'ishouvikwp'),
-            'id'            => 'site-intro',
+            'name' => __('Site Intro', 'ishouvikwp'),
+            'id' => 'site-intro',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => "</div>",
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         )
     );
 
     register_sidebar(
         array(
-            'name'          => __('Common Sidebar', 'ishouvikwp'),
-            'id'            => 'sidebar',
+            'name' => __('Common Sidebar', 'ishouvikwp'),
+            'id' => 'sidebar',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => "</div>",
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         )
     );
 
     register_sidebar(
         array(
-            'name'          => __('Pages Sidebar', 'ishouvikwp'),
-            'id'            => 'sidebar-pages',
+            'name' => __('Pages Sidebar', 'ishouvikwp'),
+            'id' => 'sidebar-pages',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => "</div>",
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         )
     );
 
     register_sidebar(
         array(
-            'name'          => __('Posts Sidebar', 'ishouvikwp'),
-            'id'            => 'sidebar-posts',
+            'name' => __('Posts Sidebar', 'ishouvikwp'),
+            'id' => 'sidebar-posts',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => "</div>",
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         )
     );
 
     /* Footer Widgets */
-    register_sidebar( array(
-        'name'          => __( 'Footer Col 1', 'ishouvikwp' ),
-        'id'            => 'footer-col-1',
-        'description'   => __( 'Appears in the first column on footer.', 'ishouvikwp' ),
+    register_sidebar(array(
+        'name' => __('Footer Col 1', 'ishouvikwp'),
+        'id' => 'footer-col-1',
+        'description' => __('Appears in the first column on footer.', 'ishouvikwp'),
         'before_widget' => '<div id="%1$s" class="col-md-4">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 
-    register_sidebar( array(
-        'name'          => __( 'Footer Col 2', 'ishouvikwp' ),
-        'id'            => 'footer-col-2',
-        'description'   => __( 'Appeasrs in the second column on footer.', 'ishouvikwp' ),
+    register_sidebar(array(
+        'name' => __('Footer Col 2', 'ishouvikwp'),
+        'id' => 'footer-col-2',
+        'description' => __('Appeasrs in the second column on footer.', 'ishouvikwp'),
         'before_widget' => '<div id="%1$s" class="col-md-4">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 
-    register_sidebar( array(
-        'name'          => __( 'Footer Col 3', 'ishouvikwp' ),
-        'id'            => 'footer-col-3',
-        'description'   => __( 'Appeasrs in the third column on footer.', 'ishouvikwp' ),
+    register_sidebar(array(
+        'name' => __('Footer Col 3', 'ishouvikwp'),
+        'id' => 'footer-col-3',
+        'description' => __('Appeasrs in the third column on footer.', 'ishouvikwp'),
         'before_widget' => '<div id="%1$s" class="col-md-4">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 
 }
+
 add_action('widgets_init', 'ishouvikwp_widgets_init');
 
 
@@ -202,21 +212,22 @@ add_action('widgets_init', 'ishouvikwp_widgets_init');
  *
  */
 if (!function_exists('ishouvikwp_content_nav')):
-    function ishouvikwp_content_nav($nav_id) {
+    function ishouvikwp_content_nav($nav_id)
+    {
 
         global $wp_query, $post;
 
         if ($wp_query->max_num_pages > 1) : ?>
 
-        <nav id="<?php echo $nav_id; ?>" class="navigation" role="navigation">
-            <h3 class="assistive-text"><?php _e('Post navigation', 'ishouvikwp'); ?></h3>
-            <div class="nav-previous alignleft"><?php next_posts_link(
-                __('<span class="meta-nav">&larr;</span> Older posts', 'ishouvikwp')
-            ); ?></div>
-            <div class="nav-next alignright"><?php previous_posts_link(
-                __('Newer posts <span class="meta-nav">&rarr;</span>', 'ishouvikwp')
-            ); ?></div>
-        </nav><!-- #<?php echo $nav_id; ?> .navigation -->
+            <nav id="<?php echo $nav_id; ?>" class="navigation" role="navigation">
+                <h3 class="assistive-text"><?php _e('Post navigation', 'ishouvikwp'); ?></h3>
+                <div class="nav-previous alignleft"><?php next_posts_link(
+                        __('<span class="meta-nav">&larr;</span> Older posts', 'ishouvikwp')
+                    ); ?></div>
+                <div class="nav-next alignright"><?php previous_posts_link(
+                        __('Newer posts <span class="meta-nav">&rarr;</span>', 'ishouvikwp')
+                    ); ?></div>
+            </nav><!-- #<?php echo $nav_id; ?> .navigation -->
 
         <?php endif;
     }
@@ -235,11 +246,11 @@ if (!function_exists('ishouvikwp_comment')) :
             case 'trackback' : ?>
 
                 <li class="comment media" id="comment-<?php comment_ID(); ?>">
-                    <div class="media-body">
-                        <p>
-                            <?php _e('Pingback:', 'ishouvikwp'); ?> <?php comment_author_link(); ?>
-                        </p>
-                    </div><!--/.media-body -->
+                <div class="media-body">
+                    <p>
+                        <?php _e('Pingback:', 'ishouvikwp'); ?><?php comment_author_link(); ?>
+                    </p>
+                </div><!--/.media-body -->
                 <?php
                 break;
             default :
@@ -247,50 +258,50 @@ if (!function_exists('ishouvikwp_comment')) :
                 global $post; ?>
 
                 <li class="comment media" id="li-comment-<?php comment_ID(); ?>">
-                        <a href="<?php echo $comment->comment_author_url;?>" class="pull-left">
-                            <?php echo get_avatar($comment, 64); ?>
-                        </a>
-                        <div class="media-body">
-                            <h4 class="media-heading comment-author vcard">
-                                <?php
-                                printf('<cite class="fn">%1$s %2$s</cite>',
-                                    get_comment_author_link(),
-                                    // If current post author is also comment author, make it known visually.
-                                    ($comment->user_id === $post->post_author) ? '<span class="label"> ' . __(
-                                        'Post author',
-                                        'ishouvikwp'
-                                    ) . '</span> ' : ''); ?>
-                            </h4>
-
-                            <?php if ('0' == $comment->comment_approved) : ?>
-                                <p class="comment-awaiting-moderation"><?php _e(
-                                    'Your comment is awaiting moderation.',
+                <a href="<?php echo $comment->comment_author_url; ?>" class="pull-left">
+                    <?php echo get_avatar($comment, 64); ?>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading comment-author vcard">
+                        <?php
+                        printf('<cite class="fn">%1$s %2$s</cite>',
+                            get_comment_author_link(),
+                            // If current post author is also comment author, make it known visually.
+                            ($comment->user_id === $post->post_author) ? '<span class="label"> ' . __(
+                                    'Post author',
                                     'ishouvikwp'
-                                ); ?></p>
-                            <?php endif; ?>
+                                ) . '</span> ' : ''); ?>
+                    </h4>
 
-                            <?php comment_text(); ?>
-                            <p class="meta">
-                                <?php printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
-                                            esc_url(get_comment_link($comment->comment_ID)),
-                                            get_comment_time('c'),
-                                            sprintf(
-                                                __('%1$s at %2$s', 'ishouvikwp'),
-                                                get_comment_date(),
-                                                get_comment_time()
-                                            )
-                                        ); ?>
-                            </p>
-                            <p class="reply">
-                                <?php comment_reply_link( array_merge($args, array(
-                                            'reply_text' => __('Reply <span>&darr;</span>', 'ishouvikwp'),
-                                            'depth'      => $depth,
-                                            'max_depth'  => $args['max_depth']
-                                        )
-                                    )); ?>
-                            </p>
-                        </div>
-                        <!--/.media-body -->
+                    <?php if ('0' == $comment->comment_approved) : ?>
+                        <p class="comment-awaiting-moderation"><?php _e(
+                                'Your comment is awaiting moderation.',
+                                'ishouvikwp'
+                            ); ?></p>
+                    <?php endif; ?>
+
+                    <?php comment_text(); ?>
+                    <p class="meta">
+                        <?php printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+                            esc_url(get_comment_link($comment->comment_ID)),
+                            get_comment_time('c'),
+                            sprintf(
+                                __('%1$s at %2$s', 'ishouvikwp'),
+                                get_comment_date(),
+                                get_comment_time()
+                            )
+                        ); ?>
+                    </p>
+                    <p class="reply">
+                        <?php comment_reply_link(array_merge($args, array(
+                                'reply_text' => __('Reply <span>&darr;</span>', 'ishouvikwp'),
+                                'depth' => $depth,
+                                'max_depth' => $args['max_depth']
+                            )
+                        )); ?>
+                    </p>
+                </div>
+                <!--/.media-body -->
                 <?php
                 break;
         endswitch;
@@ -305,7 +316,7 @@ endif;
 if (!function_exists('ishouvikwp_posted_on')) :
     function ishouvikwp_posted_on()
     {
-        printf(__('<i class="fa fa-clock-o"></i> Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>','ishouvikwp'),
+        printf(__('<i class="fa fa-clock-o"></i> Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'ishouvikwp'),
             esc_url(get_permalink()),
             esc_attr(get_the_time()),
             esc_attr(get_the_date('c')),
@@ -317,10 +328,11 @@ if (!function_exists('ishouvikwp_posted_on')) :
     }
 endif;
 
-if ( !function_exists(('ishouvik_categories_in'))  ):
-    function ishouvik_categories_in() {
-        $categories_list = get_the_category_list( __( ', ', 'ishouvikwp' ) );
-        if ( $categories_list ) {
+if (!function_exists(('ishouvik_categories_in'))):
+    function ishouvik_categories_in()
+    {
+        $categories_list = get_the_category_list(__(', ', 'ishouvikwp'));
+        if ($categories_list) {
             echo '<i class="fa fa-folder-open"></i> ' . $categories_list;
         }
     }
@@ -338,6 +350,7 @@ function ishouvikwp_body_classes($classes)
     }
     return $classes;
 }
+
 add_filter('body_class', 'ishouvikwp_body_classes');
 
 
@@ -368,12 +381,12 @@ function ishouvikwp_autoset_featured_img()
     if ($post_thumbnail == true) {
         return get_the_post_thumbnail();
     }
-    $image_args     = array(
-        'post_type'      => 'attachment',
-        'numberposts'    => 1,
+    $image_args = array(
+        'post_type' => 'attachment',
+        'numberposts' => 1,
         'post_mime_type' => 'image',
-        'post_parent'    => $post->ID,
-        'order'          => 'desc'
+        'post_parent' => $post->ID,
+        'order' => 'desc'
     );
     $attached_images = get_children($image_args, ARRAY_A);
     $first_image = reset($attached_images);
@@ -409,13 +422,15 @@ function ishouvikwp_wp_title($title, $sep)
     }
     return $title;
 }
+
 add_filter('wp_title', 'ishouvikwp_wp_title', 10, 2);
 
 /*
  * Menus
 */
 
-function ishouvik_nav_menu($theme_location) {
+function ishouvik_nav_menu($theme_location)
+{
     wp_nav_menu(
         array(
             'theme_location' => $theme_location,
@@ -433,49 +448,52 @@ function ishouvik_nav_menu($theme_location) {
 
 /**
  * Custom Excerpt
-*/
+ */
 
-function ishouvik_excerpt_length($length) {
+function ishouvik_excerpt_length($length)
+{
     return 150;
 }
+
 add_filter('excerpt_length', 'ishouvik_excerpt_length');
 
-function ishouvik_excerpt_more($more) {
+function ishouvik_excerpt_more($more)
+{
     global $post;
     return '... <div class="clearfix"><a class="btn btn-primary pull-right" href="' . get_permalink($post->ID) . '">Read More</a></div>';
 }
+
 add_filter('excerpt_more', 'ishouvik_excerpt_more');
-
-
 
 
 /*
  * Numbered Pagination
 */
-function ishouvik_pagination() {
-   if( is_singular() )
+function ishouvik_pagination()
+{
+    if (is_singular())
         return;
 
     global $wp_query;
 
     /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
+    if ($wp_query->max_num_pages <= 1)
         return;
 
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max = intval($wp_query->max_num_pages);
 
     /** Add current page to the array */
-    if ( $paged >= 1 )
+    if ($paged >= 1)
         $links[] = $paged;
 
     /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
+    if ($paged >= 3) {
         $links[] = $paged - 1;
         $links[] = $paged - 2;
     }
 
-    if ( ( $paged + 2 ) <= $max ) {
+    if (($paged + 2) <= $max) {
         $links[] = $paged + 2;
         $links[] = $paged + 1;
     }
@@ -483,38 +501,38 @@ function ishouvik_pagination() {
     echo '<nav aria-label="Page navigation"><ul class="pagination">' . "\n";
 
     /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li class="page-item">%s</li>' . "\n", get_previous_posts_link() );
+    if (get_previous_posts_link())
+        printf('<li class="page-item">%s</li>' . "\n", get_previous_posts_link());
 
     /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
+    if (!in_array(1, $links)) {
         $class = 1 == $paged ? ' class="active"' : '';
 
-        printf( '<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+        printf('<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)), '1');
 
-        if ( ! in_array( 2, $links ) )
+        if (!in_array(2, $links))
             echo '<li>…</li>';
     }
 
     /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
+    sort($links);
+    foreach ((array)$links as $link) {
         $class = $paged == $link ? ' class="active"' : '';
-        printf( '<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+        printf('<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
     }
 
     /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
+    if (!in_array($max, $links)) {
+        if (!in_array($max - 1, $links))
             echo '<li>…</li>' . "\n";
 
         $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+        printf('<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
     }
 
     /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+    if (get_next_posts_link())
+        printf('<li>%s</li>' . "\n", get_next_posts_link());
 
     echo '</ul></nav>' . "\n";
 }
@@ -522,15 +540,17 @@ function ishouvik_pagination() {
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
-function posts_link_attributes() {
+function posts_link_attributes()
+{
     return 'class="page-link"';
 }
 
 /*
  * Social Profiles
 */
-function is_social( $param = false ) {
-    switch($param) {
+function is_social($param = false)
+{
+    switch ($param) {
         case 'email':
             echo 'mailto:' . get_theme_mod('is_email_address');
             break;
@@ -560,27 +580,29 @@ function is_social( $param = false ) {
  * Navbar Brand
 */
 
-function is_navbar_brand() {
+function is_navbar_brand()
+{
     $logo_img = get_theme_mod('is_logo');
     if (get_theme_mod('is_navbar_brand') == 'yes'):
-        if ( !empty($logo_img) ) { ?>
-            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url( home_url('/') ); ?>">
-               <img src="<?php echo $logo_img; ?>" width="30" height="30" alt="<?php bloginfo('name'); ?>" />
+        if (!empty($logo_img)) { ?>
+            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>">
+                <img src="<?php echo $logo_img; ?>" width="30" height="30" alt="<?php bloginfo('name'); ?>"/>
             </a>
         <?php } else { ?>
-            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url( home_url('/') ); ?>">
+            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>">
                 <?php bloginfo('name'); ?>
             </a>
-        <?php
+            <?php
         }
     endif;
 }
 
 /**
-  *  Primary navigation class
-*/
+ *  Primary navigation class
+ */
 
-function is_site_primary_nav_class() {
+function is_site_primary_nav_class()
+{
     $nav_class = get_theme_mod('is_site_primary_nav_class');
 
     switch ($nav_class) {
@@ -598,31 +620,33 @@ function is_site_primary_nav_class() {
 
 /**
  * Custom Codes
-*/
+ */
 
-add_action('wp_head','is_custom_css');
-function is_custom_css() {
-    $output="<style>". get_theme_mod('is_custom_css') . "</style>";
+add_action('wp_head', 'is_custom_css');
+function is_custom_css()
+{
+    $output = "<style>" . get_theme_mod('is_custom_css') . "</style>";
     echo $output;
 }
 
-add_action('wp_head','is_custom_js');
-function is_custom_js() {
-    $output="<script>" . get_theme_mod('is_custom_js') . "</script>";
+add_action('wp_head', 'is_custom_js');
+function is_custom_js()
+{
+    $output = "<script>" . get_theme_mod('is_custom_js') . "</script>";
     echo $output;
 }
 
 /**
  * JetPack Responsive Videos
-*/
-add_theme_support( 'jetpack-responsive-videos' );
+ */
+add_theme_support('jetpack-responsive-videos');
 
 /**
  * Include the TGM_Plugin_Activation class.
  */
-require_once dirname( __FILE__ ) . '/includes/class-tgm-plugin-activation.php';
+require_once dirname(__FILE__) . '/includes/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+add_action('tgmpa_register', 'my_theme_register_required_plugins');
 /**
  * Register the required plugins for this theme.
  *
@@ -635,7 +659,8 @@ add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function my_theme_register_required_plugins() {
+function my_theme_register_required_plugins()
+{
 
     /**
      * Array of plugin arrays. Required keys are name and slug.
@@ -643,29 +668,29 @@ function my_theme_register_required_plugins() {
      */
     $plugins = array(
         array(
-            'name'      => 'Wordfence',
-            'slug'      => 'wordfence',
-            'required'  => false,
+            'name' => 'Wordfence',
+            'slug' => 'wordfence',
+            'required' => false,
         ),
         array(
-            'name'      => 'WP SMTP',
-            'slug'      => 'wp-smtp',
-            'required'  => false,
+            'name' => 'WP SMTP',
+            'slug' => 'wp-smtp',
+            'required' => false,
         ),
         array(
-            'name'      => 'SiteOrigin Page Builder',
-            'slug'      => 'siteorigin-panels',
-            'required'  => false,
+            'name' => 'SiteOrigin Page Builder',
+            'slug' => 'siteorigin-panels',
+            'required' => false,
         ),
         array(
-            'name'      => 'W3 Total Cache',
-            'slug'      => 'w3-total-cache',
-            'required'  => false,
+            'name' => 'W3 Total Cache',
+            'slug' => 'w3-total-cache',
+            'required' => false,
         ),
         array(
-            'name'      => 'Jetpack by WordPress.com',
-            'slug'      => 'jetpack',
-            'required'  => false
+            'name' => 'Jetpack by WordPress.com',
+            'slug' => 'jetpack',
+            'required' => false
         ),
     );
 
@@ -678,35 +703,35 @@ function my_theme_register_required_plugins() {
      */
     $config = array(
         'default_path' => '',                      // Default absolute path to pre-packaged plugins.
-        'menu'         => 'tgmpa-install-plugins', // Menu slug.
-        'has_notices'  => true,                    // Show admin notices or not.
-        'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-        'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+        'menu' => 'tgmpa-install-plugins', // Menu slug.
+        'has_notices' => true,                    // Show admin notices or not.
+        'dismissable' => true,                    // If false, a user cannot dismiss the nag message.
+        'dismiss_msg' => '',                      // If 'dismissable' is false, this message will be output at top of nag.
         'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-        'message'      => '',                      // Message to output right before the plugins table.
-        'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
-            'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
-            'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ), // %s = plugin name.
-            'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
-            'notice_can_install_required'     => _n_noop( 'iShouvik WP theme requires the following plugin: %1$s.', 'iShouvik WP theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s).
-            'notice_can_install_recommended'  => _n_noop( 'iShouvik WP theme recommends the following plugin: %1$s.', 'iShouvik WP theme recommends the following plugins: %1$s.' ), // %1$s = plugin name(s).
-            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ), // %1$s = plugin name(s).
-            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s).
-            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s).
-            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ), // %1$s = plugin name(s).
-            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ), // %1$s = plugin name(s).
-            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ), // %1$s = plugin name(s).
-            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
-            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins' ),
-            'return'                          => __( 'Return to Required Plugins Installer', 'tgmpa' ),
-            'plugin_activated'                => __( 'Plugin activated successfully.', 'tgmpa' ),
-            'complete'                        => __( 'All plugins installed and activated successfully. %s', 'tgmpa' ), // %s = dashboard link.
-            'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
+        'message' => '',                      // Message to output right before the plugins table.
+        'strings' => array(
+            'page_title' => __('Install Required Plugins', 'tgmpa'),
+            'menu_title' => __('Install Plugins', 'tgmpa'),
+            'installing' => __('Installing Plugin: %s', 'tgmpa'), // %s = plugin name.
+            'oops' => __('Something went wrong with the plugin API.', 'tgmpa'),
+            'notice_can_install_required' => _n_noop('iShouvik WP theme requires the following plugin: %1$s.', 'iShouvik WP theme requires the following plugins: %1$s.'), // %1$s = plugin name(s).
+            'notice_can_install_recommended' => _n_noop('iShouvik WP theme recommends the following plugin: %1$s.', 'iShouvik WP theme recommends the following plugins: %1$s.'), // %1$s = plugin name(s).
+            'notice_cannot_install' => _n_noop('Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.'), // %1$s = plugin name(s).
+            'notice_can_activate_required' => _n_noop('The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.'), // %1$s = plugin name(s).
+            'notice_can_activate_recommended' => _n_noop('The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.'), // %1$s = plugin name(s).
+            'notice_cannot_activate' => _n_noop('Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.'), // %1$s = plugin name(s).
+            'notice_ask_to_update' => _n_noop('The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.'), // %1$s = plugin name(s).
+            'notice_cannot_update' => _n_noop('Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.'), // %1$s = plugin name(s).
+            'install_link' => _n_noop('Begin installing plugin', 'Begin installing plugins'),
+            'activate_link' => _n_noop('Begin activating plugin', 'Begin activating plugins'),
+            'return' => __('Return to Required Plugins Installer', 'tgmpa'),
+            'plugin_activated' => __('Plugin activated successfully.', 'tgmpa'),
+            'complete' => __('All plugins installed and activated successfully. %s', 'tgmpa'), // %s = dashboard link.
+            'nag_type' => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
         )
     );
 
-    tgmpa( $plugins, $config );
+    tgmpa($plugins, $config);
 
 }
 

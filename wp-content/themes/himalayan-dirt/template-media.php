@@ -26,7 +26,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="media-page-content"
-         style="background-image:url(<?php echo bloginfo('template_directory'); ?>/image/media-page-bg.png);background-size:cover; background-position:center; min-height:100%;">
+         style="background-image:url(<?php echo bloginfo('template_directory'); ?>/image/media-page-bg.png);background-size:cover; background-position:center; min-height:100%;" id="himalayanDirt">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
