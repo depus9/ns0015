@@ -29,21 +29,9 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-ms-12 col-md-7">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder=" Full Name">
-                        </div>
-                        <div class="form-group d-flex justify-content-between">
-                            <input type="email" placeholder="Working Email">
-                            <input type="text" placeholder="Phone">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message"
-                                      rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn custom-sumit-btn mb-2">Submit</button>
-
-                    </form>
+                   <?php 
+                   echo do_shortcode( '' );
+                   ?>
                 </div>
                 <div class="col-ms-12 col-md-5">
                     <div class="himalayan-contact himalaya-address">
