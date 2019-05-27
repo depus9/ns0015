@@ -104,7 +104,8 @@
                                 <div class="col-md-6 form-group"><input type="text" name="phone" class="form-control"
                                                                         placeholder="Phone">
                                 </div>
-                                <div class="col-md-12 form-group"><select class="form-control custom-select" id=select-rides>
+                                <div class="col-md-12 form-group"><select class="form-control custom-select"
+                                                                          id=select-rides>
                                         <option value="Mesokanto La via Tilicho Lake">Mesokanto La via Tilicho Lake
                                         </option>
                                         <option value="Nepal A Mountain Bike Getaway">Nepal A Mountain Bike Getaway
@@ -114,7 +115,8 @@
                                 <div class="col-md-4 form-group"><input type="text" name="country" class="form-control"
                                                                         placeholder="Country">
                                 </div>
-                                <div class="col-md-4 form-group"><input type="text"  name="date" class="form-control datepicker"
+                                <div class="col-md-4 form-group"><input type="text" name="date"
+                                                                        class="form-control datepicker"
                                                                         placeholder="Date">
                                 </div>
 
@@ -149,6 +151,7 @@
                         </form>
                     </div>
                 </div>
+                <div class="close close-boking" data-dismiss="modal"></div>
             </div>
         </div>
     </div>

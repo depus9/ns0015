@@ -202,6 +202,7 @@ ul#menu-main-menu a {
     justify-content: center;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    z-index: 999999;
 }
 
 .arrow.bounce img {
@@ -860,6 +861,7 @@ a.btn.footer-contact, form#quickContact .submit, .planBtn, .bookNow {
     -o-transition: all 0.4s;
     transition: all 0.4s;
     cursor: pointer;
+    border: none;
 }
 
 a.btn.footer-contact svg, form#quickContact .submit svg, .planBtn svg, .bookNow svg {
@@ -1317,4 +1319,18 @@ div#himalayanDirt {
 
 span.input-group-append {
     display: none;
+}
+
+.close-boking {
+    height: 50px;
+    width: 50px;
+    background: url(../../image/close.svg) #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    /* transform: rotate(180deg); */
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
 }

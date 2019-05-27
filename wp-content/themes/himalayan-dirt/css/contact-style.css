@@ -1,33 +1,42 @@
-.media-contact-page{
+.media-contact-page {
     background: transparent;
-    margin-top: -10rem;
     padding-bottom: 10rem;
     position: relative;
 }
+
+form.contact-form, .himalayan-contact.himalaya-address {
+    margin-top: -10rem;
+}
+
 form.contact-form .form-group input {
-    width:100%;
+    width: 100%;
     height: 5rem;
     padding: 1.5rem;
     box-sizing: border-box;
     border: 1px solid #eee;
     border-radius: 2px;
-    
+    background: #fff;
+
 }
-form.contact-form .form-group input[type=text]:focus{
+
+form.contact-form .form-group input[type=text]:focus {
     box-shadow: none;
 }
+
 form.contact-form .form-group textarea {
     width: 100%;
-    height:25rem;
+    height: 25rem;
     padding: 1.5rem;
     box-sizing: border-box;
     border: 1px solid #eee;
     border-radius: 2px;
-    resize: none;  
+    resize: none;
 }
-form.contact-form .form-group textarea:focus{
+
+form.contact-form .form-group textarea:focus {
     box-shadow: none;
 }
+
 .form-group.d-flex.justify-content-between input.form-control {
     width: 48%;
     padding: 1.5rem;
@@ -35,29 +44,35 @@ form.contact-form .form-group textarea:focus{
     border: 1px solid #eee;
     border-radius: 2px;
 }
-.form-group.d-flex.justify-content-between input:focus{
+
+.form-group.d-flex.justify-content-between input:focus {
     box-shadow: none;
-    
+
 }
-.form-group.d-flex.justify-content-between input[type=email]:focus{
+
+.form-group.d-flex.justify-content-between input[type=email]:focus {
     box-shadow: none;
 }
+
 ::-webkit-input-placeholder {
     color: #555;
     font-size: 1.4rem;
     font-weight: 500;
-  }
-  ::-moz-placeholder {
+}
+
+::-moz-placeholder {
     color: #555;
     font-size: 1.4rem;
     font-weight: 500;
-  }
-  ::placeholder {
+}
+
+::placeholder {
     color: #555;
     font-size: 1.4rem;
     font-weight: 500;
-  }
-  form.contact-form button.custom-sumit-btn {
+}
+
+form.contact-form button.custom-sumit-btn {
     background: #87c440;
     font-size: 1.3rem;
     color: #fff;
@@ -65,6 +80,7 @@ form.contact-form .form-group textarea:focus{
     padding: 1.5rem 5rem;
     margin-top: 5rem;
 }
+
 form.contact-form {
     background: #fff;
     padding: 5rem 3rem;
@@ -77,22 +93,26 @@ form.contact-form {
     font-size: 2.2rem;
     margin-bottom: 0;
 }
-.media-contact-page .himalaya-address .footer-title span{
+
+.media-contact-page .himalaya-address .footer-title span {
     color: #999;
 }
 
 .media-contact-page .himalaya-address {
     background: #fff;
-    color:#111;
+    color: #111;
     padding: 5rem 3rem;
 
 }
-.himalaya-address .contact-item.location{
+
+.himalaya-address .contact-item.location {
     color: #111;
 }
+
 .himalaya-address .contact-item img {
     filter: invert(0);
 }
+
 .social-icons.contact-page-social-icon {
     background: #111;
     display: flex;
@@ -101,12 +121,14 @@ form.contact-form {
     justify-content: center;
     margin-top: 0;
 }
+
 .himalayan-location.-map {
     position: absolute;
     top: 0;
     z-index: -1;
     height: 100%;
 }
-.himalayan-location.-map img{
+
+.himalayan-location.-map img {
     height: 100%;
 }
