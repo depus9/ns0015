@@ -38,7 +38,7 @@ class Support_AdminActions {
 			Util_Environment::wp_config_path(),
 
 			/**
-			 * Attach .htaccess files
+			 * Attach .htaccess--old files
 			 */
 			Util_Rule::get_pgcache_rules_core_path(),
 			Util_Rule::get_pgcache_rules_cache_path(),

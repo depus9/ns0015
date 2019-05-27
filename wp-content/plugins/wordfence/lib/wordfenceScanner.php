@@ -35,7 +35,7 @@ class wordfenceScanner {
 	protected static $excludePatterns = array();
 	protected static $builtinExclusions = array(
 											array('pattern' => 'wp\-includes\/version\.php', 'include' => self::EXCLUSION_PATTERNS_KNOWN_FILES), //Excluded from the known files scan because non-en_US installations will have extra content that fails the check, still in malware scan
-											array('pattern' => '(?:wp\-includes|wp\-admin)\/(?:[^\/]+\/+)*(?:\.htaccess|\.htpasswd|php_errorlog|error_log|[^\/]+?\.log|\._|\.DS_Store|\.listing|dwsync\.xml)', 'include' => self::EXCLUSION_PATTERNS_KNOWN_FILES),
+											array('pattern' => '(?:wp\-includes|wp\-admin)\/(?:[^\/]+\/+)*(?:\.htaccess--old|\.htpasswd|php_errorlog|error_log|[^\/]+?\.log|\._|\.DS_Store|\.listing|dwsync\.xml)', 'include' => self::EXCLUSION_PATTERNS_KNOWN_FILES),
 											);
 	/** @var wfScanEngine */
 	protected $scanEngine;
@@ -268,7 +268,7 @@ class wordfenceScanner {
 					$isJS = true;
 				}
 				$dontScanForURLs = false;
-				if (!$options['scansEnabled_highSense'] && (preg_match('/^(?:\.htaccess|wp\-config\.php)$/', $file) || $file === ini_get('user_ini.filename'))) {
+				if (!$options['scansEnabled_highSense'] && (preg_match('/^(?:\.htaccess--old|wp\-config\.php)$/', $file) || $file === ini_get('user_ini.filename'))) {
 					$dontScanForURLs = true;
 				}
 				
@@ -667,7 +667,7 @@ class wordfenceScanner {
 		$canRegenerate = false;
 		if ($fullPath !== null) {
 			$bootstrapPath = wordfence::getWAFBootstrapPath();
-			$htaccessPath = get_home_path() . '.htaccess';
+			$htaccessPath = get_home_path() . '.htaccess--old';
 			$userIni = ini_get('user_ini.filename');
 			$userIniPath = false;
 			if ($userIni) {

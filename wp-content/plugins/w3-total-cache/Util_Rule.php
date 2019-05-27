@@ -54,7 +54,7 @@ class Util_Rule {
 		switch ( true ) {
 		case Util_Environment::is_apache():
 		case Util_Environment::is_litespeed():
-			return Util_Environment::site_path() . '.htaccess';
+			return Util_Environment::site_path() . '.htaccess--old';
 
 		case Util_Environment::is_nginx():
 			return Util_Rule::get_nginx_rules_path();
@@ -90,7 +90,7 @@ class Util_Rule {
 		switch ( true ) {
 		case Util_Environment::is_apache():
 		case Util_Environment::is_litespeed():
-			return W3TC_CACHE_MINIFY_DIR . DIRECTORY_SEPARATOR . '.htaccess';
+			return W3TC_CACHE_MINIFY_DIR . DIRECTORY_SEPARATOR . '.htaccess--old';
 
 		case Util_Environment::is_nginx():
 			return Util_Rule::get_nginx_rules_path();
@@ -108,7 +108,7 @@ class Util_Rule {
 		switch ( true ) {
 		case Util_Environment::is_apache():
 		case Util_Environment::is_litespeed():
-			return W3TC_CACHE_MINIFY_DIR . DIRECTORY_SEPARATOR . '.htaccess';
+			return W3TC_CACHE_MINIFY_DIR . DIRECTORY_SEPARATOR . '.htaccess--old';
 
 		case Util_Environment::is_nginx():
 			return Util_Rule::get_nginx_rules_path();
@@ -126,7 +126,7 @@ class Util_Rule {
 		switch ( true ) {
 		case Util_Environment::is_apache():
 		case Util_Environment::is_litespeed():
-			return '.htaccess';
+			return '.htaccess--old';
 
 		case Util_Environment::is_nginx():
 			return 'nginx.conf';
@@ -372,11 +372,11 @@ class Util_Rule {
 					$home_path = $match[2];
 
 					return W3TC_CACHE_PAGE_ENHANCED_DIR . DIRECTORY_SEPARATOR .
-						$home_path . DIRECTORY_SEPARATOR . '.htaccess';
+						$home_path . DIRECTORY_SEPARATOR . '.htaccess--old';
 				}
 			}
 
-			return W3TC_CACHE_PAGE_ENHANCED_DIR . DIRECTORY_SEPARATOR . '.htaccess';
+			return W3TC_CACHE_PAGE_ENHANCED_DIR . DIRECTORY_SEPARATOR . '.htaccess--old';
 
 		case Util_Environment::is_nginx():
 			return Util_Rule::get_nginx_rules_path();

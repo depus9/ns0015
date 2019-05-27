@@ -3090,14 +3090,14 @@ msgstr ""
 
 #: ../inc/options/install.php:276
 msgid ""
-"In the case where Apache is not used, the .htaccess file located in the root "
-"directory of the WordPress installation, wp-content/w3tc/pgcache/.htaccess "
-"and wp-content/w3tc/min/.htaccess contain directives that must be manually "
+"In the case where Apache is not used, the .htaccess--old file located in the root "
+"directory of the WordPress installation, wp-content/w3tc/pgcache/.htaccess--old "
+"and wp-content/w3tc/min/.htaccess--old contain directives that must be manually "
 "created for your web server software."
 msgstr ""
-"U slučaju kada se ne koristi Apache, fajl .htaccess, lociran u osnovnom "
-"direktorijumu WordPress instalacije, wp-content/w3tc/pgcache/.htaccess i wp-"
-"content/w3tc/min/.htaccess sadrži direktive koje moraju manuelno da se "
+"U slučaju kada se ne koristi Apache, fajl .htaccess--old, lociran u osnovnom "
+"direktorijumu WordPress instalacije, wp-content/w3tc/pgcache/.htaccess--old i wp-"
+"content/w3tc/min/.htaccess--old sadrži direktive koje moraju manuelno da se "
 "naprave za vaš web server softver."
 
 #: ../inc/options/install.php:277
@@ -5413,10 +5413,10 @@ msgstr "Ukupno postova:"
 
 #: ../inc/popup/cdn_import_library.php:36
 msgid ""
-"Create a list of permanent (301) redirects for use in your site's .htaccess "
+"Create a list of permanent (301) redirects for use in your site's .htaccess--old "
 "file"
 msgstr ""
-"Kreirati listu stalnih (301) preusmeravanja, za korišćenje u .htaccess fajlu "
+"Kreirati listu stalnih (301) preusmeravanja, za korišćenje u .htaccess--old fajlu "
 "vašeg sajta"
 
 #: ../inc/popup/cdn_import_library.php:41
@@ -5429,10 +5429,10 @@ msgstr ""
 
 #: ../inc/popup/cdn_import_library.php:58
 msgid ""
-"Add the following directives to your .htaccess file or if there are several "
+"Add the following directives to your .htaccess--old file or if there are several "
 "hundred they should be added directly to your configuration file:"
 msgstr ""
-"Dodajte sledeće direktive u vaš .htaccess fajl, ili, ako ih ima nekoliko "
+"Dodajte sledeće direktive u vaš .htaccess--old fajl, ili, ako ih ima nekoliko "
 "stotina, treba ih dodati direktno u vaš konfiguracioni fajl:"
 
 #: ../inc/popup/cdn_purge.php:5

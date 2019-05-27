@@ -102,7 +102,7 @@ class Root_Environment {
 	}
 
 	/**
-	 * Returns an array[filename]=rules of rules for .htaccess or nginx files
+	 * Returns an array[filename]=rules of rules for .htaccess--old or nginx files
 	 *
 	 * @param Config  $config
 	 * @return array

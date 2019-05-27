@@ -85,11 +85,11 @@ if ( $iis7_permalinks ) {
 } elseif ( $is_nginx ) {
 	$writable = false;
 } else {
-	if ( ( ! file_exists( $home_path . '.htaccess' ) && is_writable( $home_path ) ) || is_writable( $home_path . '.htaccess' ) ) {
+	if ( ( ! file_exists( $home_path . '.htaccess--old' ) && is_writable( $home_path ) ) || is_writable( $home_path . '.htaccess--old' ) ) {
 		$writable = true;
 	} else {
 		$writable        = false;
-		$existing_rules  = array_filter( extract_from_markers( $home_path . '.htaccess', 'WordPress' ) );
+		$existing_rules  = array_filter( extract_from_markers( $home_path . '.htaccess--old', 'WordPress' ) );
 		$new_rules       = array_filter( explode( "\n", $wp_rewrite->mod_rewrite_rules() ) );
 		$update_required = ( $new_rules !== $existing_rules );
 	}
@@ -146,7 +146,7 @@ if ( isset( $_POST['permalink_structure'] ) || isset( $_POST['category_base'] ) 
 			$message = __( 'Permalink structure updated. Remove write access on web.config file now!' );
 		}
 	} elseif ( ! $is_nginx && $permalink_structure && ! $using_index_permalinks && ! $writable && $update_required ) {
-		$message = __( 'You should update your .htaccess now.' );
+		$message = __( 'You should update your .htaccess--old now.' );
 	}
 
 	if ( ! get_settings_errors() ) {
@@ -383,9 +383,9 @@ else :
 <p>
 		<?php
 		printf(
-			/* translators: 1: .htaccess, 2: Codex URL, 3: CTRL + a */
+			/* translators: 1: .htaccess--old, 2: Codex URL, 3: CTRL + a */
 			__( 'If your %1$s file was <a href="%2$s">writable</a>, we could do this automatically, but it isn&#8217;t so these are the mod_rewrite rules you should have in your %1$s file. Click in the field and press %3$s to select all.' ),
-			'<code>.htaccess</code>',
+			'<code>.htaccess--old</code>',
 			__( 'https://codex.wordpress.org/Changing_File_Permissions' ),
 			'<kbd>CTRL + a</kbd>'
 		);

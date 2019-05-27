@@ -174,7 +174,7 @@ class W3TotalCache_Command extends \WP_CLI_Command {
 	/**
 	 * Get or set option.
 	 *
-	 * Options modifications don't update your .htaccess automatically.
+	 * Options modifications don't update your .htaccess--old automatically.
 	 * Use fix_environment command afterwards to do it.
 	 *
 	 * ## OPTIONS

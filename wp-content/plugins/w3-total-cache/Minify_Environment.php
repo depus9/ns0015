@@ -221,7 +221,7 @@ class Minify_Environment {
 			$home_url = get_home_url();
 
 			$tech_message =
-				( Util_Environment::is_nginx() ? 'nginx configuration file' : '.htaccess file' ) .
+				( Util_Environment::is_nginx() ? 'nginx configuration file' : '.htaccess--old file' ) .
 				' contains rules to rewrite url ' .
 				$url . '. If handled by ' .
 				'plugin, it returns "Minify OK" message.<br/>';
@@ -240,7 +240,7 @@ class Minify_Environment {
 					'(and that you have reloaded / restarted nginx).';
 			} else {
 				$error .= 'Please verify that the server configuration ' .
-					'allows .htaccess';
+					'allows .htaccess--old';
 			}
 
 			$error .= '<br />Unfortunately minification will ' .
@@ -307,7 +307,7 @@ class Minify_Environment {
 	 */
 
 	/**
-	 * Writes directives to WP .htaccess
+	 * Writes directives to WP .htaccess--old
 	 *
 	 * @throws Util_WpFile_FilesystemOperationException with S/FTP form if it can't get the required filesystem credentials
 	 */
@@ -335,7 +335,7 @@ class Minify_Environment {
 	 * @throws Util_WpFile_FilesystemOperationException with S/FTP form if it can't get the required filesystem credentials
 	 */
 	private function rules_core_remove( $exs ) {
-		// no need to remove rules for apache - its in cache .htaccess file
+		// no need to remove rules for apache - its in cache .htaccess--old file
 		if ( !Util_Environment::is_nginx() )
 			return;
 
@@ -485,7 +485,7 @@ class Minify_Environment {
 	 */
 
 	/**
-	 * Writes directives to file cache .htaccess
+	 * Writes directives to file cache .htaccess--old
 	 * Throws exception on error
 	 *
 	 * @param Config  $config

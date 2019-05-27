@@ -2117,13 +2117,13 @@
 
 				this.ajax('wordfence_checkHtaccess', {}, function(res) {
 					if (res.ok) {
-						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), title, 'We are about to change your <em>.htaccess</em> file. Please make a backup of this file before proceeding.'
+						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), title, 'We are about to change your <em>.htaccess--old</em> file. Please make a backup of this file before proceeding.'
 							+ '<br/>'
-							+ '<a href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + self.nonce + '" onclick="jQuery(\'#wfFPDNextBut\').prop(\'disabled\', false); return true;">Click here to download a backup copy of your .htaccess file now</a><br /><br /><input type="button" class="wf-btn wf-btn-default" name="but1" id="wfFPDNextBut" value="Click to fix .htaccess" disabled="disabled" onclick="WFAD.fixFPD_WriteHtAccess(' + issueID + ');" />');
+							+ '<a href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + self.nonce + '" onclick="jQuery(\'#wfFPDNextBut\').prop(\'disabled\', false); return true;">Click here to download a backup copy of your .htaccess--old file now</a><br /><br /><input type="button" class="wf-btn wf-btn-default" name="but1" id="wfFPDNextBut" value="Click to fix .htaccess--old" disabled="disabled" onclick="WFAD.fixFPD_WriteHtAccess(' + issueID + ');" />');
 					} else if (res.nginx) {
 						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), title, 'You are using an Nginx web server and using a FastCGI processor like PHP5-FPM. You will need to manually modify your php.ini to disable <em>display_error</em>');
 					} else if (res.err) {
-						self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess file for you because: " + res.err);
+						self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess--old file for you because: " + res.err);
 					}
 				});
 			},
@@ -2148,10 +2148,10 @@
 			hideFile: function(issueID, callback) {
 				WFAD.ajax('wordfence_checkHtaccess', {}, function(checkRes) {
 					if (checkRes.ok) {
-						WFAD.colorboxModalHTML((WFAD.isSmallScreen ? '300px' : '400px'), '.htaccess change', 'We are about to change your <em>.htaccess</em> file. Please make a backup of this file before proceeding.'
+						WFAD.colorboxModalHTML((WFAD.isSmallScreen ? '300px' : '400px'), '.htaccess--old change', 'We are about to change your <em>.htaccess--old</em> file. Please make a backup of this file before proceeding.'
 							+ '<br/>'
-							+ '<a id="dlButton" href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + WFAD.nonce + '">Click here to download a backup copy of your .htaccess file now</a>'
-							+ '<br /><br /><input type="button" class="wf-btn wf-btn-default" name="but1" id="wfFPDNextBut" value="Click to fix .htaccess" disabled="disabled" />'
+							+ '<a id="dlButton" href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + WFAD.nonce + '">Click here to download a backup copy of your .htaccess--old file now</a>'
+							+ '<br /><br /><input type="button" class="wf-btn wf-btn-default" name="but1" id="wfFPDNextBut" value="Click to fix .htaccess--old" disabled="disabled" />'
 						);
 						$('#dlButton').on('click', function(e) {
 							$('#wfFPDNextBut').prop('disabled', false);
@@ -2172,7 +2172,7 @@
 						WFAD.colorboxModal((WFAD.isSmallScreen ? '300px' : '400px'), 'Unable to automatically hide file', 'You are using an Nginx web server and using a FastCGI processor like PHP5-FPM. You will need to manually delete or hide those files.');
 					}
 					else if (checkRes.err) {
-						WFAD.colorboxModal((WFAD.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess file for you because: " + res.err);
+						WFAD.colorboxModal((WFAD.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess--old file for you because: " + res.err);
 					}
 				});
 			},
@@ -2197,17 +2197,17 @@
 
 				this.ajax('wordfence_checkHtaccess', {}, function(res) {
 					if (res.ok) {
-						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), title, 'We are about to change your <em>.htaccess</em> file. Please make a backup of this file before proceeding.'
+						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), title, 'We are about to change your <em>.htaccess--old</em> file. Please make a backup of this file before proceeding.'
 							+ '<br/>'
-							+ '<a href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + self.nonce + '" onclick="jQuery(\'#wf-htaccess-confirm\').prop(\'disabled\', false); return true;">Click here to download a backup copy of your .htaccess file now</a>' +
+							+ '<a href="' + WordfenceAdminVars.ajaxURL + '?action=wordfence_downloadHtaccess&nonce=' + self.nonce + '" onclick="jQuery(\'#wf-htaccess-confirm\').prop(\'disabled\', false); return true;">Click here to download a backup copy of your .htaccess--old file now</a>' +
 							'<br /><br />' +
-							'<button class="wf-btn wf-btn-default" type="button" id="wf-htaccess-confirm" disabled="disabled" onclick="WFAD.confirmDisableDirectoryListing(' + issueID + ');">Add code to .htaccess</button>');
+							'<button class="wf-btn wf-btn-default" type="button" id="wf-htaccess-confirm" disabled="disabled" onclick="WFAD.confirmDisableDirectoryListing(' + issueID + ');">Add code to .htaccess--old</button>');
 					} else if (res.nginx) {
 						self.colorboxModalHTML((self.isSmallScreen ? '300px' : '400px'), "You are using Nginx as your web server. " +
 							"You'll need to disable autoindexing in your nginx.conf. " +
 							"See the <a target='_blank'  rel='noopener noreferrer' href='http://nginx.org/en/docs/http/ngx_http_autoindex_module.html'>Nginx docs for more info</a> on how to do this.");
 					} else if (res.err) {
-						self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess file for you because: " + res.err);
+						self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), "We encountered a problem", "We can't modify your .htaccess--old file for you because: " + res.err);
 					}
 				});
 			},
@@ -3330,7 +3330,7 @@
 			confirmWAFConfigureAutoPrepend: function() {
 				var self = this;
 				this.ajax('wordfence_wafConfigureAutoPrepend', {}, function(res) {
-					self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), '.htaccess Updated', "Your .htaccess has been updated successfully. Please " +
+					self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), '.htaccess--old Updated', "Your .htaccess--old has been updated successfully. Please " +
 						"verify your site is functioning normally.");
 				});
 			},

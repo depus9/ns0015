@@ -526,7 +526,7 @@ class wfWAFWordPress extends wfWAF {
 	
 	public function uninstall() {
 		parent::uninstall();
-		@unlink(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess');
+		@unlink(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess--old');
 		@unlink(rtrim(WFWAF_LOG_PATH, '/') . '/template.php');
 		@unlink(rtrim(WFWAF_LOG_PATH, '/') . '/GeoLite2-Country.mmdb');
 		
@@ -595,7 +595,7 @@ class wfWAFWordPress extends wfWAF {
 	
 	public function fileList() {
 		$fileList = parent::fileList();
-		$fileList[] = rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess';
+		$fileList[] = rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess--old';
 		$fileList[] = rtrim(WFWAF_LOG_PATH, '/') . '/template.php';
 		$fileList[] = rtrim(WFWAF_LOG_PATH, '/') . '/GeoLite2-Country.mmdb';
 		return $fileList;
@@ -647,7 +647,7 @@ class wfWAFWordPress extends wfWAF {
 	}
 	
 	public static function writeHtaccess() {
-		@file_put_contents(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess', <<<APACHE
+		@file_put_contents(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess--old', <<<APACHE
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -657,7 +657,7 @@ class wfWAFWordPress extends wfWAF {
 </IfModule>
 APACHE
 		);
-		@chmod(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess', (wfWAFWordPress::permissions() | 0444));
+		@chmod(rtrim(WFWAF_LOG_PATH, '/') . '/.htaccess--old', (wfWAFWordPress::permissions() | 0444));
 	}
 }
 

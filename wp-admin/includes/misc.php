@@ -56,13 +56,13 @@ function got_url_rewrite() {
 }
 
 /**
- * Extracts strings from between the BEGIN and END markers in the .htaccess file.
+ * Extracts strings from between the BEGIN and END markers in the .htaccess--old file.
  *
  * @since 1.5.0
  *
  * @param string $filename
  * @param string $marker
- * @return array An array of strings from a file (.htaccess ) from between BEGIN and END markers.
+ * @return array An array of strings from a file (.htaccess--old ) from between BEGIN and END markers.
  */
 function extract_from_markers( $filename, $marker ) {
 	$result = array();
@@ -90,7 +90,7 @@ function extract_from_markers( $filename, $marker ) {
 }
 
 /**
- * Inserts an array of strings into a file (.htaccess ), placing it between
+ * Inserts an array of strings into a file (.htaccess--old ), placing it between
  * BEGIN and END markers.
  *
  * Replaces existing marked info. Retains surrounding
@@ -211,7 +211,7 @@ function save_mod_rewrite_rules() {
 	require_once( ABSPATH . 'wp-admin/includes/file.php' );
 
 	$home_path     = get_home_path();
-	$htaccess_file = $home_path . '.htaccess';
+	$htaccess_file = $home_path . '.htaccess--old';
 
 	/*
 	 * If the file doesn't already exist check for write access to the directory

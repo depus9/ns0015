@@ -279,7 +279,7 @@ class Cdn_Environment {
 	 */
 
 	/**
-	 * Writes directives to WP .htaccess
+	 * Writes directives to WP .htaccess--old
 	 *
 	 * @param Config  $config
 	 * @param Util_Environment_Exceptions $exs

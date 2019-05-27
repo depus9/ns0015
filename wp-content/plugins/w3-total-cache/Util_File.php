@@ -73,7 +73,7 @@ class Util_File {
 	/**
 	 * Recursive creates directory from some directory
 	 * Safely for web-accessible folders
-	 * (no .htaccess folders which cause 403 error later)
+	 * (no .htaccess--old folders which cause 403 error later)
 	 * Does not try to create directory before from
 	 *
 	 * @param string  $path
@@ -98,7 +98,7 @@ class Util_File {
 		foreach ( $dirs as $dir ) {
 			if ( $dir == '' )
 				return false;
-			if ( substr( $dir, 0, 1 ) == '.' )   // (no .htaccess folders)
+			if ( substr( $dir, 0, 1 ) == '.' )   // (no .htaccess--old folders)
 				return false;
 
 			$curr_path .= ( $curr_path == '' ? '' : '/' ) . $dir;

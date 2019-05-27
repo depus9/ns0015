@@ -39,7 +39,7 @@ jQuery(function() {
 	</tr>
 	<tr>
 		<td colspan="2">
-			<label><input id="cdn_import_library_redirect_permanent" type="checkbox" checked="checked" /> <?php _e( 'Create a list of permanent (301) redirects for use in your site\'s .htaccess file', 'w3-total-cache' ); ?></label>
+			<label><input id="cdn_import_library_redirect_permanent" type="checkbox" checked="checked" /> <?php _e( 'Create a list of permanent (301) redirects for use in your site\'s .htaccess--old file', 'w3-total-cache' ); ?></label>
 		</td>
 	</tr>
 	<tr>
@@ -67,7 +67,7 @@ jQuery(function() {
 <div id="cdn_import_library_log" class="log"></div>
 
 <p>
-	<?php _e( 'Add the following directives to your .htaccess file or if there are several hundred they should be added directly to your configuration file:', 'w3-total-cache' ); ?>
+	<?php _e( 'Add the following directives to your .htaccess--old file or if there are several hundred they should be added directly to your configuration file:', 'w3-total-cache' ); ?>
 </p>
 
 <p>

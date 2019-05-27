@@ -101,7 +101,7 @@ class wordfence {
 			wordfence::alert("Wordfence Deactivated", "A user with username \"$username\" deactivated Wordfence on your WordPress site.", wfUtils::getIP());
 		}
 		
-		//Check if caching is enabled and if it is, disable it and fix the .htaccess file.
+		//Check if caching is enabled and if it is, disable it and fix the .htaccess--old file.
 		wfCache::removeCaching();
 
 		//Used by MU code below
@@ -3931,12 +3931,12 @@ SQL
 		}
 		$file = wfCache::getHtaccessPath();
 		if(! $file){
-			return array('err' => "We could not find your .htaccess file to modify it.");
+			return array('err' => "We could not find your .htaccess--old file to modify it.");
 		}
 		$fh = @fopen($file, 'r+');
 		if(! $fh){
 			$err = error_get_last();
-			return array('err' => "We found your .htaccess file but could not open it for writing: " . $err['message']);
+			return array('err' => "We found your .htaccess--old file but could not open it for writing: " . $err['message']);
 		}
 		return array('ok' => 1);
 	}
@@ -4453,7 +4453,7 @@ SQL
 HTACCESS;
 
 		if (!wfUtils::htaccessPrepend($htaccessContent)) {
-			return array('errorMsg' => "You don't have permission to repair .htaccess. You need to either fix the file manually using FTP or change the file permissions and ownership so that your web server has write access to repair the file.");
+			return array('errorMsg' => "You don't have permission to repair .htaccess--old. You need to either fix the file manually using FTP or change the file permissions and ownership so that your web server has write access to repair the file.");
 		}
 		$issues->updateIssue((int) $_POST['issueID'], 'delete');
 		wfScanEngine::refreshScanNotification($issues);
@@ -5024,7 +5024,7 @@ HTACCESS;
 			return array('cerrorMsg' => "We could not find that issue in our database.");
 		}
 
-		$htaccess = ABSPATH . '/.htaccess';
+		$htaccess = ABSPATH . '/.htaccess--old';
 		$change   = "<IfModule mod_php5.c>\n\tphp_value display_errors 0\n</IfModule>\n<IfModule mod_php7.c>\n\tphp_value display_errors 0\n</IfModule>";
 		$content  = "";
 		if (file_exists($htaccess)) {
@@ -5032,14 +5032,14 @@ HTACCESS;
 		}
 
 		if (@file_put_contents($htaccess, trim($content . "\n" . $change), LOCK_EX) === false) {
-			return array('cerrorMsg' => "You don't have permission to repair .htaccess. You need to either fix the file
+			return array('cerrorMsg' => "You don't have permission to repair .htaccess--old. You need to either fix the file
 				manually using FTP or change the file permissions and ownership so that your web server has write access to repair the file.");
 		}
 		if (wfScanEngine::testForFullPathDisclosure()) {
 			// Didn't fix it, so revert the changes and return an error
 			file_put_contents($htaccess, $content, LOCK_EX);
 			return array(
-				'cerrorMsg' => "Modifying the .htaccess file did not resolve the issue, so the original .htaccess file
+				'cerrorMsg' => "Modifying the .htaccess--old file did not resolve the issue, so the original .htaccess--old file
 				was restored. You can fix this manually by setting <code>display_errors</code> to <code>Off</code> in
 				your php.ini if your site is on a VPS or dedicated server that you control.",
 			);
@@ -6761,7 +6761,7 @@ SQL
 		if (!$htaccessPath) {
 			return array(
 				'err'      => 1,
-				'errorMsg' => "Wordfence could not find your .htaccess file.",
+				'errorMsg' => "Wordfence could not find your .htaccess--old file.",
 			);
 		}
 
@@ -6773,18 +6773,18 @@ SQL
 					'ok' => 1,
 				);
 			} else {
-				// Revert any changes done to .htaccess
+				// Revert any changes done to .htaccess--old
 				file_put_contents($htaccessPath, $fileContents, LOCK_EX);
 				return array(
 					'err'      => 1,
-					'errorMsg' => "Updating the .htaccess did not fix the issue. You may need to add <code>Options -Indexes</code>
+					'errorMsg' => "Updating the .htaccess--old did not fix the issue. You may need to add <code>Options -Indexes</code>
 to your httpd.conf if using Apache, or find documentation on how to disable directory listing for your web server.",
 				);
 			}
 		}
 		return array(
 			'err'      => 1,
-			'errorMsg' => "There was an error writing to your .htaccess file.",
+			'errorMsg' => "There was an error writing to your .htaccess--old file.",
 		);
 	}
 
@@ -7518,12 +7518,12 @@ to your httpd.conf if using Apache, or find documentation on how to disable dire
 					$iniTTL = 300; //The PHP default
 				}
 				if (!$helper->usesUserIni()) {
-					$iniTTL = 0; //.htaccess
+					$iniTTL = 0; //.htaccess--old
 				}
 				$timeout = max(30, $iniTTL);
 				$timeoutString = wfUtils::makeDuration($timeout);
 				
-				$waitingResponse = '<p>' . __('The <code>auto_prepend_file</code> setting has been successfully removed from <code>.htaccess</code> and <code>.user.ini</code>. Once this change takes effect, Extended Protection Mode will be disabled.', 'wordfence') . '</p>';
+				$waitingResponse = '<p>' . __('The <code>auto_prepend_file</code> setting has been successfully removed from <code>.htaccess--old</code> and <code>.user.ini</code>. Once this change takes effect, Extended Protection Mode will be disabled.', 'wordfence') . '</p>';
 				if ($hasPreviousAutoPrepend) {
 					$waitingResponse .= '<p>' . __('Any previous value for <code>auto_prepend_file</code> will need to be re-enabled manually if still needed.', 'wordfence') . '</p>';
 				}
@@ -7550,7 +7550,7 @@ to your httpd.conf if using Apache, or find documentation on how to disable dire
 				}
 				return $response;
 			}
-			else { //.user.ini and .htaccess modified if applicable and waiting period elapsed or otherwise ready to advance to next step
+			else { //.user.ini and .htaccess--old modified if applicable and waiting period elapsed or otherwise ready to advance to next step
 				if (WFWAF_AUTO_PREPEND && !WFWAF_SUBDIRECTORY_INSTALL) { //.user.ini modified, but the WAF is still enabled
 					$retryAttempted = (isset($_POST['retryAttempted']) && $_POST['retryAttempted']);
 					$userIniError = '<p class="wf-error">';
@@ -8784,7 +8784,7 @@ file because of file permissions. Please verify the permissions are correct and 
 		}
 
 
-		// .htaccess configuration
+		// .htaccess--old configuration
 		switch ($serverConfig) {
 			case 'apache-mod_php':
 				$autoPrependDirective = sprintf("# Wordfence WAF
@@ -8829,7 +8829,7 @@ $userIniHtaccessDirectives
 		}
 
 		if (!empty($autoPrependDirective)) {
-			// Modify .htaccess
+			// Modify .htaccess--old
 			$htaccessContent = $wp_filesystem->get_contents($htaccessPath);
 
 			if ($htaccessContent) {
@@ -8844,8 +8844,8 @@ $userIniHtaccessDirectives
 			}
 
 			if (!$wp_filesystem->put_contents($htaccessPath, $htaccessContent)) {
-				throw new wfWAFAutoPrependHelperException('We were unable to make changes to the .htaccess file. It\'s
-				possible WordPress cannot write to the .htaccess file because of file permissions, which may have been
+				throw new wfWAFAutoPrependHelperException('We were unable to make changes to the .htaccess--old file. It\'s
+				possible WordPress cannot write to the .htaccess--old file because of file permissions, which may have been
 				set by another security plugin, or you may have set them manually. Please verify the permissions allow
 				the web server to write to the file, and retry the installation.');
 			}
@@ -8910,7 +8910,7 @@ auto_prepend_file = '%s'
 		$userIniPath = $this->getUserIniPath();
 		$userIni = ini_get('user_ini.filename');
 		
-		// Modify .htaccess
+		// Modify .htaccess--old
 		$htaccessContent = $wp_filesystem->get_contents($htaccessPath);
 		
 		if (is_string($htaccessContent)) {
@@ -8920,8 +8920,8 @@ auto_prepend_file = '%s'
 		}
 		
 		if (!$wp_filesystem->put_contents($htaccessPath, $htaccessContent)) {
-			throw new wfWAFAutoPrependHelperException('We were unable to make changes to the .htaccess file. It\'s
-			possible WordPress cannot write to the .htaccess file because of file permissions, which may have been
+			throw new wfWAFAutoPrependHelperException('We were unable to make changes to the .htaccess--old file. It\'s
+			possible WordPress cannot write to the .htaccess--old file because of file permissions, which may have been
 			set by another security plugin, or you may have set them manually. Please verify the permissions allow
 			the web server to write to the file, and retry the installation.');
 		}
@@ -8966,7 +8966,7 @@ file because of file permissions. Please verify the permissions are correct and 
 	}
 
 	public function getHtaccessPath() {
-		return get_home_path() . '.htaccess';
+		return get_home_path() . '.htaccess--old';
 	}
 
 	public function getUserIniPath() {

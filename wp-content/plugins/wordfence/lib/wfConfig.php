@@ -926,9 +926,9 @@ class wfConfig {
 			$lastEmail = self::get('lastLiteSpdEmail', false);
 			if( (! $lastEmail) || (time() - (int)$lastEmail > (86400 * 30))){
 				self::set('lastLiteSpdEmail', time());
-				wordfence::alert("Wordfence Upgrade not run. Please modify your .htaccess", "To preserve the integrity of your website we are not running Wordfence auto-update.\n" .
+				wordfence::alert("Wordfence Upgrade not run. Please modify your .htaccess--old", "To preserve the integrity of your website we are not running Wordfence auto-update.\n" .
 					"You are running the LiteSpeed web server which has been known to cause a problem with Wordfence auto-update.\n" .
-					"Please go to your website now and make a minor change to your .htaccess to fix this.\n" .
+					"Please go to your website now and make a minor change to your .htaccess--old to fix this.\n" .
 					"You can find out how to make this change at:\n" .
 					wfSupportController::supportURL(wfSupportController::ITEM_DASHBOARD_OPTION_LITESPEED_WARNING) . "\n" .
 					"\nAlternatively you can disable auto-update on your website to stop receiving this message and upgrade Wordfence manually.\n",
@@ -1002,7 +1002,7 @@ class wfConfig {
 	}
 	
 	/**
-	 * .htaccess file contents to disable all script execution in a given directory.
+	 * .htaccess--old file contents to disable all script execution in a given directory.
 	 */
 	private static $_disable_scripts_htaccess = '# BEGIN Wordfence code execution protection
 <IfModule mod_php5.c>
@@ -1020,11 +1020,11 @@ Options -ExecCGI
 	
 	private static function _uploadsHtaccessFilePath() {
 		$upload_dir = wp_upload_dir();
-		return $upload_dir['basedir'] . '/.htaccess';
+		return $upload_dir['basedir'] . '/.htaccess--old';
 	}
 
 	/**
-	 * Add/Merge .htaccess file in the uploads directory to prevent code execution.
+	 * Add/Merge .htaccess--old file in the uploads directory to prevent code execution.
 	 *
 	 * @return bool
 	 * @throws wfConfigException
@@ -1042,7 +1042,7 @@ Options -ExecCGI
 			$uploads_htaccess_has_content = strlen(trim($htaccess_contents)) > 0;
 		}
 		if (@file_put_contents($uploads_htaccess_file_path, ($uploads_htaccess_has_content ? "\n\n" : "") . self::$_disable_scripts_htaccess, FILE_APPEND | LOCK_EX) === false) {
-			throw new wfConfigException("Unable to save the .htaccess file needed to disable script execution in the uploads directory.  Please check your permissions on that directory.");
+			throw new wfConfigException("Unable to save the .htaccess--old file needed to disable script execution in the uploads directory.  Please check your permissions on that directory.");
 		}
 		self::set('disableCodeExecutionUploadsPHP7Migrated', true);
 		return true;
@@ -1065,7 +1065,7 @@ Options -ExecCGI
 	}
 
 	/**
-	 * Remove script execution protections for our the .htaccess file in the uploads directory.
+	 * Remove script execution protections for our the .htaccess--old file in the uploads directory.
 	 *
 	 * @return bool
 	 * @throws wfConfigException
@@ -1079,7 +1079,7 @@ Options -ExecCGI
 			if (preg_match(self::$_disable_scripts_regex, $htaccess_contents)) {
 				$htaccess_contents = preg_replace(self::$_disable_scripts_regex, '', $htaccess_contents);
 
-				$error_message = "Unable to remove code execution protections applied to the .htaccess file in the uploads directory.  Please check your permissions on that file.";
+				$error_message = "Unable to remove code execution protections applied to the .htaccess--old file in the uploads directory.  Please check your permissions on that file.";
 				if (strlen(trim($htaccess_contents)) === 0) {
 					// empty file, remove it
 					if (!@unlink($uploads_htaccess_file_path)) {
