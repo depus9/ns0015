@@ -39,26 +39,27 @@ get_header(); ?>
                             <span>address and contact</span>
                         </div>
                         <div class="contact-item location">
-                            <img src="http://localhost/ns0015/wp-content/themes/himalayan-dirt/image/location.svg">Sanepa
-                            -2,
-                            Lalitpur, Nepal
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/location.svg"><?php the_field('address', 'option'); ?>
                         </div>
                         <div class="contact-item">
-                            <img src="http://localhost/ns0015/wp-content/themes/himalayan-dirt/image/phone.svg">+977-9841234942
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/phone.svg"><?php the_field('phone', 'option'); ?>
                         </div>
 
                         <div class="contact-item">
-                            <img src="http://localhost/ns0015/wp-content/themes/himalayan-dirt/image/email.svg">info@himalayandirt.com
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/email.svg"><?php the_field('email', 'option'); ?>
                         </div>
                     </div>
                     <div class="social-icons contact-page-social-icon">
-                        <a href="#" title="HImalayan Dirt - Facebook"><img
+                        <a href="<?php the_field('facebook_link', 'option'); ?>" title="HImalayan Dirt - Facebook"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/fb-icon.png"
                                     alt="Facebook"> </a>
-                        <a href="#" title="HImalayan Dirt - Instagram"><img
+                        <a href="<?php the_field('instagram_link', 'option'); ?>" title="HImalayan Dirt - Instagram"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/instagram-icon.png"
                                     alt="Instagram"> </a>
-                        <a href="#" title="HImalayan Dirt - Youtube"><img
+                        <a href="<?php the_field('youtube_link', 'option'); ?>" title="HImalayan Dirt - Youtube"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/youtube.png" alt="Youtube">
                         </a>
                     </div>

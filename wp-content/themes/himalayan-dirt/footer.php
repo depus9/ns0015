@@ -17,17 +17,20 @@
                         <span>We are social</span>
                     </div>
                     <div class="social-icons">
-                        <a href="#" title="HImalayan Dirt - Facebook"><img
+                        <a href="<?php the_field('facebook_link', 'option'); ?>" title="HImalayan Dirt - Facebook"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/fb-icon.png"
                                     alt="Facebook"> </a>
-                        <a href="#" title="HImalayan Dirt - Instagram"><img
+                        <a href="<?php the_field('instagram_link', 'option'); ?>" title="HImalayan Dirt - Instagram"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/instagram-icon.png"
                                     alt="Instagram"> </a>
-                        <a href="#" title="HImalayan Dirt - Youtube"><img
+                        <a href="<?php the_field('youtube_link', 'option'); ?>" title="HImalayan Dirt - Youtube"
+                           target="_blank"><img
                                     src="<?php echo bloginfo('template_directory'); ?>/image/youtube.png" alt="Youtube">
                         </a>
                     </div>
-                    <a href="#" class="btn footer-contact" title="Himalayan Dirt - Contact Us">Contact us
+                    <a href="<?php the_field('button_link', 'option'); ?>" class="btn footer-contact" title="Himalayan Dirt - Contact Us"><?php the_field('button_text', 'option'); ?>
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                              y="0px"
@@ -40,10 +43,7 @@
                     </a>
                     <div class="copyRight">
                         <?php //get_template_part('content', 'contact_options'); ?>
-                        <p>&copy; <?php the_time('Y') ?> <a href="<?php bloginfo('url'); ?>"
-                                                            title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
-                            All
-                            Rights Reserved </p>
+                        <p><?php the_field('copyright', 'option'); ?></p>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -53,15 +53,14 @@
                             <span>address and contact</span>
                         </div>
                         <div class="contact-item location">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/image/location.svg">Sanepa -2,
-                            Lalitpur, Nepal
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/location.svg"><?php the_field('address', 'option'); ?>
                         </div>
                         <div class="contact-item">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/image/phone.svg">+977-9841234942
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/phone.svg"><?php the_field('phone', 'option'); ?>
                         </div>
 
                         <div class="contact-item">
-                            <img src="<?php echo bloginfo('template_directory'); ?>/image/email.svg">info@himalayandirt.com
+                            <img src="<?php echo bloginfo('template_directory'); ?>/image/email.svg"><?php the_field('email', 'option'); ?>
                         </div>
                     </div>
                 </div>
