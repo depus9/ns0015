@@ -13,8 +13,8 @@ get_header(); ?>
                              style="background: url(<?php the_post_thumbnail_url(); ?>)">
                             <div class="container">
                                 <div class="hero-caption">
-                                    <h2>Rides<span>Himalayan Dirt</span></h2>
-                                    <span class="dark">With a rider owned mountain bike tour company.</span>
+                                    <h2><?php the_field('big_thin_text'); ?> <span><?php the_field('big_bold_text'); ?></span></h2>
+                                    <span class="dark"><?php the_field('small_line_text'); ?></span>
                                 </div>
                             </div>
                         </div>
