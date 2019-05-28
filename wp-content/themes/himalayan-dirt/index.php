@@ -129,29 +129,16 @@ get_header(); ?>
             </section>
             <section class="about-bimal-gurung pt-0 pb-0">
                 <div class="row no-gutters">
+                <?php
+          $args = array('page_id' =>9);
+             $query = new WP_Query($args);
+              if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+        ?>
                     <div class="col-md-5" data-aos="fade-down">
                         <div class="intro-bimal">
-                            <p>
-                                To provide all sorts of Mountain Biking Tours in the Himalayas with the extensive
-                                knowledge of Terrains and Culture in a professional manner.
-                                Shred the Himalayan Dirt!
-
-                            </p>
-                            <p>Nepal was once a forbidden kingdom, hidden from the world, all her mysteries and secrets
-                                kept inside her mystical landlocked boarders. In the 1950’s when the curtain fell and
-                                her borders opened to a rapidly changing world looking for adventure and adrenaline,
-                                intrepid travelers thronged here by the thousands to the trek in the lap of the mighty
-                                Himalaya’s, home to eight of the ten world’s highest mountain peaks. They came to lose
-                                themselves in the mystery of the fabled Shangri-La … and perhaps a cloud of ganja.</p>
-                            <p>
-
-                            </p>
-                            <p>As the years went by many people only saw Nepal as a place to trek or as an abode of the
-                                hippy, but as the twenty-first century dawned so did the age of adventure tourism. To
-                                many it became apparent that the Jaw Dropping Mountains of the Himalaya boasted so much
-                                more than trudging one foot in front of the other. Now, Nepal is perhaps the fastest
-                                growing adventure play ground in the South Asia and is firmly in the eyes of the world’s
-                                mountain biking community.</p>
+        <p>
+         <?php the_field('about_bimal_gurung');?> 
+         </p>
                         </div>
                     </div>
                     <div class="col-md-7" data-aos="fade-up">
@@ -162,8 +149,8 @@ get_header(); ?>
                             </div>
                             <div class="bimal-info">
                                 <div class="name-info">
-                                    <h2>Bimal <span>Gurung</span></h2>
-                                    <span>Founder/Lead Guide</span>
+                                    <h2><?php the_field('name_bold')?><span><?php the_field('name_thin')?></span></h2>
+                                    <span><?php the_field('designation')?></span>
                                 </div>
                                 <div class="contact-info">
                                     <div class="cn"><img
@@ -179,6 +166,11 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                    <?php endwhile;
+      else: ?>
+         <p>Sorry, Nothing to display.</p>
+       <?php endif;
+       wp_reset_query(); ?>
                 </div>
             </section>
             <section class="himalayan-intro-video pt-0 pb-0" data-aos="zoom-in">
