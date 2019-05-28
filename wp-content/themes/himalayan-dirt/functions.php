@@ -58,6 +58,7 @@ function ishouvikwp_images()
 add_image_size( 'ride-small', 730, 470 , true);
 add_image_size( 'riders-image', 310, 314 , true);
 add_image_size( 'ride-thumb', 600, 360, true );
+add_image_size( 'media-thumb', 360, 220, true );
 
 /**
  * Load CSS styles for theme.

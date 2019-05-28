@@ -42,7 +42,7 @@ while($query->have_posts()):
                     <div class="ride-item blog" data-aos="slide-up" data-aos-delay="50">
                         <div class="image-container">
                             <a href= "<?php the_permalink();?>">
-                        <img src="<?php the_post_thumbnail_url('ride-thumb'); ?>"
+                        <img src="<?php the_post_thumbnail_url('media-thumb'); ?>"
                                  alt="Himalayan dirt ride to annapurna base camp"></a>
                         </div>
                         <div class="text-content">
