@@ -144,7 +144,7 @@ get_header(); ?>
                     <div class="col-md-7" data-aos="fade-up">
                         <div class="about-bimal">
                             <div class="image-container">
-                                <img src="<?php echo bloginfo('template_directory') ?>/image/bimal-gurung.png"
+                                <img src="<?php the_post_thumbnail_url();?>"
                                      alt="Bimal Gurung - Himalayan Dirt">
                             </div>
                             <div class="bimal-info">
@@ -155,13 +155,13 @@ get_header(); ?>
                                 <div class="contact-info">
                                     <div class="cn"><img
                                                 src="<?php echo bloginfo('template_directory') ?>/image/location.svg"
-                                                alt="phone"> <span>Sanepa - 2, Lalitpyr, Nepal</span></div>
+                                                alt="phone"> <span><?php the_field('address', 'option'); ?></span></div>
                                     <div class="cn"><img
                                                 src="<?php echo bloginfo('template_directory') ?>/image/phone.svg"
-                                                alt="phone"> <span>+977-9841234942</span></div>
+                                                alt="phone"> <span><?php the_field('phone', 'option'); ?></span></div>
                                     <div class="cn"><img
                                                 src="<?php echo bloginfo('template_directory') ?>/image/email.svg"
-                                                alt="phone"> <span>info@himalayandirt.com</span></div>
+                                                alt="phone"> <span><?php the_field('email', 'option'); ?></span></div>
                                 </div>
                             </div>
                         </div>
