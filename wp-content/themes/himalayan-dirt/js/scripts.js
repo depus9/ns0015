@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     $('div#himalayan-hero').owlCarousel({
         loop: true,
         margin: 10,
-        nav: true,
+        nav: false,
         responsive: {
             0: {
                 items: 1

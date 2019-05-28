@@ -1334,3 +1334,29 @@ span.input-group-append {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.himalayan-hero-slider .owl-dots {
+    position: absolute;
+    width: 100%;
+}
+
+.himalayan-hero-slider .owl-dots {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+}
+
+.himalayan-hero-slider .owl-dots .owl-dot.active {
+    background: #fff;
+
+}
+
+.himalayan-hero-slider .owl-dots .owl-dot {
+    height: 15px;
+    width: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0 5px;
+}

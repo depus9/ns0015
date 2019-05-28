@@ -70,13 +70,13 @@ get_header(); ?>
                     <div class="row">
 
                         <div class="col-md-8 aos-item" data-aos="fade-right">
-                            <div class="himalayan-ride-image mt-0">
+                            <div class="himalayan-ride-image <?php if($col == 0){echo 'mt-0';}else{echo 'mt-8';}?>">
                                 <img src="<?php the_post_thumbnail_url(); ?>"
                                      alt="Himalayan dirt ride to annapurna base camp">
                             </div>
                         </div>
                         <div class="col-md-4 aos-item" data-aos="fade-left">
-                            <div class="himalayan-dirt-discription pl-5 mt-0">
+                            <div class="himalayan-dirt-discription pl-5 <?php if($col == 0){echo 'mt-0';}else{echo 'mt-8';}?>">
                                 <span class="featured">Featured</span>
                                 <h2><?php the_title();?></h2>
                                 <p><?php the_field('excerpt_text');?></p>
@@ -94,7 +94,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-        }else{ ?>
+        <?php }else{ ?>
                     <div class="row">
                         <div class="col-md-4 aos-item" data-aos="fade-right">
                             <div class="himalayan-dirt-discription pr-5">
