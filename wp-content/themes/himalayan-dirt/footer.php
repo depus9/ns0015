@@ -30,7 +30,8 @@
                                     src="<?php echo bloginfo('template_directory'); ?>/image/youtube.png" alt="Youtube">
                         </a>
                     </div>
-                    <a href="<?php the_field('button_link', 'option'); ?>" class="btn footer-contact" title="Himalayan Dirt - Contact Us"><?php the_field('button_text', 'option'); ?>
+                    <a href="<?php the_field('button_link', 'option'); ?>" class="btn footer-contact"
+                       title="Himalayan Dirt - Contact Us"><?php the_field('button_text', 'option'); ?>
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                              y="0px"
@@ -156,7 +157,11 @@
     </div>
 </div>
 <!-- modal for pages -->
-
+<div class="mobile-contact-bar">
+    <div class="call-now"><a href="tel:<?php the_field('phone', 'option'); ?>">Call Now</a></div>
+    <div class="plan-trip"><a href="#">Plan Trip</a></div>
+    <div class="back-top-top"><img src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg"></div>
+</div>
 
 <?php wp_footer(); ?>
 </body>
