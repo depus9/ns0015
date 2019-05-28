@@ -40,6 +40,27 @@ jQuery(document).ready(function ($) {
             }
         }
     })
+    $('#single-rides').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        stagePadding: 0,
+        margin: 0,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
     $('#happy-riders').owlCarousel({
         loop: true,
         margin: 10,

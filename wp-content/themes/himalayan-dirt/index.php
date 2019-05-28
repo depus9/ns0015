@@ -1,4 +1,5 @@
 <?php
+//Template Name: Home
 /**
  * Description: Default Index template to display loop of blog posts
  *
@@ -9,7 +10,7 @@ get_header(); ?>
     <div class="row">
         <div id="primary" class="site-main-content" data-aos="zoom-in">
             <header class="page-title sr-only">
-                <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
+                <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company </h1>
             </header>
             <div class="himalayan-hero-slider">
                 <div class="owl-carousel owl-theme" id="himalayan-hero">
