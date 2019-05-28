@@ -9,7 +9,7 @@ get_header(); ?>
             <div class="himalayan-hero-inner">
                 <div id="himalayan-hero-inner">
                     <div class="hero-slider-item"
-                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayan-rides-bg.png);">
+                         style="background: url(<?php the_post_thumbnail_url(); ?>">
                         <div class="container">
                             <div class="hero-caption">
                                 <h2>Rides<span>Himalayan Dirt</span></h2>
