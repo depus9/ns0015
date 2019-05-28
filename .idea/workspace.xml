@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="913578e6-4ebd-4f53-b023-6babff6095dc" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>vh</find>
+      <find>#himalayan-dirt-happy-riders</find>
+      <find>slider</find>
+      <find>.hero-slider-item</find>
+      <find>john</find>
+      <find>hero</find>
+      <find>footer-contact</find>
+      <find>form#quickContact .submit</find>
+      <find>himalayan-dirt-rides-</find>
+      <find>blur(1px)</find>
+      <find>input type</find>
+      <find>myModal</find>
+      <find>iframe</find>
+      <find>a.btn.footer-contact</find>
+      <find>a.btn.footer-contact, form#quickContact .submit, .planBtn</find>
+      <find>book b</find>
+      <find>select</find>
+      <find>id=&quot;primary&quot;</find>
+      <find>.himalayan-hero-inner</find>
+      <find>scroll</find>
+      <find>font</find>
+      <find>10rem</find>
+      <find>loop</find>
+      <find>.arrow.bounce</find>
+      <find>himalayanDirt</find>
+      <find>date</find>
+      <find>a.btn.footer-contact, form#quickContact .submit, .planBtn, .bookNow</find>
+      <find>.single-rides-nav li a</find>
+      <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</find>
+      <find>round</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>col-md-6 aos-item</replace>
+      <replace>riders-</replace>
+      <replace>formTrip</replace>
+      <replace>blur(3px)</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/css/all/main.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/js/scripts.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/index.php" />
+        <option value="$USER_HOME$/Downloads/aos-master/demo/simple.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/css/all/aos.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/right-arrow.svg" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/arrow-white.svg" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/js/tilt.jquery.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-rides.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-rides-single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/css/contact-style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-contact.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-media.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/css/all/main.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/js/scripts.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/himalayan-dirt/includes/custom-options.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/wp-content/wflogs/config.php" />
+        <option value="$PROJECT_DIR$/wp-content/wflogs/config-synced.php" />
+        <option value="$PROJECT_DIR$/wp-content/wflogs/config-transient.php" />
+        <option value="$PROJECT_DIR$/wp-content/w3tc-config/master.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="/private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/email-order-details.php" />
+        <option value="$PROJECT_DIR$/.htaccess--old" />
+        <option value="/private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/order-details-item.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ns0015" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ns0015" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/himalayan-dirt" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="913578e6-4ebd-4f53-b023-6babff6095dc" name="Default Changelist" comment="" />
+      <created>1558534275537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558534275537</updated>
+      <workItem from="1558534277208" duration="25745000" />
+      <workItem from="1558623068245" duration="13583000" />
+      <workItem from="1558682397223" duration="388000" />
+      <workItem from="1558682888687" duration="39000" />
+      <workItem from="1558849242116" duration="3687000" />
+      <workItem from="1558859445795" duration="12618000" />
+      <workItem from="1558938001718" duration="5273000" />
+      <workItem from="1558951673331" duration="5407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="66740000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.72484076" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/css/all/main.min.css" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/css/all/main.css" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/js/scripts.js" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/footer.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/header.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/index.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/functions.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan/css/all/aos.css" />
+    <entry file="file://$USER_HOME$/Downloads/aos-master/demo/simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="127" column="12" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/quote.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/arrow-left-white.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/right-arrow.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-rides.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="238" column="18" selection-start-line="213" selection-start-column="12" selection-end-line="238" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/js/tilt.jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4125">
+          <caret line="275" column="39" selection-start-line="275" selection-start-column="39" selection-end-line="275" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/image/arrow-white.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="208" column="56" selection-start-line="208" selection-start-column="56" selection-end-line="208" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/css/contact-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="153" column="46" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-media.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/template-rides-single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/wflogs/config-livewaf.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/wflogs/config-synced.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/wflogs/config-transient.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/w3tc-config/master.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/wflogs/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/includes/custom-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="348" column="36" selection-start-line="348" selection-start-column="36" selection-end-line="348" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="e#23#29#1" expanded="true" />
+            <element signature="e#35#41#1" expanded="true" />
+            <element signature="e#12#18#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5055">
+          <caret line="342" column="3" selection-start-line="342" selection-start-column="3" selection-end-line="342" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/himalayan-dirt/css/all/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18150">
+          <caret line="1210" column="1" selection-start-line="1210" selection-start-column="1" selection-end-line="1210" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/email-order-items.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-531">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/order-details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/email-order-details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="76" column="95" selection-start-line="76" selection-start-column="95" selection-end-line="76" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess--old">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/0q/64n7vw893m743f0ljfzqqnh40000gn/T/fz3temp-2/order-details-item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
