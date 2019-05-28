@@ -79,7 +79,8 @@
             <div class="modal-body">
 
                 <div class="row no-gutters d-flex">
-                    <div class="image-ad col-md-5">
+                    <div class="image-ad col-md-5"
+                         style="background-image:url(<?php the_field('popup_image', 'option'); ?>)">
 
                     </div>
                     <div class="form col-md-7">
@@ -87,11 +88,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-titles">
-                                        <h2>Let's <strong>Plan Your Next Trip</strong>, Together</h2>
-                                        <p>We want your perfect travel experience to be created. We value your time and
-                                            strive to always be wonderful on your
-                                            journeys. Let us know the best way to get in touch with you about your
-                                            travel wishes. Very soon we will be in touch.
+                                        <h2><?php the_field('popup_title', 'option'); ?></h2>
+                                        <p><?php the_field('popup_short_text', 'option'); ?>
                                         </p>
                                     </div>
                                 </div>
@@ -146,7 +144,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="orCall"><p>Or just call us immediately at <strong>+977-9841234942</strong></p>
+                            <div class="orCall"><p><?php the_field('bottom_text', 'option'); ?></p>
                             </div>
                         </form>
                     </div>

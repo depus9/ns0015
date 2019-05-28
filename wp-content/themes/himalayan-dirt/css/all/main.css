@@ -1425,3 +1425,12 @@ span.input-group-append {
 .mobile-contact-bar.show-bar {
     bottom: 0;
 }
+.mobile-contact-bar a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
