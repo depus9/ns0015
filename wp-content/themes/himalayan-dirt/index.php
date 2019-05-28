@@ -13,15 +13,23 @@ get_header(); ?>
             </header>
             <div class="himalayan-hero-slider">
                 <div class="owl-carousel owl-theme" id="himalayan-hero">
+                <?php $args = array('post_type'=>'heroslider','posts_per_page'=>-1);
+    $query = new WP_Query($args);
+      if($query->have_posts()){
+        while($query->have_posts()):
+        $query->the_post(); 
+    ?>
                     <div class="hero-slider-item"
-                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayn-dirt-hero-1.png);">
+                         style="background: url(<?php the_post_thumbnail_url(); ?>);">
                         <div class="container">
                             <div class="hero-caption">
-                                <h2>Shred the<span>Himalayan Dirt</span></h2>
-                                <span>With a rider owned mountain bike tour company.</span>
+                                <h2><?php the_field('big_thin_text'); ?><span><?php the_field('big_bold_text'); ?></span></h2>
+                                <span><?php the_field('small_line_text'); ?></span>
                             </div>
                         </div>
                     </div>
+                    <?php endwhile; }else{ echo 'Slides not found!';}
+ wp_reset_query();?>
                 </div>
                 <div class="arrow bounce">
                     <img

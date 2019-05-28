@@ -19,8 +19,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="arrow bounce">
-                    <img
-                            src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
+                    <img src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
                 </div>
             </div>
         </div>
