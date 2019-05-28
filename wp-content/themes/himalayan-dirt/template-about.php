@@ -6,23 +6,26 @@ get_header(); ?>
             <header class="page-title sr-only">
                 <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
             </header>
-            <div class="himalayan-hero-inner">
-                <div id="himalayan-hero-inner">
-                    <div class="hero-slider-item"
-                         style="background: url(<?php echo bloginfo('template_directory') ?>/image/himalayan-rides-bg.png);">
-                        <div class="container">
-                            <div class="hero-caption">
-                                <h2> About<span>Himalayan Dirt</span></h2>
-                                <span class="dark">With a rider owned mountain bike tour company.</span>
+            <?php while (have_posts()):the_post(); ?>
+                <div class="himalayan-hero-inner">
+                    <div id="himalayan-hero-inner">
+                        <div class="hero-slider-item"
+                             style="background: url(<?php the_post_thumbnail_url(); ?>)">
+                            <div class="container">
+                                <div class="hero-caption">
+                                    <h2><?php the_field('big_thin_text'); ?> <span><?php the_field('big_bold_text'); ?></span></h2>
+                                    <span class="dark"><?php the_field('small_line_text'); ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="arrow bounce">
+                        <img
+                                src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg"
+                                alt="back to top">
+                    </div>
                 </div>
-                <div class="arrow bounce">
-                    <img
-                            src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
-                </div>
-            </div>
+            <?php endwhile;; ?>
         </div>
     </div>
     <section class="himalayan-dirt" id="himalayanDirt">
