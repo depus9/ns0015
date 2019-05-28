@@ -161,8 +161,13 @@ get_header(); ?>
                         <div class="col-md-7" data-aos="fade-up">
                             <div class="about-bimal">
                                 <div class="image-container">
-                                    <img src="<?php the_post_thumbnail_url(); ?>"
-                                         alt="Bimal Gurung - Himalayan Dirt">
+                                    <?php
+
+                                    $image = get_field('personal_image');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                    <?php endif; ?>
                                 </div>
                                 <div class="bimal-info">
                                     <div class="name-info">
