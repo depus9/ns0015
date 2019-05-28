@@ -1,10 +1,5 @@
 <section class="himalayan-dirt" id="himalayanDirt">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm-8 text-center"><p>We specialized in Mountain biking tours along with trekking in the Himalayas. 
-                            We are the locals and we know our backyard more than anyone else does</p></div>
-                    </div>
-                </div>
+<?php get_template_part('template-part-inner')?>
             </section>
             <section class="about-bimal-gurung pt-0 pb-0">
                 <div class="row no-gutters">

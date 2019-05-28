@@ -145,6 +145,7 @@ get_header(); ?>
                 </div>
                 git
             </section>
+            
             <?php get_template_part('template-part')?>
             <section class="himalayan-intro-video pt-0 pb-0" data-aos="zoom-in">
                 <div class="intro-video-container">
