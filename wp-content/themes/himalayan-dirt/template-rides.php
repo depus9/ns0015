@@ -37,7 +37,7 @@ get_header(); ?>
                             <div class="col-md-5 offset-md-1" data-aos="slide-up">
                                 <div class="ride-item">
                                     <div class="image-container">
-                                        <img src="<?php echo bloginfo('template_directory') ?>/image/riders-1.png"
+                                        <img src="(<?php the_post_thumbnail_url(); ?>"
                                              alt="Himalayan dirt ride to annapurna base camp">
                                     </div>
                                     <div class="text-content">
