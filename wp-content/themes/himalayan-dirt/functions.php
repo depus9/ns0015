@@ -57,7 +57,7 @@ function ishouvikwp_images()
 //custom sizes
 add_image_size( 'ride-small', 730, 470 , true);
 add_image_size( 'riders-image', 310, 314 , true);
-add_image_size( 'fullpage-thumb size', 590, 9999 );
+add_image_size( 'ride-thumb', 600, 360, true );
 
 /**
  * Load CSS styles for theme.
