@@ -71,7 +71,7 @@ get_header(); ?>
 
                         <div class="col-md-8 aos-item" data-aos="fade-right">
                             <div class="himalayan-ride-image <?php if($col == 0){echo 'mt-0';}else{echo 'mt-8';}?>">
-                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                <img src="<?php the_post_thumbnail_url('ride-small'); ?>"
                                      alt="Himalayan dirt ride to annapurna base camp">
                             </div>
                         </div>
@@ -116,7 +116,7 @@ get_header(); ?>
                         </div>
                         <div class="col-md-8 aos-item" data-aos="fade-left">
                             <div class="himalayan-ride-image">
-                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                <img src="<?php the_post_thumbnail_url('ride-small'); ?>"
                                      alt="Himalayan dirt ride to annapurna base camp">
                             </div>
                         </div>

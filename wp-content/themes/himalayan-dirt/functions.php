@@ -54,6 +54,10 @@ function ishouvikwp_images()
 
     set_post_thumbnail_size(260, 180); // 260px wide x 180px high
 }
+//custom sizes
+add_image_size( 'ride-small', 730, 470 );
+add_image_size( 'homepage-thumb size', 220, 180 );
+add_image_size( 'fullpage-thumb size', 590, 9999 );
 
 /**
  * Load CSS styles for theme.
