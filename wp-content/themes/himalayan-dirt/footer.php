@@ -70,7 +70,7 @@
     </div>
 </footer>
 
-<a href="#" id="back-to-top" title="Back to top"><img
+<a href="#" class="back-top-top" title="Back to top"><img
             src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top"></a>
 <!-- modal for pages -->
 <div class="modal fade" id="formTrip" tabindex="-1" role="dialog" aria-labelledby="formTripLabel" aria-hidden="true">

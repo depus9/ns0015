@@ -14,9 +14,12 @@ jQuery(document).ready(function ($) {
         if (c < currentScrollTop && a > b + b) {
             navbar.addClass("scrollUp");
             $('.single-ride-nav').removeClass("topMenuVisible");
+            $('.mobile-contact-bar').addClass("show-bar");
         } else if (c > currentScrollTop && !(a <= b)) {
             navbar.removeClass("scrollUp");
             $('.single-ride-nav').addClass("topMenuVisible");
+
+            $('.mobile-contact-bar').removeClass("show-bar");
         }
         c = currentScrollTop;
     });
@@ -56,21 +59,21 @@ jQuery(document).ready(function ($) {
     //aos animation
     AOS.init();
     //back to top action
-    if ($('#back-to-top').length) {
+    if ($('.back-top-top').length) {
         var scrollTrigger = 500, // px
             backToTop = function () {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop > scrollTrigger) {
-                    $('#back-to-top').addClass('show');
+                    $('.back-top-top').addClass('show');
                 } else {
-                    $('#back-to-top').removeClass('show');
+                    $('.back-top-top').removeClass('show');
                 }
             };
         backToTop();
         $(window).on('scroll', function () {
             backToTop();
         });
-        $('#back-to-top').on('click', function (e) {
+        $('.back-top-top').on('click', function (e) {
             e.preventDefault();
             $('html,body').animate({
                 scrollTop: 0

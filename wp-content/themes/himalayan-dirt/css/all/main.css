@@ -925,7 +925,7 @@ div#happy-riders .owl-nav button span {
 }
 
 /*back to top button*/
-#back-to-top {
+.back-top-top {
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -950,17 +950,17 @@ div#happy-riders .owl-nav button span {
     visibility: hidden;
 }
 
-#back-to-top:hover {
+.back-top-top:hover {
     background: #86c340;
 
 }
 
-#back-to-top.show {
+.back-top-top.show {
     opacity: 1;
     visibility: visible;
 }
 
-a#back-to-top {
+a.back-top-top {
     background: #111;
     transform: rotate(270deg);
     height: 60px;
@@ -970,7 +970,7 @@ a#back-to-top {
     justify-content: center;
 }
 
-a#back-to-top img {
+a.back-top-top img {
     width: 20px;
 }
 
@@ -1376,11 +1376,16 @@ span.input-group-append {
     /* justify-content: center; */
     background: #87c440;
     z-index: 999;
-    bottom: 0;
+    bottom: -80px;
     left: 0;
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .mobile-contact-bar .back-top-top {
@@ -1390,6 +1395,9 @@ span.input-group-append {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    position: static;
 }
 
 .mobile-contact-bar .call-now,
@@ -1413,4 +1421,7 @@ span.input-group-append {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
+}
+.mobile-contact-bar.show-bar {
+    bottom: 0;
 }
