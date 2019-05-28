@@ -39,10 +39,21 @@ get_header(); ?>
             <section class="himalayan-dirt" id="himalayanDirt">
                 <div class="container">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-sm-8 text-center"><p>To provide all sorts of Mountain Biking Tours in the
-                                Himalayas with the extensive knowledge of Terrains and Culture in a professional
-                                manner.
-                                Shred the Himalayan Dirt! with a rider owned Mountain Bike Tour Company.</p></div>
+                        <div class="col-sm-8 text-center">
+                        <?php
+          $args = array('page_id' =>9);
+             $query = new WP_Query($args);
+              if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+        ?>
+         <p>
+         <?php the_field('excerpt_text');?> 
+         </p>
+     <?php endwhile;
+      else: ?>
+         <p>Sorry, Nothing to display.</p>
+       <?php endif;
+       wp_reset_query(); ?>
+                     </div>
                     </div>
                 </div>
             </section>
