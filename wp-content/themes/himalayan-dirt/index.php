@@ -80,8 +80,8 @@ get_header(); ?>
                                         } else {
                                             echo 'mt-8';
                                         } ?>">
-                                            <img src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                                                 alt="Himalayan dirt ride to annapurna base camp">
+                                           <a href="<?php the_permalink(); ?>"> <img src="<?php the_post_thumbnail_url('ride-small'); ?>"
+                                                 alt="<?php the_title();?>" title="<?php the_title();?>"> </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4 aos-item" data-aos="fade-left">
@@ -93,7 +93,7 @@ get_header(); ?>
                                             <span class="featured">Featured</span>
                                             <h2><?php the_title(); ?></h2>
                                             <p><?php the_field('excerpt_text'); ?></p>
-                                            <a href="#" title="Learn more about tilicho lake"><span>Learn More</span>
+                                            <a href="<?php the_permalink(); ?>" title="Learn more about tilicho lake"><span>Learn More</span>
                                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                                      y="0px"
@@ -115,7 +115,7 @@ get_header(); ?>
                                             <span class="featured">Featured</span>
                                             <h2><?php the_title(); ?></h2>
                                             <p><?php the_field('excerpt_text'); ?></p>
-                                            <a href="#" title="Learn more about tilicho lake"><span>Learn More</span>
+                                            <a href="<?php the_permalink(); ?>" title="Learn more about tilicho lake"><span>Learn More</span>
                                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                                      y="0px"
@@ -131,8 +131,9 @@ get_header(); ?>
                                     </div>
                                     <div class="col-md-8 aos-item" data-aos="fade-left">
                                         <div class="himalayan-ride-image">
-                                            <img src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                                                 alt="Himalayan dirt ride to annapurna base camp">
+                                        <a href="<?php the_permalink(); ?>"> <img src="<?php the_post_thumbnail_url('ride-small'); ?>" 
+                                        alt="<?php the_title(); ?>" title="<?php the_title();?>"> </a>
+                                    </div>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +144,6 @@ get_header(); ?>
                     }
                     wp_reset_query(); ?>
                 </div>
-                git
             </section>
             
             <?php get_template_part('template-part')?>
