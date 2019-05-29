@@ -60,7 +60,7 @@ get_header(); ?>
         </div>
     </div>
 <?php endwhile; ?>
-<?php get_template_part('template-action-bar')?>
+<?php get_template_part('template-action-bar') ?>
     </div>
     </div>
 <?php get_footer(); ?>
