@@ -3,6 +3,9 @@ get_header(); ?>
     <div class="row">
         <?php get_template_part('template-slider-part') ?>
         <div id="himalayanDirt">
+        <?php  
+        if (have_posts()) : while (have_posts()) : the_post();
+                        ?>
             <div class="single-ride-nav">
                 <div class="container d-flex justify-content-between">
                     <div class="tab-links">
@@ -13,8 +16,8 @@ get_header(); ?>
                         </ul>
                     </div>
                     <div class="bookButton">
-                        <button class="bookNow ml-auto" id="bookNow" data-select="Nepal A Mountain Bike Getaway">Book
-                            Now
+                        <button class="bookNow ml-auto" id="bookNow" data-select="Nepal A Mountain Bike Getaway">
+                        BookNow
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;"
@@ -35,18 +38,7 @@ get_header(); ?>
                         <h2>Overviews</h2>
                     </div>
                     <div class="ride-item">
-                        <p>This is an alternate route in the famous Annapurna Circuit, to connect from Manang to
-                            Mustang. Unlike Thorong-La, only few amount of trekkers cross over the Mesokanto Pass
-                            every year to heading towards Lower Mustang Jomsom. There’s hardly any mountain bikers
-                            has been through.
-
-                        </p>
-                        <p>The trails separates from Manang, instead of heading towards Thorong-La5416m, we take the
-                            trail on the left which leads to Khangsyhar village. There are plenty of single track
-                            riding, which includes some quite technical sections too. Especially when approaching on
-                            the high altitude areas the hike a bike section is always a part of this trip.
-
-                        </p>
+                    <p><?php the_field('overviews'); ?></p>
                     </div>
                 </div>
                 <div class="ride-content" id="itinerary">
@@ -72,6 +64,11 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            <?php endwhile;
+                    else: ?>
+                        <p>Sorry, Nothing to display.</p>
+                    <?php endif;
+                    wp_reset_query(); ?>
         </div>
 
         <div class="bottom-contact" data-aos="slide-up" data-aos-delay="150">
