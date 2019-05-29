@@ -136,7 +136,7 @@ get_header(); ?>
                                     </div>
                                         </div>
                                     </div>
-                                </div>
+
                             <?php } ?>
                             <?php $col++; endwhile;
                     } else {

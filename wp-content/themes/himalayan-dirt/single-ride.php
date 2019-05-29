@@ -16,7 +16,7 @@ get_header(); ?>
                             </ul>
                         </div>
                         <div class="bookButton">
-                            <button class="bookNow ml-auto" id="bookNow" data-select="Nepal A Mountain Bike Getaway">
+                            <button class="bookNow ml-auto" id="bookNow" data-select="<?php the_title(); ?>">
                                 BookNow
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -80,16 +80,16 @@ get_header(); ?>
                             </div>
                         </div>
                     <?php } ?>
-                <?php if (get_field('faq')) { ?>
-                    <div class="ride-content" id="faq">
-                        <div class="ride-content-title">
-                            <h2>FAQ</h2>
+                    <?php if (get_field('faq')) { ?>
+                        <div class="ride-content" id="faq">
+                            <div class="ride-content-title">
+                                <h2>FAQ</h2>
+                            </div>
+                            <div class="ride-item">
+                                <p><?php the_field('faq'); ?></p>
+                            </div>
                         </div>
-                        <div class="ride-item">
-                            <p><?php the_field('faq'); ?></p>
-                        </div>
-                    </div>
-                    <?php }?>
+                    <?php } ?>
                 </div>
             <?php endwhile;
             else: ?>
