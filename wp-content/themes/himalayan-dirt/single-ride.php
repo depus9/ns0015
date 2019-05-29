@@ -12,7 +12,7 @@ get_header(); ?>
                             <ul class="single-rides-nav">
                                 <li><a href="#overviews">Overviews</a></li>
                                 <li><a href="#itinerary">Map & Itinerary</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#faq">FAQ</a></li>
                             </ul>
                         </div>
                         <div class="bookButton">
@@ -33,35 +33,63 @@ get_header(); ?>
 
                 </div>
                 <div class="single-ride-content container">
-                    <div class="ride-content" id="overviews">
-                        <div class="ride-content-title">
-                            <h2>Overviews</h2>
+                    <?php if (get_field('overviews')) { ?>
+                        <div class="ride-content" id="overviews">
+                            <div class="ride-content-title">
+                                <h2>Overviews</h2>
+                            </div>
+                            <div class="ride-item">
+                                <p><?php the_field('overviews'); ?></p>
+                            </div>
                         </div>
-                        <div class="ride-item">
-                            <p><?php the_field('overviews'); ?></p>
-                        </div>
-                    </div>
-                    <div class="ride-content" id="itinerary">
-                        <div class="ride-content-title">
-                            <h2>MAP & ITINERARY</h2>
-                        </div>
-                        <div class="ride-item">
-                            <ul class="nav nav-tabs">
-                                <li><a data-toggle="tab" class="active" href="#itinerary-item">Itinerary</a></li>
-                                <li><a data-toggle="tab" href="#map">Map</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="itinerary-item" class="tab-pane fade show active">
-                                    <p><?php the_field('faq'); ?></p>
-                                </div>
-                                <div id="map" class="tab-pane fade">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d900481.3956983556!2d84.04277784673555!3d28.16153971504631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d27.6420276!2d85.3497988!4m5!1s0x39be198522c80de7%3A0x3b66a38896292bca!2sTilicho+Lake!3m2!1d28.683332999999998!2d83.856667!5e0!3m2!1sen!2snp!4v1558876034249!5m2!1sen!2snp"
-                                            width="100%" height="450" frameborder="0" style="border:0"
-                                            allowfullscreen></iframe>
+                    <?php } ?>
+                    <?php if (get_field('itinerary') || get_field('map')) { ?>
+                        <div class="ride-content" id="itinerary">
+                            <div class="ride-content-title">
+                                <h2>MAP & ITINERARY</h2>
+                            </div>
+                            <div class="ride-item">
+                                <ul class="nav nav-tabs">
+                                    <?php if (get_field('itinerary')) { ?>
+                                        <li><a data-toggle="tab" class="active" href="#itinerary-item">Itinerary</a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if (get_field('map')) { ?>
+                                        <li><a data-toggle="tab" href="#map" <?php if (get_field('itinerary')) {
+                                            } else {
+                                                echo 'class="active"';
+                                            } ?>>Map</a></li>
+                                    <?php } ?>
+                                </ul>
+                                <div class="tab-content">
+                                    <?php if (get_field('itinerary')) { ?>
+                                    <div id="itinerary-item" class="tab-pane fade show active">
+                                        <?php } ?>
+                                        <p><?php the_field('itinerary'); ?></p>
+                                    </div>
+                                    <?php if (get_field('map')) { ?>
+                                    <div id="map" class="tab-pane fade  <?php if (get_field('itinerary')) {
+                                    } else {
+                                        echo 'show active';
+                                    } ?>">
+                                        <?php the_field('map'); ?>
+                                        <?php } ?>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    <?php } ?>
+                <?php if (get_field('faq')) { ?>
+                    <div class="ride-content" id="faq">
+                        <div class="ride-content-title">
+                            <h2>FAQ</h2>
+                        </div>
+                        <div class="ride-item">
+                            <p><?php the_field('faq'); ?></p>
+                        </div>
                     </div>
+                    <?php }?>
                 </div>
             <?php endwhile;
             else: ?>

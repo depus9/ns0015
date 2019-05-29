@@ -1494,3 +1494,8 @@ div#single-rides .owl-nav button.owl-prev {
 .single-caption-option .hero-caption h2 + span.dark {
     color: #f0b849;
 }
+
+#map iframe {
+    width: 100%;
+    height: 400px;
+}
