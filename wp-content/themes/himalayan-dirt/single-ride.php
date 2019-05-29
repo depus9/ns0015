@@ -52,8 +52,7 @@ get_header(); ?>
                         </ul>
                         <div class="tab-content">
                             <div id="itinerary-item" class="tab-pane fade show active">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                            <p><?php the_field('faq'); ?></p>
                             </div>
                             <div id="map" class="tab-pane fade">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d900481.3956983556!2d84.04277784673555!3d28.16153971504631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d27.6420276!2d85.3497988!4m5!1s0x39be198522c80de7%3A0x3b66a38896292bca!2sTilicho+Lake!3m2!1d28.683332999999998!2d83.856667!5e0!3m2!1sen!2snp!4v1558876034249!5m2!1sen!2snp"
