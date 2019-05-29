@@ -68,14 +68,13 @@ get_header(); ?>
                                         <p><?php the_field('itinerary'); ?></p>
                                     </div>
                                     <?php if (get_field('map')) { ?>
-                                    <div id="map" class="tab-pane fade  <?php if (get_field('itinerary')) {
-                                    } else {
-                                        echo 'show active';
-                                    } ?>">
-                                        <?php the_field('map'); ?>
-                                        <?php } ?>
-
-                                    </div>
+                                        <div id="map" class="tab-pane fade  <?php if (get_field('itinerary')) {
+                                        } else {
+                                            echo 'show active';
+                                        } ?>">
+                                            <?php the_field('map'); ?>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
