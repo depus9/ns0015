@@ -37,11 +37,17 @@ get_header(); ?>
                 <?php $args = array('post_type' => 'post');
                 $query = new WP_Query($args);
                 if ($query->have_posts()) {
+                    $dd = 1;
                     while ($query->have_posts()):
                         $query->the_post();
                         ?>
                         <div class="col-md-4">
-                            <div class="ride-item blog" data-aos="slide-up" data-aos-delay="50">
+                            <div class="ride-item blog" data-aos="slide-up" data-aos-delay="<?php if ($dd <= 3) {
+                                echo $dd * 100;
+                            } else {
+                                $dd = 1;
+                                echo $dd * 100;
+                            } ?>">
                                 <div class="image-container">
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                         <img src="<?php the_post_thumbnail_url('media-thumb'); ?>"
@@ -68,7 +74,7 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
-                    <?php endwhile;
+                        <?php $dd++; endwhile;
                     wp_reset_query();
                 } else {
                     echo "No posts found !";
