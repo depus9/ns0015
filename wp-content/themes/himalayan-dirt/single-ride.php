@@ -76,7 +76,7 @@ get_header(); ?>
 
         <div class="bottom-contact" data-aos="slide-up" data-aos-delay="150">
             <div class="container">
-                <didv class="row">
+                <div class="row">
                     <div class="col-md-7">
                         <div class="contact-title">
                             <h2>Want to learn more about Himalayan Dirt?</h2>
@@ -102,7 +102,7 @@ get_header(); ?>
                         </form>
 
                     </div>
-                </didv>
+                </div>
             </div>
         </div>
 
