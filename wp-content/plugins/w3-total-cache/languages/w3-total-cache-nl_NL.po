@@ -2616,9 +2616,9 @@ msgstr ""
 
 #: ../inc/options/install.php:276
 msgid ""
-"In the case where Apache is not used, the .htaccess--old file located in the root "
-"directory of the WordPress installation, wp-content/w3tc/pgcache/.htaccess--old "
-"and wp-content/w3tc/min/.htaccess--old contain directives that must be manually "
+"In the case where Apache is not used, the .htaccess file located in the root "
+"directory of the WordPress installation, wp-content/w3tc/pgcache/.htaccess "
+"and wp-content/w3tc/min/.htaccess contain directives that must be manually "
 "created for your web server software."
 msgstr ""
 
@@ -4648,7 +4648,7 @@ msgstr ""
 
 #: ../inc/popup/cdn_import_library.php:36
 msgid ""
-"Create a list of permanent (301) redirects for use in your site's .htaccess--old "
+"Create a list of permanent (301) redirects for use in your site's .htaccess "
 "file"
 msgstr ""
 
@@ -4660,7 +4660,7 @@ msgstr ""
 
 #: ../inc/popup/cdn_import_library.php:58
 msgid ""
-"Add the following directives to your .htaccess--old file or if there are several "
+"Add the following directives to your .htaccess file or if there are several "
 "hundred they should be added directly to your configuration file:"
 msgstr ""
 

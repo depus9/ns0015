@@ -212,7 +212,7 @@ class PgCache_Environment {
 			$home_url = get_home_url();
 
 			$tech_message =
-				( Util_Environment::is_nginx() ? 'nginx configuration file' : '.htaccess--old file' ) .
+				( Util_Environment::is_nginx() ? 'nginx configuration file' : '.htaccess file' ) .
 				' contains rules to rewrite url ' .
 				$home_url . '/w3tc_rewrite_test into ' .
 				$home_url . '/?w3tc_rewrite_test which, if handled by ' .
@@ -236,7 +236,7 @@ class PgCache_Environment {
 					'(and that you have reloaded / restarted nginx).';
 			} else {
 				$error .= 'Please verify that the server configuration ' .
-					'allows .htaccess--old';
+					'allows .htaccess';
 			}
 
 			$error .= '<br />Unfortunately disk enhanced page caching will ' .
@@ -393,7 +393,7 @@ class PgCache_Environment {
 	 */
 
 	/**
-	 * Writes directives to WP .htaccess--old / nginx.conf
+	 * Writes directives to WP .htaccess / nginx.conf
 	 * returns true if modifications has been made
 	 */
 	private function rules_core_add( $config, $exs ) {
@@ -1271,7 +1271,7 @@ class PgCache_Environment {
 	 */
 
 	/**
-	 * Writes directives to file cache .htaccess--old
+	 * Writes directives to file cache .htaccess
 	 * Throws exception on error
 	 *
 	 * @param Config  $config

@@ -108,7 +108,7 @@ class Minify_Plugin_Admin {
 		$w3_cache_file_cleaner_generic = new Cache_File_Cleaner_Generic( array(
 				'exclude' => array(
 					'*.files',
-					'.htaccess--old',
+					'.htaccess',
 					'index.html'
 				),
 				'cache_dir' => Util_Environment::cache_blog_dir( 'minify' ),

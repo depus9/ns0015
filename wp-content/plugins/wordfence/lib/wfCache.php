@@ -18,8 +18,8 @@ class wfCache {
 		wfConfig::set('cacheType', 'disabled');
 		
 		$cacheDir = WP_CONTENT_DIR . '/wfcache/';
-		if (file_exists($cacheDir . '.htaccess--old')) {
-			unlink($cacheDir . '.htaccess--old');
+		if (file_exists($cacheDir . '.htaccess')) {
+			unlink($cacheDir . '.htaccess');
 		}
 		
 		self::clearPageCacheSafe();
@@ -125,7 +125,7 @@ class wfCache {
 		}
 		$htaccessPath = self::getHtaccessPath();
 		if(! $htaccessPath){
-			return "Wordfence could not find your .htaccess--old file.";
+			return "Wordfence could not find your .htaccess file.";
 		}
 		$fh = @fopen($htaccessPath, 'r+');
 		if(! $fh){
@@ -157,7 +157,7 @@ class wfCache {
 	public static function updateBlockedIPs($action){ //'add' or 'remove'
 		$htaccessPath = self::getHtaccessPath();
 		if(! $htaccessPath){
-			return "Wordfence could not find your .htaccess--old file.";
+			return "Wordfence could not find your .htaccess file.";
 		}
 		if($action == 'remove'){
 			$fh = @fopen($htaccessPath, 'r+');
@@ -192,7 +192,7 @@ class wfCache {
 		}
 
 		$homePath = get_home_path();
-		$htaccessFile = $homePath.'.htaccess--old';
+		$htaccessFile = $homePath.'.htaccess';
 		return $htaccessFile;
 	}
 	public static function doNotCache(){

@@ -1,7 +1,4 @@
-<section class="himalayan-dirt" id="himalayanDirt">
-<?php get_template_part('template-part-inner')?>
-            </section>
-            <section class="about-bimal-gurung pt-0 pb-0">
+ <section class="about-bimal-gurung pt-0 pb-0">
                 <div class="row no-gutters">
                     <?php
                     $args = array('page_id' => 9);

@@ -98,7 +98,7 @@ class PgCache_Plugin_Admin {
 
 			$w3_cache_file_cleaner_generic = new Cache_File_Cleaner_Generic( array(
 					'exclude' => array(
-						'.htaccess--old'
+						'.htaccess'
 					),
 					'cache_dir' => $flush_dir,
 					'expire' => $this->_config->get_integer( 'browsercache.html.lifetime' ),

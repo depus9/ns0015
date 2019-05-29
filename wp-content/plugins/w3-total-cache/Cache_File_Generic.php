@@ -115,7 +115,7 @@ class Cache_File_Generic extends Cache_File {
 
 			if ( !empty($rules) ) {
 				@file_put_contents( dirname( $path ) .
-					DIRECTORY_SEPARATOR . '.htaccess--old', $rules );
+					DIRECTORY_SEPARATOR . '.htaccess', $rules );
 			}
 		}
 
@@ -217,8 +217,8 @@ class Cache_File_Generic extends Cache_File {
 			return true;
 
 		$dir = dirname( $path );
-		if ( file_exists( $dir . DIRECTORY_SEPARATOR . '.htaccess--old' ) ) {
-			@unlink( $dir . DIRECTORY_SEPARATOR . '.htaccess--old' );
+		if ( file_exists( $dir . DIRECTORY_SEPARATOR . '.htaccess' ) ) {
+			@unlink( $dir . DIRECTORY_SEPARATOR . '.htaccess' );
 		}
 
 		$old_entry_path = $path . '_old';

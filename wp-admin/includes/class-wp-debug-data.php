@@ -668,18 +668,18 @@ class WP_Debug_Data {
 			'debug' => $imagick_loaded,
 		);
 
-		// Check if a .htaccess--old file exists.
-		if ( is_file( ABSPATH . '.htaccess--old' ) ) {
+		// Check if a .htaccess file exists.
+		if ( is_file( ABSPATH . '.htaccess' ) ) {
 			// If the file exists, grab the content of it.
-			$htaccess_content = file_get_contents( ABSPATH . '.htaccess--old' );
+			$htaccess_content = file_get_contents( ABSPATH . '.htaccess' );
 
 			// Filter away the core WordPress rules.
 			$filtered_htaccess_content = trim( preg_replace( '/\# BEGIN WordPress[\s\S]+?# END WordPress/si', '', $htaccess_content ) );
 			$filtered_htaccess_content = ! empty( $filtered_htaccess_content );
 
 			$info['wp-server']['fields']['htaccess_extra_rules'] = array(
-				'label' => __( '.htaccess--old rules' ),
-				'value' => ( $filtered_htaccess_content ? __( 'Custom rules have been added to your .htaccess--old file.' ) : __( 'Your .htaccess--old file contains only core WordPress features.' ) ),
+				'label' => __( '.htaccess rules' ),
+				'value' => ( $filtered_htaccess_content ? __( 'Custom rules have been added to your .htaccess file.' ) : __( 'Your .htaccess file contains only core WordPress features.' ) ),
 				'debug' => $filtered_htaccess_content,
 			);
 		}

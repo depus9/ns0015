@@ -1,48 +1,130 @@
 <?php
-/**
- * Default Post Template
- * Description: Post template with a content container and right sidebar.
- *
- * @package WordPress
- * @subpackage iShouvik WP
- */
 get_header(); ?>
+    <div class="row">
+        <div id="primary" class="site-main-content" data-aos="zoom-in">
+            <header class="page-title sr-only">
+                <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
+            </header>
+            <div class="himalayan-hero-inner">
+                <?php while (have_posts()):the_post(); ?>
+                    <div id="himalayan-hero-inner">
+                        <?php
+                        $images = get_field('ride_gallery');
+                        $size = 'full'; // (thumbnail, medium, large, full or custom size)?>
+                        <?php if ($images) { ?>
+                            <div class="owl-carousel owl-theme" id="single-rides">
+                                <?php foreach ($images as $image): ?>
+                                    <div class="hero-slider-item"
+                                         style="background: url(<?php echo $image['url']; ?>);">
 
-<div class="row">
-    <div id="primary" class="site-main-content col-lg-8">
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="site-main-content clearfix card">
-            <?php while (have_posts()) : the_post(); ?>
-                <header class="card-header">
-                    <h1><?php the_title();?></h1>
-                    <p class="meta">
-                        <?php echo ishouvikwp_posted_on();?>
-                    </p>
-                    <p class="meta text-muted">
-                        <small>
-                            <?php echo ishouvik_categories_in(); ?> | <?php the_tags('<i class="fa fa-tags"></i> Tags: ', ', '); ?>
-                        </small>
-                    </p>
-                </header>
-                <?php if ( has_post_thumbnail() ): ?>
-                        <p>
-                            <?php echo the_post_thumbnail('large', array('class' => 'card-img-top img-fluid')); ?>
-                        </p>
-                <?php endif; ?>
-                
-                <div class="card-body">
-                    <?php the_content(); ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="single-caption-option">
+                                <div class="container">
+                                    <div class="hero-caption">
+                                        <h2>Mesokanto<span>Tilicho Lake</span></h2>
+                                        <span class="dark">With a rider owned mountain bike tour company.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } else { ?>
+                            <div class="hero-slider-item"
+                                 style="background: url(<?php the_post_thumbnail_url(); ?>);">
+                                <div class="container">
+                                    <div class="hero-caption">
+                                        <h2>Mesokanto<span>Tilicho Lake</span></h2>
+                                        <span class="dark">With a rider owned mountain bike tour company.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                <?php endwhile; ?>
+                <div class="arrow bounce">
+                    <img
+                            src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
                 </div>
-                
-            <?php endwhile; ?>
+            </div>
+        </div>
+        <div id="himalayanDirt">
+            <div class="single-ride-content container">
+                <div class="ride-content" id="overviews">
+                    <div class="ride-content-title">
+                        <h2>Overviews</h2>
+                    </div>
+                    <div class="ride-item">
+                        <p>This is an alternate route in the famous Annapurna Circuit, to connect from Manang to
+                            Mustang. Unlike Thorong-La, only few amount of trekkers cross over the Mesokanto Pass
+                            every year to heading towards Lower Mustang Jomsom. There’s hardly any mountain bikers
+                            has been through.
 
-            <footer class="card-footer">
-                <?php comments_template(); ?>
-                <?php ishouvikwp_content_nav('nav-below'); ?>
-            </footer>
-        </article>
+                        </p>
+                        <p>The trails separates from Manang, instead of heading towards Thorong-La5416m, we take the
+                            trail on the left which leads to Khangsyhar village. There are plenty of single track
+                            riding, which includes some quite technical sections too. Especially when approaching on
+                            the high altitude areas the hike a bike section is always a part of this trip.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="ride-content" id="itinerary">
+                    <div class="ride-content-title">
+                        <h2>MAP & ITINERARY</h2>
+                    </div>
+                    <div class="ride-item">
+                        <ul class="nav nav-tabs">
+                            <li><a data-toggle="tab" class="active" href="#itinerary-item">Itinerary</a></li>
+                            <li><a data-toggle="tab" href="#map">Map</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="itinerary-item" class="tab-pane fade show active">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div id="map" class="tab-pane fade">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d900481.3956983556!2d84.04277784673555!3d28.16153971504631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d27.6420276!2d85.3497988!4m5!1s0x39be198522c80de7%3A0x3b66a38896292bca!2sTilicho+Lake!3m2!1d28.683332999999998!2d83.856667!5e0!3m2!1sen!2snp!4v1558876034249!5m2!1sen!2snp"
+                                        width="100%" height="450" frameborder="0" style="border:0"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-contact" data-aos="slide-up" data-aos-delay="150">
+            <div class="container">
+                <didv class="row">
+                    <div class="col-md-7">
+                        <div class="contact-title">
+                            <h2>Want to learn more about Himalayan Dirt?</h2>
+                            <span>Let us know how er can get in touch with you.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1">
+                        <form id="quickContact">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" required>
+                                <input type="email" class="form-control" placeholder="Email" required>
+                                <button type="submit" class="btn submit">Submit
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;"
+                                         xml:space="preserve">
+                                    <path style="fill:#fff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </didv>
+            </div>
+        </div>
+
     </div>
-
-    <?php get_sidebar('blog'); ?>
-</div>
-
+    </div>
 <?php get_footer(); ?>

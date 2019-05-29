@@ -615,7 +615,7 @@ class wfScanEngine {
 
 		$backupFileTests = array(
 			wfCommonBackupFileTest::createFromRootPath('.user.ini'),
-//			wfCommonBackupFileTest::createFromRootPath('.htaccess--old'),
+//			wfCommonBackupFileTest::createFromRootPath('.htaccess'),
 			wfCommonBackupFileTest::createFromRootPath('wp-config.php.bak'),
 			wfCommonBackupFileTest::createFromRootPath('wp-config.php.bak.a2'),
 			wfCommonBackupFileTest::createFromRootPath('wp-config.php.swo'),
@@ -755,7 +755,7 @@ class wfScanEngine {
 		}
 	}
 	private function scan_knownFiles_init(){
-		$baseWPStuff = array( '.htaccess--old', 'index.php', 'license.txt', 'readme.html', 'wp-activate.php', 'wp-admin', 'wp-app.php', 'wp-blog-header.php', 'wp-comments-post.php', 'wp-config-sample.php', 'wp-content', 'wp-cron.php', 'wp-includes', 'wp-links-opml.php', 'wp-load.php', 'wp-login.php', 'wp-mail.php', 'wp-pass.php', 'wp-register.php', 'wp-settings.php', 'wp-signup.php', 'wp-trackback.php', 'xmlrpc.php');
+		$baseWPStuff = array( '.htaccess', 'index.php', 'license.txt', 'readme.html', 'wp-activate.php', 'wp-admin', 'wp-app.php', 'wp-blog-header.php', 'wp-comments-post.php', 'wp-config-sample.php', 'wp-content', 'wp-cron.php', 'wp-includes', 'wp-links-opml.php', 'wp-load.php', 'wp-login.php', 'wp-mail.php', 'wp-pass.php', 'wp-register.php', 'wp-settings.php', 'wp-signup.php', 'wp-trackback.php', 'xmlrpc.php');
 		$baseContents = scandir(ABSPATH);
 		if(! is_array($baseContents)){
 			throw new Exception("Wordfence could not read the contents of your base WordPress directory. This usually indicates your permissions are so strict that your web server can't read your WordPress directory.");

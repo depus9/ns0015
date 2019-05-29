@@ -13,7 +13,8 @@ get_header(); ?>
                              style="background: url(<?php the_post_thumbnail_url(); ?>)">
                             <div class="container">
                                 <div class="hero-caption">
-                                    <h2><?php the_field('big_thin_text'); ?> <span><?php the_field('big_bold_text'); ?></span></h2>
+                                    <h2><?php the_field('big_thin_text'); ?>
+                                        <span><?php the_field('big_bold_text'); ?></span></h2>
                                     <span class="dark"><?php the_field('small_line_text'); ?></span>
                                 </div>
                             </div>
@@ -28,7 +29,9 @@ get_header(); ?>
             <?php endwhile;; ?>
         </div>
     </div>
-    <?php get_template_part('template-part')?>
+<?php get_template_part('template-about-text') ?>
+<?php get_template_part('template-about-part') ?>
+<?php while (have_posts()): the_post(); ?>
     <div class="media-page-content"
          style="background-image:url(<?php echo bloginfo('template_directory'); ?>/image/about-bg.png);background-size:cover; background-position:center; min-height:100%;">
         <div class="container">
@@ -37,12 +40,10 @@ get_header(); ?>
                     <div class="ride-item about-content" data-aos="slide-up" data-aos-delay="50">
                         <div class="text-content">
                             <div class="himalayan-dirt-discription mt-0">
-                                <h2>What we do</h2>
-                                <p>We cater all types of guided mountain bike tours. Every year we go out to Trail-hunt, 
-                                    because nothings better than to explore the wilderness on two wheels in the Himalayas. 
-                                    We like to expand our tour destinations and offer the new trails for mountain bikers because we care
+                                <h2><?php the_field('title') ?></h2>
+                                <p><?php the_field('what_we_do_content') ?>
                                 </p>
-                                <a href="#" title="Learn more about tilicho lake"><span>Our Rides</span>
+                                <a href="<?php echo site_url(); ?>/rides" title="Himalayan Rides"><span>Our Rides</span>
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                          y="0px"
@@ -61,12 +62,11 @@ get_header(); ?>
                     <div class="ride-item about-content" data-aos="slide-up" data-aos-delay="100">
                         <div class="text-content">
                             <div class="himalayan-dirt-discription mt-0">
-                                <h2>Why ride with Us</h2>
-                                <p>We try our best to promote least explored areas and trails in the Himalayas of Nepal. 
-                                    So if you wish not to ride on the trails where thousands of people already have ridden before you.
-                                     Then, you’ve come to the right place, we definitely have a better alternative for you
+                                <h2><?php the_field('why_ride_with_us_title') ?></h2>
+                                <p><?php the_field('why_ride_with_us_content') ?>
                                 </p>
-                                <a href="#" title="Learn more about tilicho lake"><span>Plan Your Trip</span>
+                                <a href="#" data-toggle="modal" data-target="#formTrip"
+                                   title="Make Plan With Himilayan Dirt"><span>Plan Your Trip</span>
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                          y="0px"
@@ -84,13 +84,14 @@ get_header(); ?>
             </div>
         </div>
     </div>
+<?php endwhile; ?>
     <div class="bottom-contact" data-aos="fade-in" data-aos-delay="150">
         <div class="container">
             <didv class="row">
                 <div class="col-md-7">
                     <div class="contact-title">
-                        <h2>Want to learn more about Himalayan Dirt?</h2>
-                        <span>Let us know how er can get in touch with you.</span>
+                        <h2><?php the_field('action_bar_title', 'option'); ?></h2>
+                        <span><?php the_field('action_bar_short_text', 'option'); ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 offset-md-1">
@@ -112,8 +113,8 @@ get_header(); ?>
                     </form>
 
                 </div>
-            </div>
         </div>
+    </div>
     </div>
     </div>
 <?php get_footer(); ?>

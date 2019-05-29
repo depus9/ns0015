@@ -729,7 +729,7 @@ class Minify_MinifiedFileRequestHandler {
 				$cache = new \Minify_Cache_File(
 					Util_Environment::cache_blog_minify_dir(),
 					array(
-						'.htaccess--old',
+						'.htaccess',
 						'index.html',
 						'*_old'
 					),

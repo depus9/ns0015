@@ -1,5 +1,4 @@
 <?php
-//Template Name: Our Rides Single Template
 get_header(); ?>
     <div class="row">
         <div id="primary" class="site-main-content" data-aos="zoom-in">

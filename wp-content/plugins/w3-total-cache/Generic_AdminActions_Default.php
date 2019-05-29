@@ -699,7 +699,7 @@ class Generic_AdminActions_Default {
 			if ( is_dir( $file ) ) {
 				$this->_deleteAllHtaccessFiles( $file );
 				continue;
-			} else if ( $file === '.htaccess--old' ) {
+			} else if ( $file === '.htaccess' ) {
 				@unlink( $file );
 			}
 		}

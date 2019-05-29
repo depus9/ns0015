@@ -670,7 +670,7 @@ class Util_Admin {
 	}
 
 	/**
-	 * Uploads Browser Cache .htaccess--old to FTP
+	 * Uploads Browser Cache .htaccess to FTP
 	 *
 	 * @var Config $config
 	 * @return void
@@ -699,7 +699,7 @@ class Util_Admin {
 	}
 
 	/**
-	 * Deletes Browser Cache .htaccess--old from FTP
+	 * Deletes Browser Cache .htaccess from FTP
 	 *
 	 * @return void
 	 */

@@ -579,7 +579,7 @@ class wfIssues {
 			for($i = 0; $i < sizeof($issueList); $i++){
 				if ($issueList[$i]['type'] == 'file' || $issueList[$i]['type'] == 'knownfile') {
 					$localFile = $issueList[$i]['data']['file'];
-					if ($localFile != '.htaccess--old' && $localFile != $userIni) {
+					if ($localFile != '.htaccess' && $localFile != $userIni) {
 						$localFile = ABSPATH . '/' . preg_replace('/^[\.\/]+/', '', $localFile);
 					}
 					else {

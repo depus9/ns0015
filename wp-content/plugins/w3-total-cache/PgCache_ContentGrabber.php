@@ -786,7 +786,7 @@ class PgCache_ContentGrabber {
 
 				$engineConfig = array(
 					'exclude' => array(
-						'.htaccess--old'
+						'.htaccess'
 					),
 					'expire' => $this->_lifetime,
 					'cache_dir' => W3TC_CACHE_PAGE_ENHANCED_DIR,
@@ -1035,7 +1035,7 @@ class PgCache_ContentGrabber {
 			return;
 
 		// we call it as little times as possible
-		// its expensive, but have to restore lost .htaccess--old file
+		// its expensive, but have to restore lost .htaccess file
 		$e = Dispatcher::component( 'PgCache_Environment' );
 		try {
 			$e->fix_on_wpadmin_request( $this->_config, true );
