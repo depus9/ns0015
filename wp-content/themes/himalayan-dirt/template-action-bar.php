@@ -1,4 +1,4 @@
-<div class="bottom-contact" data-aos="fade-in" data-aos-delay="150">
+<div class="bottom-contact" data-aos="slide-up" data-aos-delay="100">
     <div class="container">
         <didv class="row">
             <div class="col-md-7">

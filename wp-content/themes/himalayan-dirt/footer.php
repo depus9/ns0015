@@ -11,7 +11,7 @@
     <div class="clearfix">
         <div class="container">
             <div class="row d-flex justify-content-between">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="footer-title">
                         <h2>Follow us</h2>
                         <span>We are social</span>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div class="himalayan-contact">
+                    <div class="himalayan-contact" data-aos="zoom-in" data-aos-delay="150">
                         <div class="footer-title">
                             <h2>Himalayan Dirt</h2>
                             <span>address and contact</span>

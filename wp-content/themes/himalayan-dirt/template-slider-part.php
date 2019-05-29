@@ -28,10 +28,12 @@
                 <?php } else { ?>
                     <div class="hero-slider-item"
                          style="background: url(<?php the_post_thumbnail_url(); ?>);">
-                        <div class="container">
-                            <div class="hero-caption">
-                                <h2>Mesokanto<span>Tilicho Lake</span></h2>
-                                <span class="dark">With a rider owned mountain bike tour company.</span>
+                        <div class="single-caption-option">
+                            <div class="container">
+                                <div class="hero-caption">
+                                    <h2>Mesokanto<span>Tilicho Lake</span></h2>
+                                    <span class="dark">With a rider owned mountain bike tour company.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,7 +42,7 @@
         <?php endwhile; ?>
         <div class="arrow bounce">
             <img
-                src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
+                    src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
         </div>
     </div>
 </div>
