@@ -84,7 +84,6 @@
 
                     </div>
                     <div class="form col-md-7">
-                        <form>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-titles">
@@ -99,7 +98,6 @@
                             </div>
                             <div class="orCall"><p><?php the_field('bottom_text', 'option'); ?></p>
                             </div>
-                        </form>
                     </div>
                 </div>
                 <div class="close close-boking" data-dismiss="modal"></div>
