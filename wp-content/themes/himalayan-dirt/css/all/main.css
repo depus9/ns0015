@@ -89,8 +89,8 @@ ul#menu-main-menu li {
     position: relative;
 }
 
-ul#menu-main-menu a:hover, ul#menu-main-menu a:focus, ul#menu-main-menu a:active {
-    color: #86c340;
+ul#menu-main-menu a:hover, ul#menu-main-menu a:focus, ul#menu-main-menu a:active, li.current_page_item.active > a {
+    color: #86c340 !important;
 
 }
 

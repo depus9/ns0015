@@ -2,32 +2,7 @@
 //Template Name: Media
 get_header(); ?>
     <div class="row">
-        <div id="primary" class="site-main-content" data-aos="zoom-in">
-            <header class="page-title sr-only">
-                <h1>Himalayan Dirt! with a rider owned Mountain Bike Tour Company</h1>
-            </header>
-            <?php while (have_posts()):the_post(); ?>
-                <div class="himalayan-hero-inner">
-                    <div id="himalayan-hero-inner">
-                        <div class="hero-slider-item"
-                             style="background: url(<?php the_post_thumbnail_url(); ?>)">
-                            <div class="container">
-                                <div class="hero-caption">
-                                    <h2><?php the_field('big_thin_text'); ?>
-                                        <span><?php the_field('big_bold_text'); ?></span></h2>
-                                    <span class="dark"><?php the_field('small_line_text'); ?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arrow bounce">
-                        <img
-                                src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg"
-                                alt="back to top">
-                    </div>
-                </div>
-            <?php endwhile;; ?>
-        </div>
+        <?php get_template_part('template-slider-part')?>
     </div>
     <div class="media-page-content"
          style="background-image:url(<?php echo bloginfo('template_directory'); ?>/image/media-page-bg.png);background-size:cover; background-position:center; min-height:100%;"

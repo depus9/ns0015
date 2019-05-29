@@ -20,8 +20,9 @@
                     <div class="single-caption-option">
                         <div class="container">
                             <div class="hero-caption">
-                                <h2>Mesokanto<span>Tilicho Lake</span></h2>
-                                <span class="dark">With a rider owned mountain bike tour company.</span>
+                                <h2><?php the_field('big_thin_text') ?><span><?php the_field('big_bold_text') ?></span>
+                                </h2>
+                                <span class="dark"><?php the_field('small_line_text') ?></span>
                             </div>
                         </div>
                     </div>
@@ -31,8 +32,9 @@
                         <div class="single-caption-option">
                             <div class="container">
                                 <div class="hero-caption">
-                                    <h2>Mesokanto<span>Tilicho Lake</span></h2>
-                                    <span class="dark">With a rider owned mountain bike tour company.</span>
+                                    <h2><?php the_field('big_thin_text') ?><span><?php the_field('big_bold_text') ?></span>
+                                    </h2>
+                                    <span class="dark"><?php the_field('small_line_text') ?></span>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,12 @@
 get_header(); ?>
     <div class="row">
         <?php get_template_part('template-slider-part') ?>
+        <style>
+            .single-caption-option {
+                padding-bottom: 130px;
+                padding-top: 130px;
+            }
+        </style>
     </div>
     <div class="media-contact-page" id="himalayanDirt">
         <div class="container">

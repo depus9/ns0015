@@ -54,11 +54,12 @@ function ishouvikwp_images()
 
     set_post_thumbnail_size(260, 180); // 260px wide x 180px high
 }
+
 //custom sizes
-add_image_size( 'ride-small', 730, 470 , true);
-add_image_size( 'riders-image', 310, 314 , true);
-add_image_size( 'ride-thumb', 600, 360, true );
-add_image_size( 'media-thumb', 360, 220, true );
+add_image_size('ride-small', 730, 470, true);
+add_image_size('riders-image', 310, 314, true);
+add_image_size('ride-thumb', 600, 360, true);
+add_image_size('media-thumb', 360, 220, true);
 
 /**
  * Load CSS styles for theme.
@@ -738,5 +739,29 @@ function my_theme_register_required_plugins()
 
     tgmpa($plugins, $config);
 
+}
+
+//adding ride select iotion
+// Custom contact form 7 ride select
+add_action('wpcf7_init', 'custom_add_form_tag_clock');
+
+function custom_add_form_tag_clock()
+{
+    wpcf7_add_form_tag('ride_select', 'custom_clock_form_tag_handler'); // "clock" is the type of the form-tag
+}
+
+function custom_clock_form_tag_handler($tag)
+{
+    $args = array('post_type' => 'ride');
+    $query = new WP_Query($args);
+    ob_start(); ?>
+    <select id="select-rides" class="form-control custom-select">
+        <?php if ($query->have_posts()):while ($query->have_posts()): $query->the_post(); ?>
+            <option value="<?php the_title() ?>"><?php the_title(); ?></option>
+        <?php endwhile; endif; ?>
+    </select>
+    <?php
+    $content = ob_get_clean();
+    return $content;
 }
 
