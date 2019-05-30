@@ -108,7 +108,7 @@
 <!-- modal for pages -->
 <div class="mobile-contact-bar">
     <div class="call-now"><a href="tel:<?php the_field('phone', 'option'); ?>">Call Now</a></div>
-    <div class="plan-trip"><a href="#">Plan Trip</a></div>
+    <div class="plan-trip"><a href="#" data-toggle="modal" data-target="#formTrip">Plan Trip</a></div>
     <div class="back-top-top"><img src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg"></div>
 </div>
 

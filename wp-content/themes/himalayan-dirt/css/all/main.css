@@ -1504,3 +1504,220 @@ div#single-rides .owl-nav button.owl-prev {
     width: 100%;
     height: 400px;
 }
+
+@media screen and (max-width: 767px) {
+    a.header-plan-trip {
+        display: none;
+    }
+
+    div#navbarDropdown.show {
+        left: 0;
+
+    }
+
+    div#navbarDropdown {
+        position: fixed;
+        height: 100%;
+        background: #111;
+        width: 220px;
+        top: 80px;
+        padding: 15px;
+        left: -220px;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+    button.navbar-toggler {
+        border: none;
+        height: 100%;
+        display: block;
+        width: 80px;
+    }
+
+    nav#is-site-navbar-primary {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .icon-bar {
+        width: 30px;
+        height: 2px;
+        background-color: #B6B6B6;
+        display: block;
+        transition: all 0.2s;
+        margin: 6px auto;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent !important;
+    }
+
+    .navbar-toggler .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    .navbar-toggler .middle-bar {
+        opacity: 0;
+    }
+
+    .navbar-toggler .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    .navbar-toggler.collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    .navbar-toggler.collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+
+
+    div#navbarDropdown div#ishouvik-navbar-collapse-primary {
+        display: block;
+    }
+
+    div#navbarDropdown {
+        display: block;
+    }
+
+    .contact-info {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .contact-info .cn + .cn {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .name-info h2 {
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+
+    .media-page-content {
+        padding: 3rem 0 0 !important;
+    }
+
+    footer.site-footer .row.d-flex.justify-content-between {
+        flex-direction: column-reverse;
+    }
+
+    footer.site-footer {
+        background: #333;
+    }
+
+    .himalayan-contact.aos-init.aos-animate {
+        margin-bottom: 30px;
+    }
+
+    .bottom-contact h2 + span {
+        font-size: 1.8rem;
+    }
+
+    .bottom-contact h2 {
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
+
+    #quickContact {
+        margin-top: 30px;
+    }
+
+    section#himalayan-dirt-rides .himalayan-dirt-discription {
+        padding: 0 !important;
+
+    }
+
+    section#himalayan-dirt-rides {
+        padding: 30px;
+    }
+
+    section#himalayan-dirt-rides .row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .riders-text .rider-image {
+        display: none;
+    }
+
+    .riders-text {
+        padding: 0 30px 30px;
+
+    }
+
+    .riders-text .rider-words p {
+        font-size: 2.0rem;
+    }
+
+    div#happy-riders .owl-nav {
+        right: 20px;
+        bottom: 30px;
+    }
+
+    .hero-slider-item {
+        height: 80vh;
+    }
+
+    .single-ride-nav .container.d-flex.justify-content-between {
+        flex-wrap: wrap;
+    }
+
+    button#bookNow {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+
+    .single-rides-nav li {
+        margin-right: 0 !important;
+    }
+
+    .single-rides-nav {
+        justify-content: space-between;
+    }
+
+    .bookButton {
+        width: 100%;
+    }
+
+    button#bookNow {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .arrow.bounce {
+        margin: 0 0 18%;
+    }
+
+    ul#menu-main-menu li {
+        margin: 10px 0;
+    }
+
+    .himalayan-contact.himalaya-address {
+        margin-top: 40px !important;
+    }
+
+    .form-group.d-flex.justify-content-between {
+        flex-wrap: wrap;
+    }
+    .media-contact-page{
+        padding-bottom: 4rem !important;
+    }
+
+
+}

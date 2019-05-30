@@ -15,6 +15,7 @@ jQuery(document).ready(function ($) {
             navbar.addClass("scrollUp");
             $('.single-ride-nav').removeClass("topMenuVisible");
             $('.mobile-contact-bar').addClass("show-bar");
+            $('[aria-expanded="true"]').click();
         } else if (c > currentScrollTop && !(a <= b)) {
             navbar.removeClass("scrollUp");
             $('.single-ride-nav').addClass("topMenuVisible");
@@ -28,6 +29,9 @@ jQuery(document).ready(function ($) {
         loop: true,
         margin: 10,
         nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 1
@@ -44,9 +48,9 @@ jQuery(document).ready(function ($) {
         loop: true,
         nav: true,
         dots: false,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
         stagePadding: 0,
         margin: 0,
         responsive: {
@@ -78,7 +82,7 @@ jQuery(document).ready(function ($) {
         }
     })
     //aos animation
-    AOS.init();
+    AOS.init({disable: false});
     //back to top action
     if ($('.back-top-top').length) {
         var scrollTrigger = 500, // px

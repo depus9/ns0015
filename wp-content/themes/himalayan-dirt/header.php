@@ -27,18 +27,23 @@
 
 <nav id="is-site-navbar-primary" class="navbar navbar-expand-md fixed-top <?php is_site_primary_nav_class(); ?>">
     <?php is_navbar_brand(); ?>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown"
+    <div class="logo-container"><a href="<?php echo site_url() ?>"><img
+                    src="<?php echo bloginfo('template_directory') ?>/image/logo.png"></a></div>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDropdown"
             aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarDropdown">
-        <div class="logo-container"><a href="<?php echo site_url()?>"><img src="<?php echo bloginfo('template_directory')?>/image/logo.png"></a> </div>
+
         <?php ishouvik_nav_menu('primary'); ?>
         <?php //get_template_part( 'searchform', 'navbar' ); ?>
-        <a href="#" class="header-plan-trip" data-toggle="modal" data-target="#formTrip"><span class="ride-icon"></span> Plan your trip</a>
+
     </div>
+    <a href="#" class="header-plan-trip" data-toggle="modal" data-target="#formTrip"><span class="ride-icon"></span>
+        Plan your trip</a>
 </nav>
 
 <?php if (is_front_page() && get_theme_mod('is_site_intro') == 'yes'): ?>
