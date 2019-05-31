@@ -68,6 +68,9 @@ jQuery(document).ready(function ($) {
     $('#happy-riders').owlCarousel({
         loop: true,
         margin: 10,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        autoplayHoverPause: true,
         nav: true,
         responsive: {
             0: {

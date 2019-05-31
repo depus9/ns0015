@@ -3,7 +3,7 @@ get_header(); ?>
     <div class="row">
         <?php get_template_part('template-slider-part') ?>
         <div id="himalayanDirt">
-            <section>
+            <section id="media-post-<?php the_ID();?>" <?php post_class(); ?>>
             <div class="container">
              <div class="row">
              <div class="col-sm-12">

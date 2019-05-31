@@ -2,7 +2,7 @@
 get_header(); ?>
     <div class="row">
         <?php get_template_part('template-slider-part') ?>
-        <div id="himalayanDirt">
+        <div id="himalayanDirt" <?php post_class(); ?>>
             <?php
             if (have_posts()) : while (have_posts()) : the_post();
                 ?>

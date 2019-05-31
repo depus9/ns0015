@@ -498,7 +498,7 @@ div#primary {
 }
 
 .himalayan-dirt {
-    background: #f2f2f2;
+    background: #42afef;
     padding: 70px 0;
     width: 100%;
 }
@@ -507,7 +507,7 @@ div#primary {
     font-size: 20px;
     line-height: 38px;
     font-weight: 300;
-    color: #333;
+    color: #fff;
 }
 
 section {
@@ -525,7 +525,7 @@ section {
 /*featured rides*/
 span.featured {
     display: inline-block;
-    background: #f2f2f2;
+    background: rgba(0, 0, 0, 0.1);
     color: #aaa;
     text-transform: uppercase;
     padding: 1rem 2.5rem;
@@ -534,7 +534,7 @@ span.featured {
 
 .himalayan-dirt-discription h2 {
     font-size: 4.4rem;
-    color: #00aeef;
+    color: #fff;
     margin: 1.5rem 0;
 }
 
@@ -543,7 +543,7 @@ span.featured {
 }
 
 .himalayan-dirt-discription p {
-    color: #111;
+    color: #999;
     font-size: 1.6rem;
     line-height: 2.4rem;
 }
@@ -793,13 +793,17 @@ span.featured {
 
 /*himalayan dirt happy riders*/
 section#himalayan-dirt-rides {
-    background: #fff;
+    background: #111;
 }
 
 footer {
     background: url(../../image/himalayan-dirt-footer.png) no-repeat #333333;
     background-position: right center;
     padding: 80px 0;
+}
+
+section.himalayan-intro-video {
+    background: #111;
 }
 
 .footer-title h2 {
@@ -812,6 +816,10 @@ footer {
 .footer-title span {
     color: #aaa;
     font-size: 1.6rem;
+}
+
+.intro-video-container {
+    margin-top: -2px;
 }
 
 .social-icons a:hover {
@@ -840,12 +848,12 @@ footer {
     width: 100%;
 }
 
-a.btn.footer-contact:hover, form#quickContact .submit:hover, .planBtn:hover, .bookNow:hover {
+a.btn.footer-contact:hover, #quickContact .submit:hover, .planBtn:hover, .bookNow:hover {
     max-width: 190px
 
 }
 
-a.btn.footer-contact, form#quickContact .submit, .planBtn, .bookNow {
+a.btn.footer-contact, #quickContact .submit, .planBtn, .bookNow {
     font-size: 1.5rem;
     color: #fff;
     background: #87c440;
@@ -864,7 +872,16 @@ a.btn.footer-contact, form#quickContact .submit, .planBtn, .bookNow {
     border: none;
 }
 
-a.btn.footer-contact svg, form#quickContact .submit svg, .planBtn svg, .bookNow svg {
+#quickContact + div.wpcf7-mail-sent-ok {
+    color: #398f14 !important;
+
+}
+
+#quickContact + .wpcf7-validation-errors {
+    color: #f7e700 !important;
+}
+
+a.btn.footer-contact svg, #quickContact .submit svg, .planBtn svg, .bookNow svg {
     width: 20px;
 }
 
@@ -1078,6 +1095,10 @@ div#formTrip input[type=text] {
     border: 1px solid #eee;
 }
 
+div#formTrip [role="form"] {
+    padding: 0 30px 30px;
+}
+
 select.custom-select {
     display: inline-block;
     width: 100%;
@@ -1095,7 +1116,7 @@ select.custom-select {
     appearance: none;
 }
 
-form#quickContact .submit {
+#quickContact .submit {
     width: 100%;
     font-size: 1.8rem;
 }
@@ -1505,6 +1526,15 @@ div#single-rides .owl-nav button.owl-prev {
     height: 400px;
 }
 
+.ride-content li {
+    margin-bottom: 18px;
+    line-height: 2.5rem;
+}
+
+ul.nav.nav-tabs li {
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 767px) {
     a.header-plan-trip {
         display: none;
@@ -1715,8 +1745,13 @@ div#single-rides .owl-nav button.owl-prev {
     .form-group.d-flex.justify-content-between {
         flex-wrap: wrap;
     }
-    .media-contact-page{
+
+    .media-contact-page {
         padding-bottom: 4rem !important;
+    }
+
+    section[id*=media-post], .bottom-contact {
+        padding: 30px;
     }
 
 
