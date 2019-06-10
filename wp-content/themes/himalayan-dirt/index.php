@@ -235,10 +235,10 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
+
             <section class="instagramGallery pt-0 pb-0">
                 <?php echo do_shortcode('[instagram-feed]') ?>
             </section>
         </div>
     </div>
-    <?php get_template_part('template-part-supporter') ?>
 <?php get_footer(); ?>

@@ -7,6 +7,7 @@
  */
 ?>
 </main> <!-- / #is-site-body .container .clearfix -->
+<?php get_template_part('template-part-supporter') ?>
 <footer class="site-footer">
     <div class="clearfix">
         <div class="container">
