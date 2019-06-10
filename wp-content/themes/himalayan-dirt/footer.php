@@ -10,7 +10,7 @@
 <footer class="site-footer">
     <div class="clearfix">
         <div class="container">
-            <div class="row d-flex justify-content-between">
+            <div class="row d-flex justify-content-star">
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="footer-title">
                         <h2>Follow us</h2>
