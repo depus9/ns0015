@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
         }
     })
     $('#supporter-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 0,
         nav: false,
         autoplay: true,
@@ -55,13 +55,14 @@ jQuery(document).ready(function ($) {
         responsive: {
             0: {
                 items: 2,
-                dots: false
+                dots: false,
+                loop: true
             },
             600: {
-                items: 3
+                items: 4
             },
             1000: {
-                items: 3
+                items: 4
             }
         }
     })

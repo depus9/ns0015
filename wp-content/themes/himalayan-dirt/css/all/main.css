@@ -519,6 +519,9 @@ section {
     padding: 120px 0;
     overflow: hidden;
 }
+#supporters {
+    padding: 40px 0;
+}
 
 .image-container {
     position: relative;
@@ -782,14 +785,14 @@ span.featured {
 
 .section-title h2 {
     font-weight: 100;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
 }
 
 .section-title {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -1818,4 +1821,8 @@ div#tripOverview.sticky {
     }
 
 
+}
+section#supporters img {
+    max-width: 150px!important;
+    margin: 0 auto;
 }

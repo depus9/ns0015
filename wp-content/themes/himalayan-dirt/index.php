@@ -182,7 +182,7 @@ get_header(); ?>
                     <div class="video-overlay"></div>
                 </section>
             </div>
-                <?php get_template_part('template-part-supporter') ?>
+                
             <div class="dark-bg">
                 <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                     <div class="container">
@@ -240,5 +240,5 @@ get_header(); ?>
             </section>
         </div>
     </div>
-
+    <?php get_template_part('template-part-supporter') ?>
 <?php get_footer(); ?>

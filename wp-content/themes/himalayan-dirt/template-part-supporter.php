@@ -4,7 +4,6 @@
             <div class="col-md-12">
                 <div class="section-title dark">
                     <h2>Our Supporters</h2>
-                    <span>We are deeply grateful for our supporters</span>
                 </div>
                 <div class="owl-carousel owl-theme" id="supporter-carousel">
                     <?php
