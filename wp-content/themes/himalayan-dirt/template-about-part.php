@@ -1,4 +1,4 @@
-<div class="dark-bg">
+
 <section class="about-bimal-gurung pt-0 pb-0">
                 <div class="row no-gutters">
                     <?php
@@ -54,4 +54,3 @@
                     wp_reset_query(); ?>
                 </div>
      </section>
-</div>
