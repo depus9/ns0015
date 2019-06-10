@@ -80,24 +80,25 @@
 
                 <div class="row no-gutters d-flex">
                     <div class="image-ad col-md-5"
-                         style="background-image:url(<?php the_field('popup_image', 'option'); ?>)">
+                         style="background-image:url(<?php $image = get_field('popup_image', 'option');
+                         echo $image['url'] ?>)">
 
                     </div>
                     <div class="form col-md-7">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-titles">
-                                        <h2><?php the_field('popup_title', 'option'); ?></h2>
-                                        <p><?php the_field('popup_short_text', 'option'); ?>
-                                        </p>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-titles">
+                                    <h2><?php the_field('popup_title', 'option'); ?></h2>
+                                    <p><?php the_field('popup_short_text', 'option'); ?>
+                                    </p>
                                 </div>
-                                <?php
-                                 echo do_shortcode('[contact-form-7 id="5" title="Contact form popup"]');
-                                 ?> 
                             </div>
-                            <div class="orCall"><p><?php the_field('bottom_text', 'option'); ?></p>
-                            </div>
+                            <?php
+                            echo do_shortcode('[contact-form-7 id="5" title="Contact form popup"]');
+                            ?>
+                        </div>
+                        <div class="orCall"><p><?php the_field('bottom_text', 'option'); ?></p>
+                        </div>
                     </div>
                 </div>
                 <div class="close close-boking" data-dismiss="modal"></div>

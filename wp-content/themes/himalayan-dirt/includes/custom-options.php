@@ -533,4 +533,62 @@ function create_testimonial_cpt() {
 
 }
 add_action( 'init', 'create_testimonial_cpt', 0 );
+//supporter
+// Register Custom Post Type Supporter
+function create_supporter_cpt() {
+
+    $labels = array(
+        'name' => _x( 'Supporters', 'Post Type General Name', 'textdomain' ),
+        'singular_name' => _x( 'Supporter', 'Post Type Singular Name', 'textdomain' ),
+        'menu_name' => _x( 'Supporters', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar' => _x( 'Supporter', 'Add New on Toolbar', 'textdomain' ),
+        'archives' => __( 'Supporter Archives', 'textdomain' ),
+        'attributes' => __( 'Supporter Attributes', 'textdomain' ),
+        'parent_item_colon' => __( 'Parent Supporter:', 'textdomain' ),
+        'all_items' => __( 'All Supporters', 'textdomain' ),
+        'add_new_item' => __( 'Add New Supporter', 'textdomain' ),
+        'add_new' => __( 'Add New', 'textdomain' ),
+        'new_item' => __( 'New Supporter', 'textdomain' ),
+        'edit_item' => __( 'Edit Supporter', 'textdomain' ),
+        'update_item' => __( 'Update Supporter', 'textdomain' ),
+        'view_item' => __( 'View Supporter', 'textdomain' ),
+        'view_items' => __( 'View Supporters', 'textdomain' ),
+        'search_items' => __( 'Search Supporter', 'textdomain' ),
+        'not_found' => __( 'Not found', 'textdomain' ),
+        'not_found_in_trash' => __( 'Not found in Trash', 'textdomain' ),
+        'featured_image' => __( 'Featured Image', 'textdomain' ),
+        'set_featured_image' => __( 'Set featured image', 'textdomain' ),
+        'remove_featured_image' => __( 'Remove featured image', 'textdomain' ),
+        'use_featured_image' => __( 'Use as featured image', 'textdomain' ),
+        'insert_into_item' => __( 'Insert into Supporter', 'textdomain' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this Supporter', 'textdomain' ),
+        'items_list' => __( 'Supporters list', 'textdomain' ),
+        'items_list_navigation' => __( 'Supporters list navigation', 'textdomain' ),
+        'filter_items_list' => __( 'Filter Supporters list', 'textdomain' ),
+    );
+    $args = array(
+        'label' => __( 'Supporter', 'textdomain' ),
+        'description' => __( '', 'textdomain' ),
+        'labels' => $labels,
+        'menu_icon' => '',
+        'supports' => array('title', 'thumbnail'),
+        'taxonomies' => array(),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'hierarchical' => false,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+    );
+    register_post_type( 'supporter', $args );
+
+}
+add_action( 'init', 'create_supporter_cpt', 0 );
 ?>

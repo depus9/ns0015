@@ -136,12 +136,13 @@ ul#menu-main-menu a {
 }
 
 .hero-caption h2 {
-    font-size: 7.6rem;
+    font-size: 5.6rem;
     display: block;
     font-weight: 100;
     text-transform: uppercase;
     color: #fff;
     line-height: 7.8rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8)
 }
 
 .hero-caption h2 span {
@@ -320,6 +321,10 @@ article h3:hover, article a:hover {
 .page-numbers-lg > li > span {
     padding: 10px 16px;
     font-size: 18px;
+}
+
+.codegena iframe {
+    border: none;
 }
 
 .page-numbers-lg > li:first-child > a,
@@ -520,6 +525,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 /*featured rides*/
@@ -610,9 +616,9 @@ span.featured {
 }
 
 .about-bimal .image-container img {
-    height: 100%;
+    width: 100%;
     background: #111;
-    width: auto;
+    height: auto;
     max-width: initial;
 }
 
@@ -644,13 +650,13 @@ span.featured {
 }
 
 .name-info h2 + span {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
 
 }
 
 .name-info h2 {
-    font-size: 9rem;
-    line-height: 10rem;
+    font-size: 6rem;
+    line-height: 7rem;
     color: #111;
     font-weight: 700;
     text-transform: uppercase;
@@ -659,7 +665,7 @@ span.featured {
 
 .contact-info span {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
 }
 
@@ -683,14 +689,14 @@ span.featured {
 }
 
 .contact-info .cn img {
-    height: 2.6rem;
-    width: 2.6rem;
+    height: 2.0rem;
+    width: 2.0rem;
     filter: invert(1);
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .intro-bimal p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #fff;
     margin-top: 3rem;
     line-height: 3rem;
@@ -702,7 +708,7 @@ span.featured {
 
 .intro-bimal {
     height: 100%;
-    background: #111;
+    background: #191919;
     padding: 4rem;
 }
 
@@ -724,7 +730,7 @@ span.featured {
 /*about bimal gurun sectioln*/
 /*himalayan dirt happy riders*/
 #himalayan-dirt-happy-riders {
-    background: url(../../image/himalayan-dirt-testimonial.png) no-repeat #e4e6e5;
+    background: url(../../image/himalayan-dirt-testimonial.png) no-repeat #498adc;
     background-position: bottom center;
     min-height: 100vh;
     padding-bottom: 60rem;
@@ -779,6 +785,7 @@ span.featured {
     font-size: 5rem;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .section-title {
@@ -789,6 +796,7 @@ span.featured {
 .section-title span {
     font-size: 1.7rem;
     text-transform: uppercase;
+    color: #fff;
 }
 
 /*himalayan dirt happy riders*/
@@ -1284,8 +1292,10 @@ button.planBtn {
 }
 
 .ride-item p {
-    color: #777;
+    color: #111;
     font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 500;
 }
 
 ul.nav.nav-tabs li a.active {
@@ -1373,6 +1383,9 @@ span.input-group-append {
     display: flex;
     justify-content: center;
     bottom: 20px;
+    transform: rotate(90deg);
+    top: 0;
+    left: 280px;
 }
 
 .himalayan-hero-slider .owl-dots .owl-dot.active {
@@ -1383,7 +1396,7 @@ span.input-group-append {
 .himalayan-hero-slider .owl-dots .owl-dot {
     height: 15px;
     width: 15px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     margin: 0 5px;
 }
@@ -1454,6 +1467,16 @@ span.input-group-append {
     bottom: 0;
 }
 
+section.about-content p {
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+section.about-content img {
+    height: auto;
+}
+
 .mobile-contact-bar a {
     display: block;
     height: 100%;
@@ -1515,6 +1538,9 @@ div#single-rides .owl-nav button.owl-prev {
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 7%, rgba(17, 17, 17, 1) 100%);
     padding-bottom: 30px;
+    min-height: 40%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .single-caption-option .hero-caption h2 + span.dark {
@@ -1533,6 +1559,34 @@ div#single-rides .owl-nav button.owl-prev {
 
 ul.nav.nav-tabs li {
     margin-bottom: 0;
+}
+
+.js-tilt-glare {
+    pointer-events: none;
+}
+
+div#single-rides:hover .owl-nav button.owl-next span, div#single-rides:hover .owl-nav button.owl-prev span {
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+div#tripOverview {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+
+div#tripOverview.sticky {
+    position: fixed;
+    top: 80px;
+    width: 350px;
+}
+
+.dark-bg {
+    background: #111;
 }
 
 @media screen and (max-width: 767px) {
@@ -1636,8 +1690,8 @@ ul.nav.nav-tabs li {
     }
 
     .name-info h2 {
-        font-size: 5rem;
-        line-height: 6rem;
+        font-size: 3rem;
+        line-height: 3rem;
     }
 
     .media-page-content {
@@ -1752,6 +1806,15 @@ ul.nav.nav-tabs li {
 
     section[id*=media-post], .bottom-contact {
         padding: 30px;
+    }
+
+    .close-boking {
+        height: 30px;
+        width: 30px;
+    }
+
+    .name-info h2 + span {
+        font-size: 1.4rem;
     }
 
 
