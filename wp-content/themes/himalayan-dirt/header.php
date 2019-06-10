@@ -11,6 +11,12 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Himalayan Dirt">
+    <meta name="description" content="We are a trail hunter, because nothing gets better than to explore the wilderness on your mountain bike in the trails of the Himalayas.">
+    <meta name="keywords" content="Himalayan dirt, Mountain Biking Mustang, Mountain Biking Tilicho, Mountain Biking Kathmandu, Mountain Biking Annapurna Circuit, Enduro/All Mountain, Mountain Biking Upper Mustang">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"

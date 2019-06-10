@@ -33,62 +33,123 @@ get_header(); ?>
 
                 </div>
                 <div class="single-ride-content container">
-                    <?php if (get_field('overviews')) { ?>
-                        <div class="ride-content" id="overviews">
-                            <div class="ride-content-title">
-                                <h2>Overviews</h2>
-                            </div>
-                            <div class="ride-item">
-                                <p><?php the_field('overviews'); ?></p>
-                            </div>
-                        </div>
-                    <?php } ?>
-                    <?php if (get_field('itinerary') || get_field('map')) { ?>
-                        <div class="ride-content" id="itinerary">
-                            <div class="ride-content-title">
-                                <h2>MAP & ITINERARY</h2>
-                            </div>
-                            <div class="ride-item">
-                                <ul class="nav nav-tabs">
-                                    <?php if (get_field('itinerary')) { ?>
-                                        <li><a data-toggle="tab" class="active" href="#itinerary-item">Itinerary</a>
-                                        </li>
-                                    <?php } ?>
-                                    <?php if (get_field('map')) { ?>
-                                        <li><a data-toggle="tab" href="#map" <?php if (get_field('itinerary')) {
-                                            } else {
-                                                echo 'class="active"';
-                                            } ?>>Map</a></li>
-                                    <?php } ?>
-                                </ul>
-                                <div class="tab-content">
-                                    <?php if (get_field('itinerary')) { ?>
-                                    <div id="itinerary-item" class="tab-pane fade show active">
-                                        <?php } ?>
-                                        <p><?php the_field('itinerary'); ?></p>
+                    <div class="row">
+                        <div class="col-md-8">
+
+
+                            <?php if (get_field('overviews')) { ?>
+                                <div class="ride-content" id="overviews">
+                                    <div class="ride-content-title">
+                                        <h2>Overviews</h2>
                                     </div>
-                                    <?php if (get_field('map')) { ?>
-                                        <div id="map" class="tab-pane fade  <?php if (get_field('itinerary')) {
-                                        } else {
-                                            echo 'show active';
-                                        } ?>">
-                                            <?php the_field('map'); ?>
-                                        </div>
-                                    <?php } ?>
+                                    <div class="ride-item">
+                                        <p><?php the_field('overviews'); ?></p>
+                                    </div>
                                 </div>
+                            <?php } ?>
+                            <?php if (get_field('itinerary') || get_field('map')) { ?>
+                                <div class="ride-content" id="itinerary">
+                                    <div class="ride-content-title">
+                                        <h2>MAP & ITINERARY</h2>
+                                    </div>
+                                    <div class="ride-item">
+                                        <ul class="nav nav-tabs">
+                                            <?php if (get_field('itinerary')) { ?>
+                                                <li><a data-toggle="tab" class="active"
+                                                       href="#itinerary-item">Itinerary</a>
+                                                </li>
+                                            <?php } ?>
+                                            <?php if (get_field('map')) { ?>
+                                                <li><a data-toggle="tab" href="#map" <?php if (get_field('itinerary')) {
+                                                    } else {
+                                                        echo 'class="active"';
+                                                    } ?>>Map</a></li>
+                                            <?php } ?>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <?php if (get_field('itinerary')) { ?>
+                                            <div id="itinerary-item" class="tab-pane fade show active">
+                                                <?php } ?>
+                                                <p><?php the_field('itinerary'); ?></p>
+                                            </div>
+                                            <?php if (get_field('map')) { ?>
+                                                <div id="map" class="tab-pane fade  <?php if (get_field('itinerary')) {
+                                                } else {
+                                                    echo 'show active';
+                                                } ?>">
+                                                    <?php the_field('map'); ?>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <?php if (get_field('faq')) { ?>
+                                <div class="ride-content" id="faq">
+                                    <div class="ride-content-title">
+                                        <h2>FAQ</h2>
+                                    </div>
+                                    <div class="ride-item">
+                                        <p><?php the_field('faq'); ?></p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="trip-overView ride-content" id="tripOverview">
+                                <h2>Trip Overview</h2>
+                                <hr>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('ride');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('group_size');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('trip_grade');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('trip_grade');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('duration');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('altitude');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('accommodation');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
+                                <p>
+                                    <?php
+                                    $field = get_field_object('trip_contact');
+                                    ?>
+                                    <strong><?php echo $field['label'] ?></strong>: <?php echo $field['value'] ?>
+                                </p>
                             </div>
                         </div>
-                    <?php } ?>
-                    <?php if (get_field('faq')) { ?>
-                        <div class="ride-content" id="faq">
-                            <div class="ride-content-title">
-                                <h2>FAQ</h2>
-                            </div>
-                            <div class="ride-item">
-                                <p><?php the_field('faq'); ?></p>
-                            </div>
-                        </div>
-                    <?php } ?>
+                    </div>
                 </div>
             <?php endwhile;
             else: ?>

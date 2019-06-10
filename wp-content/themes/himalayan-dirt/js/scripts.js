@@ -34,13 +34,34 @@ jQuery(document).ready(function ($) {
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                dots: false
             },
             600: {
                 items: 1
             },
             1000: {
                 items: 1
+            }
+        }
+    })
+    $('#supporter-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2,
+                dots: false
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
             }
         }
     })
@@ -165,5 +186,23 @@ jQuery(document).ready(function ($) {
     $('.datepicker').datepicker({
         uiLibrary: 'bootstrap4'
     });
+
+    if ($('#tripOverview').length > 0) {
+        window.onscroll = function () {
+            stickySidebar();
+
+        }
+        var sticky = $('#tripOverview').offset().top + 10;
+
+        function stickySidebar() {
+            if (window.pageYOffset >= sticky && $('.bottom-contact').offset().top >= window.pageYOffset + 600) {
+                $('#tripOverview').addClass("sticky")
+            } else {
+                $('#tripOverview').removeClass("sticky");
+            }
+        }
+
+    }
+
 
 });

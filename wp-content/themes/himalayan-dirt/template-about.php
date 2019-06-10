@@ -5,6 +5,21 @@ get_header(); ?>
         <?php get_template_part('template-slider-part') ?>
     </div>
 <?php get_template_part('template-about-text') ?>
+<?php while (have_posts()):the_post() ?>
+    <section class="about-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="col-md-6">
+                    <?php the_content() ?>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<?php endwhile; ?>
 <?php get_template_part('template-about-part') ?>
 <?php while (have_posts()): the_post(); ?>
     <div class="media-page-content"
