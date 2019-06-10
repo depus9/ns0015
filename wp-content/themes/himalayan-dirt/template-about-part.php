@@ -1,4 +1,5 @@
- <section class="about-bimal-gurung pt-0 pb-0">
+<div class="dark-bg">
+<section class="about-bimal-gurung pt-0 pb-0">
                 <div class="row no-gutters">
                     <?php
                     $args = array('page_id' => 9);
@@ -53,3 +54,4 @@
                     wp_reset_query(); ?>
                 </div>
      </section>
+</div>
