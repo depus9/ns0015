@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
     //ow carousel
     $('div#himalayan-hero').owlCarousel({
         loop: true,
-        margin: 10,
+        margin: 0,
         nav: false,
         autoplay: true,
         autoplayTimeout: 5000,

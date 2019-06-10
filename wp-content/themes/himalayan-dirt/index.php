@@ -67,94 +67,204 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section id="himalayan-dirt-rides">
-                <div class="container">
-                    <?php $args = array('post_type' => 'ride', 'posts_per_page' => 3);
-                    $query = new WP_Query($args);
-                    $col = 0;
-                    if ($query->have_posts()) {
-                        while ($query->have_posts()):
-                            $query->the_post();
-                            if ($col % 2 == 0) {
-                                ?>
-                                <div class="row">
+            <?php $t = 9;
+            if ($t > 10): ?>
+                <section id="himalayan-dirt-rides">
+                    <div class="container">
+                        <?php $args = array('post_type' => 'ride', 'posts_per_page' => 3);
+                        $query = new WP_Query($args);
+                        $col = 0;
+                        if ($query->have_posts()) {
+                            while ($query->have_posts()):
+                                $query->the_post();
+                                if ($col % 2 == 0) {
+                                    ?>
+                                    <div class="row">
 
-                                    <div class="col-md-8 aos-item" data-aos="fade-right">
-                                        <div class="himalayan-ride-image <?php if ($col == 0) {
-                                            echo 'mt-0';
-                                        } else {
-                                            echo 'mt-8';
-                                        } ?>">
-                                            <a href="<?php the_permalink(); ?>"> <img
-                                                        src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                                                        alt="<?php the_title(); ?>" title="<?php the_title(); ?>"> </a>
+                                        <div class="col-md-8 aos-item" data-aos="fade-right">
+                                            <div class="himalayan-ride-image <?php if ($col == 0) {
+                                                echo 'mt-0';
+                                            } else {
+                                                echo 'mt-8';
+                                            } ?>">
+                                                <a href="<?php the_permalink(); ?>"> <img
+                                                            src="<?php the_post_thumbnail_url('ride-small'); ?>"
+                                                            alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 aos-item" data-aos="fade-left">
-                                        <div class="himalayan-dirt-discription pl-5 <?php if ($col == 0) {
-                                            echo 'mt-0';
-                                        } else {
-                                            echo 'mt-8';
-                                        } ?>">
-                                            <span class="featured">Featured</span>
-                                            <h2><?php the_title(); ?></h2>
-                                            <p><?php the_field('excerpt_text'); ?></p>
-                                            <a href="<?php the_permalink(); ?>"
-                                               title="<?php the_content(); ?>"><span>Learn More</span>
-                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                     y="0px"
-                                                     viewBox="0 0 31.49 31.49"
-                                                     style="enable-background:new 0 0 31.49 31.49;"
-                                                     xml:space="preserve">
+                                        <div class="col-md-4 aos-item" data-aos="fade-left">
+                                            <div class="himalayan-dirt-discription pl-5 <?php if ($col == 0) {
+                                                echo 'mt-0';
+                                            } else {
+                                                echo 'mt-8';
+                                            } ?>">
+                                                <span class="featured">Featured</span>
+                                                <h2><?php the_title(); ?></h2>
+                                                <p><?php the_field('excerpt_text'); ?></p>
+                                                <a href="<?php the_permalink(); ?>"
+                                                   title="<?php the_content(); ?>"><span>Learn More</span>
+                                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                         y="0px"
+                                                         viewBox="0 0 31.49 31.49"
+                                                         style="enable-background:new 0 0 31.49 31.49;"
+                                                         xml:space="preserve">
 <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
 	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
 	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
 </svg>
-                                            </a>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } else { ?>
-                                <div class="row">
-                                    <div class="col-md-4 aos-item" data-aos="fade-right">
-                                        <div class="himalayan-dirt-discription pr-5">
-                                            <span class="featured">Featured</span>
-                                            <h2><?php the_title(); ?></h2>
-                                            <p><?php the_field('excerpt_text'); ?></p>
-                                            <a href="<?php the_permalink(); ?>"
-                                               title="<?php the_content(); ?>"><span>Learn More</span>
-                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                     y="0px"
-                                                     viewBox="0 0 31.49 31.49"
-                                                     style="enable-background:new 0 0 31.49 31.49;"
-                                                     xml:space="preserve">
+                                <?php } else { ?>
+                                    <div class="row">
+                                        <div class="col-md-4 aos-item" data-aos="fade-right">
+                                            <div class="himalayan-dirt-discription pr-5">
+                                                <span class="featured">Featured</span>
+                                                <h2><?php the_title(); ?></h2>
+                                                <p><?php the_field('excerpt_text'); ?></p>
+                                                <a href="<?php the_permalink(); ?>"
+                                                   title="<?php the_content(); ?>"><span>Learn More</span>
+                                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                         y="0px"
+                                                         viewBox="0 0 31.49 31.49"
+                                                         style="enable-background:new 0 0 31.49 31.49;"
+                                                         xml:space="preserve">
 <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
 	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
 	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
 </svg>
-                                            </a>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 aos-item" data-aos="fade-left">
+                                            <div class="himalayan-ride-image">
+                                                <a href="<?php the_permalink(); ?>"> <img
+                                                            src="<?php the_post_thumbnail_url('ride-small'); ?>"
+                                                            alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-8 aos-item" data-aos="fade-left">
-                                        <div class="himalayan-ride-image">
-                                            <a href="<?php the_permalink(); ?>"> <img
-                                                        src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                                                        alt="<?php the_title(); ?>" title="<?php the_title(); ?>"> </a>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            <?php } ?>
-                            <?php $col++; endwhile;
-                    } else {
-                        echo 'Nothing to Display!';
-                    }
-                    wp_reset_query(); ?>
-                </div>
-            </section>
+                                <?php } ?>
+                                <?php $col++; endwhile;
+                        } else {
+                            echo 'Nothing to Display!';
+                        }
+                        wp_reset_query(); ?>
+                    </div>
+                </section>
+            <?php endif; ?>
             <div class="dark-bg">
+                <div class="enter-section">
+                    <div class="intro-container">
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/image/enter.jpg"
+                                     alt="Himalayan Dirt - a rider owned tour company">
+                            </div>
+                            <div class="col-md-5">
+                                <div class="intro-text">
+                                    <h2>Nepal <span>A mountain bike getaway</span></h2>
+                                    <p>
+                                        Nepal was once a forbidden kingdom, hidden from the world, all her mysteries and
+                                        secrets kept inside her mystical landlocked boarders. In the 1950’s when the
+                                        curtain
+                                        fell and her borders opened to a rapidly changing world looking for adventure
+                                        and
+                                        adrenaline, intrepid travelers thronged here by the thousands to the trek in the
+                                        lap
+                                        of the mighty Himalaya’s, home to eight of world’s ten highest mountains. They
+                                        came
+                                        to lose themselves in the mystery of the fabled Shangri-La… and perhaps a cloud
+                                        of
+                                        Ganja.
+                                    </p>
+                                    <p>
+                                        As the years went by many people only saw Nepal as a place to trek or as an
+                                        abode of
+                                        the hippy, but as the twenty-first century dawned so did the age of adventure
+                                        tourism.
+
+                                    </p>
+                                    <p>To many it became apparent that the Jaw Dropping Mountains of the
+                                        Himalaya
+                                        boasted so much more than trudging one foot in front of the other. Now, Mountain
+                                        biking has become a key part of our life as in terms of sport, for health
+                                        benefits
+                                        and for some of us it is more of a lifestyle.
+                                    </p>
+                                    <div class="goFindRide">
+                                        <p>
+                                            A rider owned Mountain Bike Tour Company.
+                                        </p>
+                                        <p>
+                                            We provide all sorts of Mountain Biking Tours in the Himalayas with the
+                                            extensive knowledge of all Terrains and Culture in a professional manner.
+                                        </p>
+                                        <p>Your partner for All mountain, Enduro, singletrack rides in the
+                                            Himalayas.</p>
+                                    </div>
+                                </div>
+                                <style>
+                                    .intro-text p {
+                                        color: #fff;
+                                        font-size: 1.7rem;
+                                        line-height: 25px;
+                                    }
+
+                                    .goFindRide {
+                                        background: #fff;
+                                        color: #888;
+                                        padding: 20px;
+                                        margin-left: -160px;
+                                        margin-top: 50px;
+                                        margin-right: 160px;
+                                        position: relative;
+                                    }
+
+                                    .goFindRide p {
+                                        color: #777;
+                                    }
+
+                                    .goFindRide:after {
+                                        content: "";
+                                        position: absolute;
+                                        height: 0;
+                                        width: 0;
+                                        border-top: 30px solid transparent;
+                                        border-bottom: 30px solid transparent;
+                                        border-right: 30px solid #fff;
+                                        top: 0;
+                                        left: -11px;
+                                    }
+
+                                    .intro-text h2 {
+                                        font-size: 3rem;
+                                        color: #fff;
+                                        font-weight: 600;
+                                        margin-bottom: 30px;
+                                    }
+
+                                    ro-text h2 span {
+                                        font-weight: 100;
+                                    }
+
+                                    .intro-text {
+                                        padding: 50px 40px;
+                                        background: #42afef;
+                                        height: 100%;
+                                    }
+                                </style>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <?php get_template_part('template-about-part') ?>
 
 
@@ -182,7 +292,7 @@ get_header(); ?>
                     <div class="video-overlay"></div>
                 </section>
             </div>
-                <?php get_template_part('template-part-supporter') ?>
+            <?php get_template_part('template-part-supporter') ?>
             <div class="dark-bg">
                 <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                     <div class="container">
