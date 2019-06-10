@@ -128,11 +128,12 @@ ul#menu-main-menu a {
 }
 
 .hero-slider-item {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     background-size: cover !important;
     background-position: center !important;
     display: flex;
     align-items: center;
+    margin-top:80px;
 }
 
 .hero-caption h2 {
