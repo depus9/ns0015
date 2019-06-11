@@ -164,9 +164,13 @@ get_header(); ?>
                 <div class="enter-section">
                     <div class="intro-container">
                         <div class="row no-gutters">
+                        <?php
+                    $args = array('page_id' => 520);
+                    $query = new WP_Query($args);
+                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+                        ?>
                             <div class="col-md-7">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/image/enter.jpg"
-                                     alt="Himalayan Dirt - a rider owned tour company">
+                            <img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
                                 <div class="goRides">
                                     <p>Find your trips</p>
                                     <a href="<?php echo site_url(); ?>/rides" title="Find Your Ride">Enter</a>
@@ -175,46 +179,14 @@ get_header(); ?>
                             <div class="col-md-5">
                                 <div class="intro-text">
                                     <div class="goFindRide">
-                                        <p>
-                                            A rider owned Mountain Bike Tour Company.
-                                        </p>
-                                        <p>
-                                            We provide all sorts of Mountain Biking Tours in the Himalayas with the
-                                            extensive knowledge of all Terrains and Culture in a professional manner.
-                                        </p>
-                                        <p>Your partner for All mountain, Enduro, singletrack rides in the
-                                            Himalayas.</p>
+                                    <p>
+                                        <?php the_field('excerpt_text'); ?>
+                                    </p>
                                     </div>
-                                    <h2>Nepal <span>a mountain bike getaway</span></h2>
+                                    <h2> <?php the_field('big_bold_text'); ?> <span><?php the_field('big_thin_text'); ?></span></h2>
                                     <p>
-                                        Nepal was once a forbidden kingdom, hidden from the world, all her mysteries and
-                                        secrets kept inside her mystical landlocked boarders. In the 1950’s when the
-                                        curtain
-                                        fell and her borders opened to a rapidly changing world looking for adventure
-                                        and
-                                        adrenaline, intrepid travelers thronged here by the thousands to the trek in the
-                                        lap
-                                        of the mighty Himalaya’s, home to eight of world’s ten highest mountains. They
-                                        came
-                                        to lose themselves in the mystery of the fabled Shangri-La… and perhaps a cloud
-                                        of
-                                        Ganja.
+                                    <?php the_content();?>
                                     </p>
-                                    <p>
-                                        As the years went by many people only saw Nepal as a place to trek or as an
-                                        abode of
-                                        the hippy, but as the twenty-first century dawned so did the age of adventure
-                                        tourism.
-
-                                    </p>
-                                    <p>To many it became apparent that the Jaw Dropping Mountains of the
-                                        Himalaya
-                                        boasted so much more than trudging one foot in front of the other. Now, Mountain
-                                        biking has become a key part of our life as in terms of sport, for health
-                                        benefits
-                                        and for some of us it is more of a lifestyle.
-                                    </p>
-
                                 </div>
                                 <style>
                                     .intro-text p {
@@ -297,8 +269,12 @@ get_header(); ?>
                                         font-weight: 700;
                                     }
                                 </style>
-
                             </div>
+                            <?php endwhile;
+                    else: ?>
+                        <p>Sorry, Nothing to display.</p>
+                    <?php endif;
+                    wp_reset_query(); ?>
                         </div>
                     </div>
                 </div>
