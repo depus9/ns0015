@@ -305,11 +305,6 @@ get_header(); ?>
                     <div class="video-overlay"></div>
                 </section>
             </div>
-<<<<<<< HEAD
-            <?php //get_template_part('template-part-supporter') ?>
-=======
-                
->>>>>>> b450a029b6dc7dfa6a628e9174ea621abf78684d
             <div class="dark-bg">
                 <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                     <div class="container">
