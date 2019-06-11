@@ -6,16 +6,26 @@
         <?php while (have_posts()):the_post(); ?>
             <div id="himalayan-hero-inner">
                 <?php
+
                 $images = get_field('ride_gallery');
                 $size = 'full'; // (thumbnail, medium, large, full or custom size)?>
                 <?php if ($images) { ?>
                     <div class="owl-carousel owl-theme" id="single-rides">
-                        <?php foreach ($images as $image): ?>
-                            <div class="hero-slider-item"
-                                 style="background: url(<?php echo $image['url']; ?>);">
+                        <?php foreach ($images as $image):
+                            if ($image['type'] != 'video') {
+                                ?>
+                                <div class="hero-slider-item"
+                                     style="background: url(<?php echo $image['url']; ?>);">
 
-                            </div>
-                        <?php endforeach; ?>
+                                </div>
+                            <?php } else {
+                                ?>
+                                <iframe allowFullScreen="allowFullScreen"
+                                        src="https://www.youtube.com/embed/p2xBsiNca7c?ecver=1&amp;autoplay=1&amp;iv_load_policy=1&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;width=100%&amp;width=100%"
+                                        width="100%" height="800" allowtransparency="true" frameborder="0">
+                                </iframe>
+                                <?php
+                            } endforeach; ?>
                     </div>
                     <div class="single-caption-option">
                         <div class="container">
@@ -32,7 +42,8 @@
                         <div class="single-caption-option">
                             <div class="container">
                                 <div class="hero-caption">
-                                    <h2><?php the_field('big_thin_text') ?><span><?php the_field('big_bold_text') ?></span>
+                                    <h2><?php the_field('big_thin_text') ?>
+                                        <span><?php the_field('big_bold_text') ?></span>
                                     </h2>
                                     <span class="dark"><?php the_field('small_line_text') ?></span>
                                 </div>
