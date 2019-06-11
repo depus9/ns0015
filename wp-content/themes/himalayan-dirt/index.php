@@ -329,7 +329,11 @@ get_header(); ?>
                     <div class="video-overlay"></div>
                 </section>
             </div>
+<<<<<<< HEAD
             <?php //get_template_part('template-part-supporter') ?>
+=======
+                
+>>>>>>> b450a029b6dc7dfa6a628e9174ea621abf78684d
             <div class="dark-bg">
                 <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                     <div class="container">
@@ -382,10 +386,10 @@ get_header(); ?>
                     </div>
                 </section>
             </div>
+
             <section class="instagramGallery pt-0 pb-0">
                 <?php echo do_shortcode('[instagram-feed]') ?>
             </section>
         </div>
     </div>
-
 <?php get_footer(); ?>

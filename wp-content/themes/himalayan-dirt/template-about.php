@@ -20,9 +20,15 @@ get_header(); ?>
         </div>
     </section>
 <?php endwhile; ?>
+<<<<<<< HEAD
     <div class="dark-bg">
         <?php get_template_part('template-about-part') ?>
     </div>
+=======
+<div class="dark-bg">
+<?php get_template_part('template-about-part') ?>
+</div>
+>>>>>>> b450a029b6dc7dfa6a628e9174ea621abf78684d
 <?php while (have_posts()): the_post(); ?>
     <div class="media-page-content"
          style="background-image:url(<?php echo bloginfo('template_directory'); ?>/image/about-bg.png);background-size:cover; background-position:center; min-height:100%;">
