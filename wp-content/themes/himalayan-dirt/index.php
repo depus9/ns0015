@@ -46,29 +46,30 @@ get_header(); ?>
                             src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
                 </div>
             </div>
-            <section class="himalayan-dirt" id="himalayanDirt">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm-8 text-center">
-                            <?php
-                            $args = array('page_id' => 9);
-                            $query = new WP_Query($args);
-                            if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-                                ?>
-                                <p>
-                                    <?php the_field('excerpt_text'); ?>
-                                </p>
-                            <?php endwhile;
-                            else: ?>
-                                <p>Sorry, Nothing to display.</p>
-                            <?php endif;
-                            wp_reset_query(); ?>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <?php $t = 9;
             if ($t > 10): ?>
+                <section class="himalayan-dirt" id="himalayanDirt">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-8 text-center">
+                                <?php
+                                $args = array('page_id' => 9);
+                                $query = new WP_Query($args);
+                                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+                                    ?>
+                                    <p>
+                                        <?php the_field('excerpt_text'); ?>
+                                    </p>
+                                <?php endwhile;
+                                else: ?>
+                                    <p>Sorry, Nothing to display.</p>
+                                <?php endif;
+                                wp_reset_query(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="himalayan-dirt-rides">
                     <div class="container">
                         <?php $args = array('post_type' => 'ride', 'posts_per_page' => 3);
@@ -166,10 +167,25 @@ get_header(); ?>
                             <div class="col-md-7">
                                 <img src="<?php echo bloginfo('template_directory'); ?>/image/enter.jpg"
                                      alt="Himalayan Dirt - a rider owned tour company">
+                                <div class="goRides">
+                                    <p>Find your trips</p>
+                                    <a href="<?php echo site_url(); ?>/rides" title="Find Your Ride">Enter</a>
+                                </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="intro-text">
-                                    <h2>Nepal <span>A mountain bike getaway</span></h2>
+                                    <div class="goFindRide">
+                                        <p>
+                                            A rider owned Mountain Bike Tour Company.
+                                        </p>
+                                        <p>
+                                            We provide all sorts of Mountain Biking Tours in the Himalayas with the
+                                            extensive knowledge of all Terrains and Culture in a professional manner.
+                                        </p>
+                                        <p>Your partner for All mountain, Enduro, singletrack rides in the
+                                            Himalayas.</p>
+                                    </div>
+                                    <h2>Nepal <span>a mountain bike getaway</span></h2>
                                     <p>
                                         Nepal was once a forbidden kingdom, hidden from the world, all her mysteries and
                                         secrets kept inside her mystical landlocked boarders. In the 1950’s when the
@@ -198,17 +214,7 @@ get_header(); ?>
                                         benefits
                                         and for some of us it is more of a lifestyle.
                                     </p>
-                                    <div class="goFindRide">
-                                        <p>
-                                            A rider owned Mountain Bike Tour Company.
-                                        </p>
-                                        <p>
-                                            We provide all sorts of Mountain Biking Tours in the Himalayas with the
-                                            extensive knowledge of all Terrains and Culture in a professional manner.
-                                        </p>
-                                        <p>Your partner for All mountain, Enduro, singletrack rides in the
-                                            Himalayas.</p>
-                                    </div>
+
                                 </div>
                                 <style>
                                     .intro-text p {
@@ -222,9 +228,10 @@ get_header(); ?>
                                         color: #888;
                                         padding: 20px;
                                         margin-left: -160px;
-                                        margin-top: 50px;
+                                        margin-bottom: 50px;
                                         margin-right: 160px;
                                         position: relative;
+                                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
                                     }
 
                                     .goFindRide p {
@@ -259,6 +266,36 @@ get_header(); ?>
                                         background: #42afef;
                                         height: 100%;
                                     }
+
+                                    .intro-text h2 span {
+                                        font-weight: 100;
+                                    }
+
+                                    .goRides a:hover {
+                                        opacity: 0.7;
+                                    }
+                                    .goRides a {
+                                        border: 2px solid #fff;
+                                        color: #fff;
+                                        padding: 10px 25px;
+                                        margin-top: 15px;
+                                        display: block;
+                                        text-decoration: none;
+                                    }
+
+                                    .goRides {
+                                        display: block;
+                                        position: absolute;
+                                        bottom: 30px;
+                                        left: calc(50% - 120px);
+                                        width: 240px;
+                                        /* background: #fff; */
+                                        text-align: center;
+                                        padding: 15px;
+                                        color: #fff;
+                                        text-transform: uppercase;
+                                        font-weight: 700;
+                                    }
                                 </style>
 
                             </div>
@@ -292,7 +329,7 @@ get_header(); ?>
                     <div class="video-overlay"></div>
                 </section>
             </div>
-            <?php get_template_part('template-part-supporter') ?>
+            <?php //get_template_part('template-part-supporter') ?>
             <div class="dark-bg">
                 <section id="himalayan-dirt-happy-riders" class="" data-aos="zoom-in">
                     <div class="container">
