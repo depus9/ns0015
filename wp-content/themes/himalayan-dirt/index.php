@@ -182,7 +182,7 @@ wp_reset_query(); ?>
     <?php endif; ?>
     <div class="dark-bg">
       <div class="enter-section">
-        <?php $args = array('page_id' => 525);
+        <?php $args = array('page_id' => 520);
 $query = new WP_Query($args);
 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
 ?>
