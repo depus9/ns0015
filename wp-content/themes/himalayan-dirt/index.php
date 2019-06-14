@@ -217,6 +217,7 @@ if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                 <p>
                   <?php the_content();?>
                 </p>
+                <a class="btn" href="<?php echo site_url(); ?>/about-us">Read More</a>
               </div>
               <style>
                 .intro-text p {
@@ -252,7 +253,7 @@ if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                   font-size: 3rem;
                   color: #fff;
                   font-weight: 600;
-                  margin-bottom: 30px;
+                  margin-bottom: 20px;
                 }
                 .intro-text {
                   padding: 50px 40px;
@@ -261,7 +262,6 @@ if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                 }
                 .intro-text h2 span {
                   font-weight: 100;
-                  display:block;
                 }
                 .goRides a:hover {
                   opacity: 0.7;
