@@ -1565,10 +1565,6 @@ ul.nav.nav-tabs li {
     pointer-events: none;
 }
 
-div#single-rides:hover .owl-nav button.owl-next span, div#single-rides:hover .owl-nav button.owl-prev span {
-    color: #fff;
-    font-size: 3.5rem;
-}
 
 div#tripOverview {
     -webkit-transition: all 0.5s;
@@ -1588,7 +1584,9 @@ div#tripOverview.sticky {
 .dark-bg {
     background: #111;
 }
-
+div#himalayanDirt p{
+    color: #fff;
+}
 @media screen and (max-width: 767px) {
     a.header-plan-trip {
         display: none;
@@ -1872,6 +1870,7 @@ section#supporters img {
     border: 2px solid #103e8b;
 }
 
+div#single-rides .owl-nav button span,
 .himalayan-hero-slider .owl-nav button span {
     font-size: 90px;
     color: #fff;

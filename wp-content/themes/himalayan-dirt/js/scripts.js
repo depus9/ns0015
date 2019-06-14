@@ -37,10 +37,14 @@ jQuery(document).ready(function ($) {
         responsive: {
             0: {
                 items: 1,
-                dots: false
+                dots: false,
+                nav: false,
+                stagePadding: 0
             },
             600: {
-                items: 1
+                items: 1,
+                nav: false,
+                stagePadding: 0
             },
             1000: {
                 items: 1
@@ -76,14 +80,18 @@ jQuery(document).ready(function ($) {
         video: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
-        stagePadding: 0,
+        stagePadding: 200,
         margin: 0,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false,
+                stagePadding: 0
             },
             600: {
-                items: 1
+                items: 1,
+                nav: false,
+                stagePadding: 0
             },
             1000: {
                 items: 1
