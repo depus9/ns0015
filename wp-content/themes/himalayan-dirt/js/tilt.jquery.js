@@ -267,7 +267,6 @@
             this.init();
         });
     };
-
     /**
      * Auto load
      */
