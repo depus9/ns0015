@@ -164,117 +164,120 @@ get_header(); ?>
                 <div class="enter-section">
                     <div class="intro-container">
                         <div class="row no-gutters">
-                        <?php
-                    $args = array('page_id' => 525);
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-                        ?>
-                            <div class="col-md-7">
-                            <img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-                                <div class="goRides">
-                                    <p>Find your trips</p>
-                                    <a href="<?php echo site_url(); ?>/rides" title="Find Your Ride">Enter</a>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="intro-text">
-                                    <div class="goFindRide">
-                                    <p>
-                                        <?php the_field('excerpt_text'); ?>
-                                    </p>
+                            <?php
+                            $args = array('page_id' => 525);
+                            $query = new WP_Query($args);
+                            if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+                                ?>
+                                <div class="col-md-7">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>"
+                                         alt="<?php the_title(); ?>">
+                                    <div class="goRides">
+                                        <p>Find your trips</p>
+                                        <a href="<?php echo site_url(); ?>/rides" title="Find Your Ride">Enter</a>
                                     </div>
-                                    <h2> <?php the_field('big_bold_text'); ?> <span><?php the_field('big_thin_text'); ?></span></h2>
-                                    <p>
-                                    <?php the_content();?>
-                                    </p>
                                 </div>
-                                <style>
-                                    .intro-text p {
-                                        color: #fff;
-                                        font-size: 1.7rem;
-                                        line-height: 25px;
-                                    }
+                                <div class="col-md-5">
+                                    <div class="intro-text">
+                                        <div class="goFindRide">
+                                            <p>
+                                                <?php the_field('excerpt_text'); ?>
+                                            </p>
+                                        </div>
+                                        <h2> <?php the_field('big_bold_text'); ?>
+                                            <span><?php the_field('big_thin_text'); ?></span></h2>
+                                        <p>
+                                            <?php the_content(); ?>
+                                        </p>
+                                    </div>
+                                    <style>
+                                        .intro-text p {
+                                            color: #fff;
+                                            font-size: 1.7rem;
+                                            line-height: 25px;
+                                        }
 
-                                    .goFindRide {
-                                        background: #fff;
-                                        color: #888;
-                                        padding: 20px;
-                                        margin-left: -160px;
-                                        margin-bottom: 50px;
-                                        margin-right: 160px;
-                                        position: relative;
-                                        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-                                    }
+                                        .goFindRide {
+                                            background: #fff;
+                                            color: #888;
+                                            padding: 20px;
+                                            margin-left: -160px;
+                                            margin-bottom: 50px;
+                                            margin-right: 160px;
+                                            position: relative;
+                                            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+                                        }
 
-                                    .goFindRide p {
-                                        color: #777;
-                                    }
+                                        .goFindRide p {
+                                            color: #777;
+                                        }
 
-                                    .goFindRide:after {
-                                        content: "";
-                                        position: absolute;
-                                        height: 0;
-                                        width: 0;
-                                        border-top: 30px solid transparent;
-                                        border-bottom: 30px solid transparent;
-                                        border-right: 30px solid #fff;
-                                        top: 0;
-                                        left: -11px;
-                                    }
+                                        .goFindRide:after {
+                                            content: "";
+                                            position: absolute;
+                                            height: 0;
+                                            width: 0;
+                                            border-top: 30px solid transparent;
+                                            border-bottom: 30px solid transparent;
+                                            border-right: 30px solid #fff;
+                                            top: 0;
+                                            left: -11px;
+                                        }
 
-                                    .intro-text h2 {
-                                        font-size: 3rem;
-                                        color: #fff;
-                                        font-weight: 600;
-                                        margin-bottom: 30px;
-                                    }
+                                        .intro-text h2 {
+                                            font-size: 3rem;
+                                            color: #fff;
+                                            font-weight: 600;
+                                            margin-bottom: 30px;
+                                        }
 
-                                    ro-text h2 span {
-                                        font-weight: 100;
-                                    }
+                                        ro-text h2 span {
+                                            font-weight: 100;
+                                        }
 
-                                    .intro-text {
-                                        padding: 50px 40px;
-                                        background: #42afef;
-                                        height: 100%;
-                                    }
+                                        .intro-text {
+                                            padding: 50px 40px;
+                                            background: #42afef;
+                                            height: 100%;
+                                        }
 
-                                    .intro-text h2 span {
-                                        font-weight: 100;
-                                    }
+                                        .intro-text h2 span {
+                                            font-weight: 100;
+                                        }
 
-                                    .goRides a:hover {
-                                        opacity: 0.7;
-                                    }
-                                    .goRides a {
-                                        border: 2px solid #fff;
-                                        color: #fff;
-                                        padding: 10px 25px;
-                                        margin-top: 15px;
-                                        display: block;
-                                        text-decoration: none;
-                                    }
+                                        .goRides a:hover {
+                                            opacity: 0.7;
+                                        }
 
-                                    .goRides {
-                                        display: block;
-                                        position: absolute;
-                                        bottom: 30px;
-                                        left: calc(50% - 120px);
-                                        width: 240px;
-                                        /* background: #fff; */
-                                        text-align: center;
-                                        padding: 15px;
-                                        color: #fff;
-                                        text-transform: uppercase;
-                                        font-weight: 700;
-                                    }
-                                </style>
-                            </div>
+                                        .goRides a {
+                                            border: 2px solid #fff;
+                                            color: #fff;
+                                            padding: 10px 25px;
+                                            margin-top: 15px;
+                                            display: block;
+                                            text-decoration: none;
+                                        }
+
+                                        .goRides {
+                                            display: block;
+                                            position: absolute;
+                                            bottom: 30px;
+                                            left: calc(50% - 120px);
+                                            width: 240px;
+                                            /* background: #fff; */
+                                            text-align: center;
+                                            padding: 15px;
+                                            color: #fff;
+                                            text-transform: uppercase;
+                                            font-weight: 700;
+                                        }
+                                    </style>
+                                </div>
                             <?php endwhile;
-                    else: ?>
-                        <p>Sorry, Nothing to display.</p>
-                    <?php endif;
-                    wp_reset_query(); ?>
+                            else: ?>
+                                <p>Sorry, Nothing to display.</p>
+                            <?php endif;
+                            wp_reset_query(); ?>
                         </div>
                     </div>
                 </div>
