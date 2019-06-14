@@ -1887,3 +1887,7 @@ section#supporters img {
 .intro-text a.btn:hover{
     border: 2px solid #103e8b;
 }
+.himalayan-hero-slider .owl-nav button span {
+    font-size: 90px;
+    color: #fff;
+}
