@@ -165,7 +165,7 @@ get_header(); ?>
                     <div class="intro-container">
                         <div class="row no-gutters">
                         <?php
-                    $args = array('page_id' => 520);
+                    $args = array('page_id' => 525);
                     $query = new WP_Query($args);
                     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                         ?>
