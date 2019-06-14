@@ -52,137 +52,10 @@ wp_reset_query(); ?>
              src="<?php echo bloginfo('template_directory'); ?>/image/arrow-white.svg" alt="back to top">
       </div>
     </div>
-    <?php $t = 9;
-if ($t > 10): ?>
-    <section class="himalayan-dirt" id="himalayanDirt">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-sm-8 text-center">
-            <?php
-$args = array('page_id' => 9);
-$query = new WP_Query($args);
-if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-?>
-            <p>
-              <?php the_field('excerpt_text'); ?>
-            </p>
-            <?php endwhile;
-else: ?>
-            <p>Sorry, Nothing to display.
-            </p>
-            <?php endif;
-wp_reset_query(); ?>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="himalayan-dirt-rides">
-      <div class="container">
-        <?php $args = array('post_type' => 'ride', 'posts_per_page' => 3);
-$query = new WP_Query($args);
-$col = 0;
-if ($query->have_posts()) {
-while ($query->have_posts()):
-$query->the_post();
-if ($col % 2 == 0) {
-?>
-        <div class="row">
-          <div class="col-md-8 aos-item" data-aos="fade-right">
-            <div class="himalayan-ride-image <?php if ($col == 0) {
-                        echo 'mt-0';
-                        } else {
-                        echo 'mt-8';
-                        } ?>">
-              <a href="<?php the_permalink(); ?>"> 
-                <img
-                     src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                     alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 aos-item" data-aos="fade-left">
-            <div class="himalayan-dirt-discription pl-5 <?php if ($col == 0) {
-                        echo 'mt-0';
-                        } else {
-                        echo 'mt-8';
-                        } ?>">
-              <span class="featured">Featured
-              </span>
-              <h2>
-                <?php the_title(); ?>
-              </h2>
-              <p>
-                <?php the_field('excerpt_text'); ?>
-              </p>
-              <a href="<?php the_permalink(); ?>"
-                 title="<?php the_content(); ?>">
-                <span>Learn More
-                </span>
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                     y="0px"
-                     viewBox="0 0 31.49 31.49"
-                     style="enable-background:new 0 0 31.49 31.49;"
-                     xml:space="preserve">
-                  <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
-                                                 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
-                                                 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <?php } else { ?>
-        <div class="row">
-          <div class="col-md-4 aos-item" data-aos="fade-right">
-            <div class="himalayan-dirt-discription pr-5">
-              <span class="featured">Featured
-              </span>
-              <h2>
-                <?php the_title(); ?>
-              </h2>
-              <p>
-                <?php the_field('excerpt_text'); ?>
-              </p>
-              <a href="<?php the_permalink(); ?>"
-                 title="<?php the_content(); ?>">
-                <span>Learn More
-                </span>
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                     y="0px"
-                     viewBox="0 0 31.49 31.49"
-                     style="enable-background:new 0 0 31.49 31.49;"
-                     xml:space="preserve">
-                  <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
-                                                 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
-                                                 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-8 aos-item" data-aos="fade-left">
-            <div class="himalayan-ride-image">
-              <a href="<?php the_permalink(); ?>"> 
-                <img
-                     src="<?php the_post_thumbnail_url('ride-small'); ?>"
-                     alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
-              </a>
-            </div>
-          </div>
-        </div>
-        <?php } ?>
-        <?php $col++; endwhile;
-} else {
-echo 'Nothing to Display!';
-}
-wp_reset_query(); ?>
-      </div>
-    </section>
-    <?php endif; ?>
+
     <div class="dark-bg">
       <div class="enter-section">
-        <?php $args = array('page_id' => 520);
+        <?php $args = array('page_id' => 525);
 $query = new WP_Query($args);
 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
 ?>
@@ -299,6 +172,112 @@ else: ?>
 wp_reset_query(); ?>
       </div>
       <?php get_template_part('template-about-part') ?>
+        <?php $t = 11;
+        if ($t > 10): ?>
+            <section id="himalayan-dirt-rides">
+                <div class="container">
+                    <?php $args = array('post_type' => 'post', 'posts_per_page' => 3);
+                    $query = new WP_Query($args);
+                    $col = 0;
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()):
+                            $query->the_post();
+                            if ($col % 2 == 0) {
+                                ?>
+                                <div class="row">
+                                    <div class="col-md-8 aos-item" data-aos="fade-right">
+                                        <div class="himalayan-ride-image <?php if ($col == 0) {
+                                            echo 'mt-0';
+                                        } else {
+                                            echo 'mt-8';
+                                        } ?>">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <img
+                                                        src="<?php the_post_thumbnail_url('ride-small'); ?>"
+                                                        alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 aos-item" data-aos="fade-left">
+                                        <div class="himalayan-dirt-discription pl-5 <?php if ($col == 0) {
+                                            echo 'mt-0';
+                                        } else {
+                                            echo 'mt-8';
+                                        } ?>">
+              <span class="featured">Featured
+              </span>
+                                            <h2>
+                                                <?php the_title(); ?>
+                                            </h2>
+                                            <p>
+                                                <?php the_field('excerpt_text'); ?>
+                                            </p>
+                                            <a href="<?php the_permalink(); ?>"
+                                               title="<?php the_content(); ?>">
+                <span>Learn More
+                </span>
+                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                     y="0px"
+                                                     viewBox="0 0 31.49 31.49"
+                                                     style="enable-background:new 0 0 31.49 31.49;"
+                                                     xml:space="preserve">
+                  <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+                                                 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+                                                 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
+                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } else { ?>
+                                <div class="row">
+                                    <div class="col-md-4 aos-item" data-aos="fade-right">
+                                        <div class="himalayan-dirt-discription pr-5">
+              <span class="featured">Featured
+              </span>
+                                            <h2>
+                                                <?php the_title(); ?>
+                                            </h2>
+                                            <p>
+                                                <?php the_field('excerpt_text'); ?>
+                                            </p>
+                                            <a href="<?php the_permalink(); ?>"
+                                               title="<?php the_content(); ?>">
+                <span>Learn More
+                </span>
+                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                     y="0px"
+                                                     viewBox="0 0 31.49 31.49"
+                                                     style="enable-background:new 0 0 31.49 31.49;"
+                                                     xml:space="preserve">
+                  <path style="fill:#1E201D;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+                                                 C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+                                                 c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
+                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 aos-item" data-aos="fade-left">
+                                        <div class="himalayan-ride-image">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <img
+                                                        src="<?php the_post_thumbnail_url('ride-small'); ?>"
+                                                        alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <?php $col++; endwhile;
+                    } else {
+                        echo 'Nothing to Display!';
+                    }
+                    wp_reset_query(); ?>
+                </div>
+            </section>
+        <?php endif; ?>
       <section class="himalayan-intro-video pt-0 pb-0" data-aos="zoom-in">
         <div class="intro-video-container">
           <style>.codegena {

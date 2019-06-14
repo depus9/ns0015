@@ -1753,7 +1753,8 @@ div#himalayanDirt p{
     }
 
     .hero-slider-item {
-        height: 80vh;
+        height: 350px;
+        min-height: initial;
     }
 
     .single-ride-nav .container.d-flex.justify-content-between {
