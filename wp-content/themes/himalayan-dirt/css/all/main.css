@@ -1041,20 +1041,26 @@ a.back-top-top img {
 }
 
 /*innper page rides*/
+section#himalayan-rides {
+    background: #333;
+
+}
+
 section#himalayan-rides span.featured {
+    margin-top: 20px;
     margin-top: 20px;
 
 }
 
 section#himalayan-rides .himalayan-dirt-discription h2 {
-    color: #111;
+    color: #fff9ec;
     font-size: 2.4rem;
     margin: 30px 0;
     font-weight: 600;
 }
 
 section#himalayan-rides .himalayan-dirt-discription p {
-    color: #777;
+    color: #fff;
     margin-top: 5rem;
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -1063,12 +1069,10 @@ section#himalayan-rides .himalayan-dirt-discription p {
 
 section#himalayan-rides .himalayan-dirt-discription a {
     width: 70%;
-    color: #111;
-    border-color: #111;
+
 }
 
 section#himalayan-rides .himalayan-dirt-discription a svg, section#himalayan-rides .himalayan-dirt-discription a svg path {
-    fill: #111 !important;
 }
 
 .ride-item {
@@ -1245,7 +1249,7 @@ button.planBtn {
 .single-ride-nav {
     display: flex;
     padding: 15px;
-    background: #fff;
+    background: #111;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
 }
@@ -1294,11 +1298,25 @@ button.planBtn {
 
 }
 
+.ride-content p {
+    color: #fff;
+
+}
+
 .ride-content {
-    background: #fff;
+    background: #222;
     padding: 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
+}
+
+div#tripOverview hr {
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+div#tripOverview p {
+    color: #fff;
 }
 
 .ride-content-title h2 {
@@ -1306,10 +1324,11 @@ button.planBtn {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .ride-item p {
-    color: #111;
+    color: #fff;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 500;
@@ -1326,15 +1345,20 @@ ul.nav.nav-tabs li a {
     text-decoration: none;
 }
 
+div#tripOverview h2 {
+    color: #fff;
+}
+
 .nav.nav-tabs li {
     margin-right: 25px;
     /* margin-bottom: 25px; */
 }
 
 ul.nav.nav-tabs {
-    background: #f2f2f2;
+    background: #111;
     margin-bottom: 15px;
     padding: 15px;
+    border: none;
 }
 
 .single-ride-nav {
@@ -1356,6 +1380,7 @@ ul.nav.nav-tabs {
 
 div#himalayanDirt {
     width: 100%;
+    background: #333;
 }
 
 .single-ride-nav.sticky.topMenuVisible {
@@ -1502,51 +1527,6 @@ section.about-content img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-}
-
-div#single-rides:hover .owl-nav button.owl-next,
-div#single-rides:hover .owl-nav button.owl-prev {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-}
-
-div#single-rides .owl-nav button {
-    height: 80px;
-    width: 80px;
-    /* opacity: 0.3; */
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    pointer-events: auto;
-
-}
-
-div#single-rides .owl-nav {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-
-}
-
-div#single-rides .owl-nav button.owl-next {
-    background: #111;
-    transform: translateX(80px);
-}
-
-div#single-rides .owl-nav button.owl-prev {
-    background: #111;
-    transform: translateX(-80px);
 }
 
 .single-caption-option {
@@ -1845,7 +1825,7 @@ section#supporters img {
     margin: 0 auto;
 }
 
-.himalayan-hero-slider .owl-nav button {
+.himalayan-hero-slider .owl-nav button, div#single-rides .owl-nav button {
     position: absolute;
     height: 100%;
     width: 200px;
@@ -1855,22 +1835,25 @@ section#supporters img {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 60%) !important;
 }
 
-.himalayan-hero-slider .owl-nav button.owl-next {
+.himalayan-hero-slider .owl-nav button.owl-next, div#single-rides .owl-nav button.owl-next {
     right: 0;
     left: initial;
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 60%) !important;
 
 }
+
 .welcome-text {
     background: #333;
     padding: 100px 0;
 }
+
 .welcome-text .col-sm-8.text-center p {
     font-size: 20px;
     line-height: 38px;
     font-weight: 400;
     color: #fff;
 }
+
 .intro-text a.btn {
     border: 2px solid #fff;
     width: 150px;
@@ -1882,11 +1865,13 @@ section#supporters img {
     font-size: 1.4rem;
     font-weight: 400;
     transition: all 0.3s;
-    margin-top:3rem;
+    margin-top: 3rem;
 }
-.intro-text a.btn:hover{
+
+.intro-text a.btn:hover {
     border: 2px solid #103e8b;
 }
+
 .himalayan-hero-slider .owl-nav button span {
     font-size: 90px;
     color: #fff;
